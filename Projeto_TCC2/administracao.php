@@ -1,7 +1,5 @@
 <?php include "logo_menu.php"?>
-<?php<!-- /* 
-	if ($_SESSION["id_adm"] == "adm	"){ */ -->
-?>	
+<?php /* 	
 <ul>		
 	<li> <a href="administracao.php" > Adminitração </a> </li>
 	<li> <a href="lista_cadastro.php" > Cadastros </a> </li>
@@ -9,7 +7,6 @@
 	
 </ul>
 <?php
- }
  //else if ($_SESSION["id_cliente"] == "cliente"){
 ?>
 <ul>
@@ -19,7 +16,6 @@
     <li> <a href="orçamento.php"> Orçamento </li>
 </ul>
 <?php 
- }
 
  /*else { */
 ?> 
@@ -29,7 +25,6 @@
 	<li> <a href="vendas.php" > Vendas </a> </li>
 </ul>
 </*?php
-}
 
 ?>
 -->

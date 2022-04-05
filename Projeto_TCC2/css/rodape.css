@@ -1,0 +1,67 @@
+footer {
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(10, 23, 55, 0.37);
+    color: rgb(255, 0, 0);
+    font-family: Arial black;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: white;
+}
+table{
+    width: fit-content;
+} 
+.rodape img {
+    width: 30px;
+    height: 30px;
+    border-color: red;
+
+}
+
+footer ol li {
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+footer a,
+img {
+    color: inherit;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgb(17, 17, 17)
+}
+
+
+/* link selecionado */
+footer a:active {
+    color: green;
+}
+
+footer {
+    max-width: 100%;
+    width: 98%;
+}
+/* foto rodape */
+table tr td .apresenta {
+    width: 200px;
+    height: 200px;
+    border-radius: 300px;
+}
+
+table tr td p {
+    text-align: center;
+    font-size: 20px;
+}
+
+table tr td ol {
+    text-align: center;
+}
+
+table tr td a {
+    text-decoration: none;
+}

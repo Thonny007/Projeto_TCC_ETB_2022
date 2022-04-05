@@ -1,0 +1,29 @@
+h6 {
+    opacity: 100%;
+    font-size: 25px;
+}
+
+p {
+    opacity: 100%;
+    font-size: 20px;
+    color: black;
+}
+
+div .accordion h2 {
+    text-align: center;
+}
+
+
+/*tabela*/
+
+.txt_orçamento table tr td {
+    background-color: blanchedalmond;
+    text-align: center;
+    text-decoration: black;
+    color: black;
+}
+
+.txt_orçamento img {
+    width: 25px;
+    margin: -7px;
+}

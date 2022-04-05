@@ -1,0 +1,62 @@
+html {
+    display: flex;  
+    
+}
+
+.logo h1 {
+    font-size: 100px;
+    margin: 14.6px;
+    font-family: Algerian;
+    text-align: center;
+    padding: 15px;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+.logo {
+    background-color: black;
+    margin: -15px;
+    align-items: baseline;
+    width: auto;
+}
+
+.logo img {
+    width: 120px;
+    margin: auto;
+    background-color: black;
+}
+
+.lista_menu ul {
+    background-color: #DCDCDC;
+    color: black;
+    width: 100%;
+    border-radius: 19px;
+}
+
+.lista_menu ul li {
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
+    padding: 10px 10px 10px 40px;
+    /*efeitos visuais */
+    list-style-type: none;
+    height: 30px;
+    font-size: 25px;
+}
+
+.lista_menu li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #A9A9A9;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: red;
+}

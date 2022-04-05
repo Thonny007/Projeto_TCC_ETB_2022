@@ -12,9 +12,9 @@
     <li> <a href="agendamento.php" > Agendar Tattoo </a> </li>  
     <li> <a href="orçamento.php"> Orçamento </li>
 </ul>
-<!--
+
  <ul>		
 	<li> <a href="administracao.php" > AdminitraAdminitração </a> </li>
 	<li> <a href="vendas.php" > Vendas </a> </li>
 </ul>
--->
+

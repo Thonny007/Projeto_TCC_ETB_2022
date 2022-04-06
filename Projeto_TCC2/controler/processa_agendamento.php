@@ -8,5 +8,9 @@
     $formataData = $formataData->format('Y-m-d H:i:s');
 
     $desc = $_POST["desc"];
-    var_dump($_POST['ft']);
+    $foto = $_FILES["ft"];
+
+    $agendamento = new Agendamentos($formataData, $foto["tmp_name"], $desc);
+
+    $agendamento->insert();
 ?>

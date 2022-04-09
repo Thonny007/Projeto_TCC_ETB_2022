@@ -5,7 +5,8 @@
 	<li> <a href="lista_agendamentos" > Agendamento </a> </li>
 	
 </ul>
- //else if ($_SESSION["id_cliente"] == "cliente"){
+	<!-- Teste de criação de branch lucas -->
+	<!-- Teste Pull Request -->
 <ul>
 	<!-- lista o agendamento do cliente-->
 	<li><a href="lista_agendamento"></a></li>

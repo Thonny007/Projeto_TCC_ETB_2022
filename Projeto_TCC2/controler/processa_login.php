@@ -11,12 +11,13 @@
  	
 	if ($cliente || $admin == null) {
 		echo "<script>
-			
-            alert ('🛑⚠️ Login ou Senha Incorreto ⚠️🛑')
-			location.href = ('../login.php')
-         </script>";
+             	alert ('🛑⚠️ Login ou Senha Incorreto ⚠️🛑')
+				location.href = ('../login.php')
+         	 </script>";
 } else {
-	echo "<p>  PROCESSA LOGIN OK  </p>";
+	echo"<script>		
+			location.href = ('../agendamento.php')
+ 		</script>";
 	
 	
 	

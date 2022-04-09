@@ -10,8 +10,8 @@
     <title> Ditte.Tattoo </title>
 </head>
 <div class="container-fluid">
-    <body>
-        <!-- LOGO -->
+    <body>    
+    <!-- LOGO -->
         <?php include "logo_menu.php";?>
         <!-- Carousel Bootstrap -->
         <div class="container-fluid">

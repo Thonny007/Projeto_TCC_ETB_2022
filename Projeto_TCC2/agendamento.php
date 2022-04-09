@@ -18,11 +18,9 @@
     <title> Agendamento.Ditte.Tattoo </title>
 </head>
 <div class="container-fluid">
-<?php include "controler/valida_login.php"?>
     <body>
         <!-- LOGO -->
-
-        <?php include "logo_menu.php "?> 
+        <?php include "menu_entrada.php";?>
         
         <form method="POST" action="controler/processa_agendamento.php" enctype="multipart/form-data">
             <div class="agm">

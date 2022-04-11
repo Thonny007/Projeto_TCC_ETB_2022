@@ -90,24 +90,5 @@
 
 
         </div>
-    <!-- 
-        <div id="adm_lista"> 
-			<ul>		
-				<li> <a href="administracao.php" > Administração </a> </li>
-				<li> <a href="lista_cadastro.php" > Cadastros Realizados </a> </li>
-				<li> <a href="lista_agendamentos" > Agendamentos Realizados  </a> </li>
-	
-			</ul>
-			<ul>
-				<li><a href="lista_agendamento"></a></li>
-    			<li> <a href="agendamento.php" > Agendar Tattoo </a> </li>  
-    			<li> <a href="orçamento.php"> Orçamento </li>
-			</ul>
-
- 			<ul>		
-				<li> <a href="administracao.php" > AdminitraAdminitração </a> </li>
-				<li> <a href="vendas.php" > Vendas </a> </li>
-            </div>
-        </ul>-->
 	</body>
 </div>

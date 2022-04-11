@@ -4,10 +4,10 @@ html {
 
 .logo_entrada h1 {
     font-size: 100px;
-    margin: 10px;
+    margin: 14.9px;
     font-family: Algerian;
     text-align: left;
-    padding: 10px;
+    padding: 15px;
 }
 
 .logo_entrada p {
@@ -15,12 +15,11 @@ html {
     margin: 14.9px;
     font-family: arial black;
     text-align: left;
-    padding: auto;
+    padding: 15px;
     color: white;
 }
 
 table {
-    margin: 10px 10px 14px 5px;
     border-color: white;
 }
 
@@ -31,6 +30,7 @@ h1 a {
 .logo_entrada {
     background-color: black;
     margin: -15px;
+    /*     align-items: left; */
     width: auto;
 }
 
@@ -42,7 +42,7 @@ h1 a {
 }
 
 .lista_menu ul {
-    padding: -5px;
+    padding: -3px;
     background-color: #DCDCDC;
     color: black;
     width: 100%;

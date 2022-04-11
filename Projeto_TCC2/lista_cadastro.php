@@ -12,16 +12,10 @@
 	<body>
 		<?php include "menu_entrada.php"?>
         <div id="list_cadastro" class="list_cadastro"> 	
-		    <?php
-			    include_once "classes/cliente.php";
-				$conectar = mysqli_connect ("localhost", "root", "", "agendamentos");			
-		    			$sql_consulta = "SELECT 
-                                                id_clt, nome_clt, login_clt, senha_clt, data_nascimento, id_agnd,id_adm, 
-                                                numero_cliente 
-                                        FROM 
-                                            cliente";
-			    		$resultado_consulta = mysqli_query ($conectar, $sql_consulta);		
-	       ?>
+		    <?php 
+				include_once "classes/cliente.php";
+				$listar = Cliente::list();
+			?>
          <p> <a href="cadastro.php"> Cadastrar Cliente </a> </p>
 					<div class="container">
 						<table boder="1px" class="table bg-warning">
@@ -45,7 +39,7 @@
 								</tr>
 							</thead>
 												<?php
-								while ($registro = mysqli_fetch_row($resultado_consulta))
+								while ($registro = mysqli_fetch_row($listar))
 								{
 									?>	
 													<tr>

@@ -1,6 +1,6 @@
 <head>
 
-    <link rel="stylesheet" type="text/css" href="css/Menu_entrada.css">
+    <link rel="stylesheet" type="text/css" href="css/menu_entrada.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
@@ -28,7 +28,8 @@
                 </h1>
             </td>
             <td>
-                <p> Olá <?php include "controler/valida_login.php" ?></p>
+             <p> Olá Ditte.Tattoo <?php/*  include "controler/valida_login.php" */ ?></p>
+            <a href="controler/logout.php"> SAIR </a>
             </td>
         </tr>
         
@@ -37,7 +38,7 @@
         <div class="lista_menu">
             <ul>
                 <li>
-                    <a href="cadastro.php"> XXX Cadastro </a>
+                    <a href="cadastro.php"> Cadastro </a>
                 </li>
                 <li>
                     <a href="agendamento.php"> Agendamento </a>

@@ -51,6 +51,12 @@ class Cliente {
         
     }
 
+    public static function formataData(string $dataRecebida): string{
+        $data = new DateTime($dataRecebida);
+        
+        return $data->format('d/m/Y');
+    }
+
     public function delete(int $id): string{
         $sql = "DELETE FROM cliente WHERE id_clt = '$id'";
 

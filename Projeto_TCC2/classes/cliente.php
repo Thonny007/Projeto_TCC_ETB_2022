@@ -51,7 +51,7 @@ class Cliente {
         
     }
 
-    public static function list(): mysqli_result | bollean  {
+    public static function list(): mysqli_result /* |boll */ {
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
         $sql_consulta = "SELECT id_clt, nome_clt, login_clt, senha_clt, 

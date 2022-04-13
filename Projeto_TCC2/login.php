@@ -20,7 +20,7 @@
 <div class="container-fluid">
     <body>
         <!-- LOGO -->
-        <?php include "logo_menu.php " ?>
+        <?php include "logo_menu.php" ?>
         <!-- LOGO -->
         <form class="form" method="POST" action="controler/processa_login.php">
         <h5> Área de Login</h5>

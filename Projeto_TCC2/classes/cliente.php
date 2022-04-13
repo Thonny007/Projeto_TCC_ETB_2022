@@ -51,6 +51,23 @@ class Cliente {
         
     }
 
+    public static function list(): mysqli_result /* |boll */ {
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+
+        $sql_consulta = "SELECT id_clt, nome_clt, login_clt, senha_clt, 
+        data_nascimento, id_agnd,id_adm, numero_cliente 
+        FROM cliente";
+
+
+        return $result = mysqli_query ($con, $sql_consulta);
+    }
+
+    public static function formataData(string $dataRecebida): string{
+        $data = new DateTime($dataRecebida);
+        
+        return $data->format('d/m/Y');
+    }
+
     public function delete(int $id): string{
         $sql = "DELETE FROM cliente WHERE id_clt = '$id'";
 

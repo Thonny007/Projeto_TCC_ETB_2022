@@ -1,9 +1,6 @@
-<?php 
-	session_start ();
-?>
 <head>
 
-    <link rel="stylesheet" type="text/css" href="css/layout_Logo_Menu.css">
+    <link rel="stylesheet" type="text/css" href="css/menu_entrada.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
@@ -19,13 +16,24 @@
     </style>
 
     <div class="container-fluid">
-        <div class="logo">
-            <h1>
-                <a href="index.php">
-                    <img src="img/logo1.png" alt="">
-                    DITTE.TATTOO
-                </a>
-            </h1>
+        <div class="logo_entrada">
+        <table>    
+        <tr>
+            <td>
+                <h1>
+                    <a href="index.php">
+                        <img  src="img/logo1.png">
+                        DITTE.TATTOO
+                    </a>
+                </h1>
+            </td>
+            <td width="14%" class="sair">
+                <p> Olá Ditte.Tattoo <?php/*  include "controler/valida_login.php" */ ?></p>
+                <a href="controler/logout.php"> SAIR </a>
+            </td>
+        </tr>
+        
+        </table>
         </div>
         <div class="lista_menu">
             <ul>

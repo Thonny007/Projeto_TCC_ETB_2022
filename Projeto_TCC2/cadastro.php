@@ -22,7 +22,7 @@
         <?php include "logo_menu.php" ?>
         <div class="fomulario_cadastro">
             <form method="POST" action="controler/processa_cadastro.php">
-                <h3> CADASTRO </h3>
+                <h3><u> CADASTRO</u> </h3>
 
                 <p>
                     Nome Completo:

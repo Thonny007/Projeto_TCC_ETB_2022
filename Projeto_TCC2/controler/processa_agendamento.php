@@ -13,4 +13,8 @@
     $agendamento = new Agendamentos($formataData, $foto["tmp_name"], $desc);
 
     $agendamento->insert();
+    echo "<script>
+                alert ('🛑⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️🛑')
+                location.href = ('/Projeto_TCC2/cadastro.php')
+             </script>";
 ?>

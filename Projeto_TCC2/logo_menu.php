@@ -28,7 +28,8 @@
             </h1>
         </div>
         <div class="lista_menu">
-            <ul>
+        <strong>    
+        <ul>
                 <li>
                     <a href="cadastro.php"> Cadastro </a>
                 </li>
@@ -50,6 +51,7 @@
                     <a href="login.php"> LOGIN </a>
                 </li>
             </ul>
+    </strong>
         </div>
     </div>
 </header>

@@ -9,12 +9,12 @@
     
     if($idade <= 17){
         echo "<script>
-        alert ('♣ Você ainda é Jovem para realiza uma Tattoo ♣')
+        alert ('🔞♣ Você ainda é Jovem para realiza uma Tattoo ♣🔞')
         location.href = ('/Projeto_TCC2/cadastro.php')
      </script>";
     }else if(strlen($_POST["senha"]) < 6){
         echo "<script>
-                alert ('☺ Sua senha teve ter no minimo 6(seis) caracteres ☺')
+                alert ('🛑⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️🛑')
                 location.href = ('/Projeto_TCC2/cadastro.php')
              </script>";
     }else {

@@ -14,7 +14,7 @@
 			<ul>		
 				<li> <a href="administracao.php" > Administração </a> </li>
 				<li> <a href="lista_cadastro.php" > Cadastros Realizados </a> </li>
-				<li> <a href="lista_agendamentos" > Agendamentos Realizados  </a> </li>
+				<li> <a href="lista_agendamentos.php" > Agendamentos Realizados  </a> </li>
 	
 			</ul>
 			<ul>

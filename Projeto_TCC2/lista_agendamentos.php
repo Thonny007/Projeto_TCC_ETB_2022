@@ -15,7 +15,7 @@
 			    $conectar = mysqli_connect ("localhost", "root", "", "agendamentos");			
 		    			$sql_consulta = "SELECT 
                                                 id_agnd,data_agnd,imagem_atendimento,status_agnd,descricao_agnd
-                                        FROM 
+                                         FROM 
                                             agendamento";
 			    		$resultado_consulta = mysqli_query ($conectar, $sql_consulta);		
 	       ?>

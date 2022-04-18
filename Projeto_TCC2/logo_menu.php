@@ -28,8 +28,8 @@
             </h1>
         </div>
         <div class="lista_menu">
-        <strong>    
-        <ul>
+        <strong>
+                <ul>
                 <li>
                     <a href="cadastro.php"> Cadastro </a>
                 </li>
@@ -40,18 +40,18 @@
                     <a href="orçamento.php"> Orçamento </a>
                 </li>
                 <li>
-                    <a href="desenhos.php"> Desenhos </a>
+                    <a href="desenhos.php"> Portfólio </a>
                 </li>
                 <li>
                     <nav>
                         <a href="#rodape_1" href="rodape.php"> Contato/Rede Sociais </a>
                     </nav>
-                </li>
-                <li>
+                  </li>
+                  <li>
                     <a href="login.php"> LOGIN </a>
-                </li>
-            </ul>
-    </strong>
+                    </li>
+                </ul>
+        </strong>
         </div>
     </div>
 </header>

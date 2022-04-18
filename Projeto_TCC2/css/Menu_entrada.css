@@ -29,6 +29,7 @@ table {
 
 h1 a {
     text-decoration: none;
+    color: white;
 }
 
 .logo_entrada {
@@ -46,14 +47,17 @@ h1 a {
 }
 
 .lista_menu ul {
+    text-align: center;
     padding: -3px;
     background-color: #DCDCDC;
     color: black;
     width: 100%;
     border-radius: 19px;
+    margin: 15px;
 }
 
 .lista_menu ul li {
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: auto;

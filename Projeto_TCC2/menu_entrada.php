@@ -1,39 +1,40 @@
 <head>
-
-    <link rel="stylesheet" type="text/css" href="css/menu_entrada.css">
-    <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Menu_entrada.css">    
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
 
 </head>
-
+<div class="container-fluid">
 <header>
     <style>
         /*imagem de fundo*/
         body {
             background-image: url('img/fundo.png');
         }
+
     </style>
 
-    <div class="container-fluid">
+    <div id="menu">
         <div class="logo_entrada">
-        <table>    
-        <tr>
-            <td>
-                <h1>
-                    <a href="index.php">
-                        <img  src="img/logo1.png">
-                        DITTE.TATTOO
+            <table>    
+            <tr>
+                <td>
+                    <h1>
+                        <a href="index.php">
+                            <img  src="img/logo1.png">
+                            DITTE.TATTOO
+                        </a>
+                    </h1>
+                </td>
+                <td width="13%" class="sair">
+                    <p> Olá Ditte.Tattoo <?php/*  include "controler/valida_login.php" */ ?></p>
+                    <a href="controler/logout.php">
+                     
+                        SAIR 
                     </a>
-                </h1>
-            </td>
-            <td width="14%" class="sair">
-                <p> Olá Ditte.Tattoo <?php/*  include "controler/valida_login.php" */ ?></p>
-                <a href="controler/logout.php"> SAIR </a>
-            </td>
-        </tr>
-        
-        </table>
+                </td>
+            </tr>
+            </table>
         </div>
         <div class="lista_menu">
             <ul>
@@ -43,11 +44,11 @@
                 <li>
                     <a href="agendamento.php"> Agendamento </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="orçamento.php"> Orçamento </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="desenhos.php"> Desenhos </a>
+                    <a href="desenhos.php"> Portfólio </a>
                 </li>
                 <li>
                     <nav>
@@ -61,3 +62,4 @@
         </div>
     </div>
 </header>
+</div>

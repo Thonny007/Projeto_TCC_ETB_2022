@@ -20,7 +20,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <strong> 1° COMO CUIDAR DA SUA TATUAGEM <!-- <i style="opacity:1%">T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O  T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O  T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O T   E   S    T   E   C   O   R   R</i> --> </strong>
+                            <strong> 1° COMO CUIDAR DA SUA TATUAGEM <i style="opacity:1%">T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O  T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O  T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O T   E   S    T   E   C   O   R   R</i> </strong>
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">

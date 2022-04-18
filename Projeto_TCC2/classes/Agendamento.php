@@ -24,11 +24,34 @@ class Agendamentos {
         
     }
 
-    public function getById(int $id): string{
-        $sql = "SELECT * FROM agendamento WHERE id_clt = $id";
-        $query = mysqli_query($this->con, $sql);
+    public static function list($excluidos = false ): mysqli_result /* | bollean */{
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        
+        if ($excluidos) {
+            $sql_consulta = "SELECT id_agnd, data_agnd, status_agnd, descricao_tatto
+            FROM agendamento";
+        } else {
+            $sql_consulta = "SELECT id_agnd, data_agnd, status_agnd, descricao_tatto
+            FROM agendamento
+            WHERE status_agnd != 'desmarcado' ";
+        }
+        
 
-        return mysqli_fetch_row($query);
+
+        return $result = mysqli_query ($con, $sql_consulta);
+    }
+
+    public static function getImgById($id){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        $sql = "SELECT imagem_atendimento FROM agendamento WHERE id_agnd = $id";
+        
+        return mysqli_query($con, $sql);
+    }
+
+    public static function formataData(string $dataRecebida): string{
+        $data = new DateTime($dataRecebida);
+        
+        return $data->format('d/m/Y H:i');
     }
 
     function getData_agendamento() {
@@ -46,8 +69,7 @@ class Agendamentos {
     function setStatus_agendamento($status_agendamento) {
         $this->status_agendamento = $status_agendamento;
     }
-/*-------------------------------------------------------------------*/    
-/*-------------------------------------------------------------------*/    
+
     public function getImagem(){
         return $this->imagem;
     }

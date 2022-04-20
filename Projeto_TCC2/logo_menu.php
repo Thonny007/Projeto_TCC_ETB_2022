@@ -15,6 +15,7 @@
         /*imagem de fundo*/
         body {
             background-image: url('img/fundo.png');
+            
         }
     </style>
 
@@ -28,7 +29,8 @@
             </h1>
         </div>
         <div class="lista_menu">
-            <ul>
+        <strong>
+                <ul>
                 <li>
                     <a href="cadastro.php"> Cadastro </a>
                 </li>
@@ -39,17 +41,18 @@
                     <a href="orçamento.php"> Orçamento </a>
                 </li>
                 <li>
-                    <a href="desenhos.php"> Desenhos </a>
+                    <a href="desenhos.php"> Portfólio </a>
                 </li>
                 <li>
                     <nav>
-                        <a href="#rodape_1" href="rodape.php"> Contato/Rede Sociais </a>
+                        <a href="#rodape_1"> Contato/Rede Sociais </a>
                     </nav>
-                </li>
-                <li>
+                  </li>
+                  <li>
                     <a href="login.php"> LOGIN </a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+        </strong>
         </div>
     </div>
 </header>

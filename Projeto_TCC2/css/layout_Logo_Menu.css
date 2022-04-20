@@ -1,6 +1,5 @@
 html {
-    display: flex;  
-    
+    display: flex;
 }
 
 .logo h1 {
@@ -13,6 +12,12 @@ html {
 
 h1 a {
     text-decoration: none;
+    color: white;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    color: SaddleBrown;
 }
 
 .logo {
@@ -48,6 +53,7 @@ h1 a {
 
 .lista_menu li a {
     text-decoration: none;
+    color: SaddleBrown;
 }
 
 li a:hover {

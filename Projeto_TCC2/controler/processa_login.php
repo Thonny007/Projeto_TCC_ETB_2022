@@ -8,20 +8,39 @@
 	$cliente = Cliente::verificaCliente($login, $senha);
 	
 	$admin = Administrador::verificaAdmin($login, $senha);
- 	
-	if ($cliente || $admin == null) {
+ 	switch($admin){
+		 case 1:
+				if($admin == 1){
+					echo"<script>		
+							location.href = ('../administracao.php')
+					 	</script>";			
+				}else{
+					echo "ouver algum erro";
+				}
+			break;
+		case 0:
+	  		echo "<script>
+	 				alert ('🛑⚠️ Login ou Senha Incorreto ⚠️🛑')
+					location.href = ('../login.php')
+  				</script>";
+			break;
+	
+	}/* 
+	if ($cliente == null || $$admin == null)  {
 		echo "<script>
              	alert ('🛑⚠️ Login ou Senha Incorreto ⚠️🛑')
 				location.href = ('../login.php')
          	 </script>";
-} else {
-	echo"<script>		
-			location.href = ('../agendamento.php')
- 		</script>";
-	
-	
-	
-}
+	}else if ($cliente == 1) {
+		echo"<script>		
+				location.href = ('../agendamento.php')
+ 			</script>";
+	}else{
+		echo"<script>		
+				location.href = ('../administracao.php')
+ 			</script>";
+	} */
+
 
 	
 ?>

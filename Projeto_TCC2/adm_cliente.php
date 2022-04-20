@@ -12,11 +12,13 @@
 		<?php include "menu_entrada.php"?> 	
 		<div id="adm_lista"> 
 			<ul>		
-				<li> <a href="administracao.php" > Administração </a> </li>
-				<li> <a href="lista_cadastro.php" > Listar Cadastros </a> </li>
-				<li> <a href="lista_agendamentos.php" > Agendamentos </a> </li>
-				<li> <a href="cadastro_adm.php"> Cadastrar Administrador</li>
+				<li> <a href="adm_cliente.php" > Administração </a> </li>
+				<li> <a href="altera_clt.php" > Alterar meu Cadastro </a> </li>
+				<li> <a href="lista_agendamentos.php" > Agendamentos Realizados  </a> </li>
+	
 			</ul>
-		</div>
+        <div class="rodape_1">
+                <?php include "rodape.php" ?>
+            </div>
 	</body>
 </div>

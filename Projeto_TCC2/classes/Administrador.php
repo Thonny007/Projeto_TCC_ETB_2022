@@ -43,9 +43,9 @@ class Administrador {
 
         if ($linhas == 1) {
 
-            die("login já existente  
+            die("⚠️ Login já Existente ⚠️ 
                 <script>
-                    locale.href = ('cadastra_fun.php')
+                    locale.href = ('cadastro_adm.php')
                 </script>");
         } else {
             $sql = "INSERT INTO administrador (nome_adm, senha_adm, login_adm)
@@ -57,9 +57,9 @@ class Administrador {
                 return "Cadastrado com sucesso";
             } else {
                 return "<script> 
-                            alert ('Erro ao Cadastrar Tente Novamente!!') 
+                            alert ('⚠️⚠️ Erro ao Cadastrar Tente Novamente ⚠️⚠️') 
                         </script>";
-                 return "<script> location.href = ('../cadastro.php') </script>";
+                 return "<script> location.href = ('../cadastro_adm.php') </script>";
   }
             }
         }
@@ -74,10 +74,10 @@ class Administrador {
             return "<script> 
                         alert ('☺ Registro Deletado com Sucesso ☺') 
                     </script>";
-            return"<script> location.href = ('index.php') </script>";;
+            return"<script> location.href = ('../administracao.php') </script>";;
         } else {
             return "<script> 
-                        alert ('Houve um Erro ao Deletar o Cliente') 
+                        alert ('⚠️⚠️ Houve um Erro ao Deletar o Cliente ⚠️⚠️') 
                     </script>";
         }
     }

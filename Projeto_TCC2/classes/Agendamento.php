@@ -24,12 +24,13 @@ class Agendamentos {
         
     }
 
-    public static function list($excluidos = false ): mysqli_result /* | bollean */{
+    public static function list($excluidos){
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
         
         if ($excluidos) {
             $sql_consulta = "SELECT id_agnd, data_agnd, status_agnd, descricao_tatto
-            FROM agendamento";
+            FROM agendamento
+            WHERE status_agnd = 'desmarcado' ";
         } else {
             $sql_consulta = "SELECT id_agnd, data_agnd, status_agnd, descricao_tatto
             FROM agendamento
@@ -41,11 +42,19 @@ class Agendamentos {
         return $result = mysqli_query ($con, $sql_consulta);
     }
 
-    public static function getImgById($id){
+    public static function getyId($id){
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
-        $sql = "SELECT imagem_atendimento FROM agendamento WHERE id_agnd = $id";
+        $sql = "SELECT * FROM agendamento WHERE id_agnd = $id";
         
         return mysqli_query($con, $sql);
+    }
+    
+    public static function updateStatus($id, $new_status){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        $sql = "UPDATE agendamento SET status_agnd='$new_status'
+	    WHERE id_agnd=$id;";
+
+        mysqli_query($con, $sql);
     }
 
     public static function formataData(string $dataRecebida): string{

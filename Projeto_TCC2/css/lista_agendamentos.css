@@ -17,18 +17,23 @@
     text-decoration: none;
 }
 
+.acoes a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
 .acoes img{
     width: 20px;
     height: 20px;
     margin: 0px 10px;
 }
 
-.acoes img:nth-child(1){
+.acoes a img.confirma{
     background-color: #5bd89eb6;
     border-radius: 10px;
 }
 
-.acoes img:nth-child(2){
+.acoes a img.cancela{
     background-color: rgb(238, 97, 97);
     border-radius: 10px;
 }

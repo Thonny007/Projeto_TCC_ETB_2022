@@ -20,7 +20,7 @@
 <body>
 	<?php 
 		include_once "classes/Agendamento.php";
-			$listar = Agendamentos::list(false);
+		$listar = Agendamentos::list(true);
 		?>
 
 <?php include "menu_entrada.php"; ?>
@@ -30,7 +30,7 @@
 	</button>
 	
 	<button class="btn btn-warning">
-		<a href="lista_agendamentos_excluidos.php">listar Clientes excluidos</a>
+		<a href="lista_agendamentos.php">listar Clientes confirmados e em espera</a>
 	</button>
 	<table id="lista_cadastro"  class="table mt-3 table-warning">
 		<thead>

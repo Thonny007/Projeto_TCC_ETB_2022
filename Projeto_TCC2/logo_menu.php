@@ -15,6 +15,7 @@
         /*imagem de fundo*/
         body {
             background-image: url('img/fundo.png');
+            
         }
     </style>
 
@@ -44,7 +45,7 @@
                 </li>
                 <li>
                     <nav>
-                        <a href="#rodape_1" href="rodape.php"> Contato/Rede Sociais </a>
+                        <a href="#rodape_1"> Contato/Rede Sociais </a>
                     </nav>
                   </li>
                   <li>

@@ -1,15 +1,15 @@
 
 <?php
-    include_once "../classes/administrador.php";
+    include_once "../classes/Administrador.php";
 
     if(strlen($_POST["senha"]) < 6){
         echo "<script>
-                alert ('☺ Sua senha teve ter no minimo 6(seis) caracteres ☺')
+                alert ('⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️')
                 location.href = ('/Projeto_TCC2/cadastro.php')
              </script>";
     }else {
         
-        $administrador = new Administrador(
+        $adm = new Administrador(
             $_POST["nome"],
             $_POST["senha"],
             $_POST["login"]
@@ -17,7 +17,7 @@
 
 
 
-        $administrador->insert();
+        $adm->insert();
 
         echo "<script>
                 alert ('☺ CADASTRO DO ADM REALIZADO COM SUCESSO ☺')

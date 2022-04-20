@@ -21,7 +21,7 @@
 				?>
             <p> <a href="cadastro.php"> Cadastrar Cliente </a> </p>
             <div class="container">
-				<button id='btn_mostrar' type="button" class="btn btn-success" class="">
+				<button id='btn_mostrar' type="button" class="btn btn-success">
                     Mostrar Clientes Cadastrados
                 </button>
                 <table class="table" id="table_cliente">

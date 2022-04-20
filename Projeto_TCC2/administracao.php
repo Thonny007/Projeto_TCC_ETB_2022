@@ -13,8 +13,8 @@
 		<div id="adm_lista"> 
 			<ul>		
 				<li> <a href="administracao.php" > Administração </a> </li>
-				<li> <a href="lista_cadastro.php" > Cadastros Realizados </a> </li>
-				<li> <a href="lista_agendamentos.php" > Agendamentos Realizados  </a> </li>
+				<li> <a href="lista_cadastro.php" > Listar Cadastros </a> </li>
+				<li> <a href="lista_agendamentos.php" > Agendamentos </a> </li>
 				<li> <a href="cadastro_adm.php"> Cadastrar Administrador</li>
 			</ul>
 		</div>

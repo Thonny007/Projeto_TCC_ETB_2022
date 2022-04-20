@@ -9,7 +9,7 @@
     <style>
         /*imagem de fundo*/
         body {
-            background-image: url('img/fundo.png');
+            background-image: url('img/fundo1.jpg');
         }
 
     </style>
@@ -37,28 +37,30 @@
             </table>
         </div>
         <div class="lista_menu">
-            <ul>
-                <li>
-                    <a href="cadastro.php"> Cadastro </a>
-                </li>
-                <li>
-                    <a href="agendamento.php"> Agendamento </a>
-                </li>
-                <!-- <li>
-                    <a href="orçamento.php"> Orçamento </a>
-                </li> -->
-                <li>
-                    <a href="desenhos.php"> Portfólio </a>
-                </li>
-                <li>
-                    <nav>
-                        <a href="#rodape_1" href="rodape.php"> Contato/Rede Sociais </a>
-                    </nav>
-                </li>
-                <li>
-                    <a href="login.php"> LOGIN </a>
-                </li>
-            </ul>
+            <strong>    
+                <ul>
+                    <li>
+                        <a href="cadastro.php"> Cadastro </a>
+                    </li>
+                    <li>
+                        <a href="agendamento.php"> Agendamento </a>
+                    </li>
+                        <!-- <li>
+                            <a href="orçamento.php"> Orçamento </a>
+                        </li> -->
+                    <li>
+                        <a href="desenhos.php"> Portfólio </a>
+                    </li>
+                    <li>
+                        <nav>
+                            <a href="#rodape_1" href="rodape.php"> Contato/Rede Sociais </a>
+                        </nav>
+                    </li>
+                    <li>
+                        <a href="login.php"> LOGIN </a>
+                    </li>
+                </ul>
+            </strong>    
         </div>
     </div>
 </header>

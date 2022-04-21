@@ -1,21 +1,19 @@
 <?php
-	if ( isset($_SESSION["login_clt"]) ) {
-		
-		echo $_SESSION["nome_clt"];
-		
-	}else if ( isset($_SESSION["login_adm"]) ) {
-		
-		echo $_SESSION["nome_adm"];
+	session_start();
 
-    }
-    else {
-	
-		echo "<script> 
-				alert ('Você não está logado!!!') 
-			  </script>";
-			
-		echo "<script> 
-				location.href = ('index.php') 
-			  </script>";
+	if (isset($_SESSION['nome']) && isset($_SESSION['adm'])) {
+		var_dump($_SESSION['nome']);
+		var_dump($_SESSION['adm']);
+	} else {
+		echo "must be logged";
 	}
+	
+
+	/* echo "<script> 
+			alert ('Você não está logado!!!') 
+		  </script>";
+		
+	echo "<script> 
+			location.href = ('index.php') 
+		  </script>"; */
 ?>

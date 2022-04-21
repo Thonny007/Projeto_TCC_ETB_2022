@@ -21,16 +21,20 @@
 		$_SESSION["nome"] = $cliente[1];
 		$_SESSION["adm"] = false;
 
-		echo "é um administrador: ";
+		echo "<script>
+				location.href = ('../adm_cliente.php')
+         	 </script>";
 		echo $_SESSION['adm'];
-	}elseif ($admin && sizeof($admin) > 0) {
+	}else if ($admin && sizeof($admin) > 0) {
 		var_dump($admin);
 		
 		$_SESSION["id"] = $admin[0];
 		$_SESSION["nome"] = $admin[1];
 		$_SESSION["adm"] = true;
 
-		echo "é um administrador: ";
+		echo "<script>
+				location.href = ('../administracao.php')
+         	 </script>";
 		echo $_SESSION['adm'];
 	}
 ?>

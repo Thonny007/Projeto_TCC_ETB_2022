@@ -5,15 +5,11 @@
 		var_dump($_SESSION['nome']);
 		var_dump($_SESSION['adm']);
 	} else {
-		echo "must be logged";
+		/* echo "must be logged"; */
+		echo "<script>
+                alert ('🚷⚠️ Acesso Negado 🚷⚠️')
+                location.href = ('../Projeto_TCC2/index.php')
+             </script>";
+			  exit();
 	}
-	
-
-	/* echo "<script> 
-			alert ('Você não está logado!!!') 
-		  </script>";
-		
-	echo "<script> 
-			location.href = ('index.php') 
-		  </script>"; */
 ?>

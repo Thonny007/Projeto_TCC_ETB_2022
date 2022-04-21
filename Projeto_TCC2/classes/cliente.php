@@ -44,9 +44,9 @@ class Cliente {
         $query = mysqli_query($this->con, $sql);
 
         if ($query) {
-            return "Cadastrado com sucesso";
+            return "😁 Cadastrado com Sucesso 😁";
         } else {
-            return "Houve um erro ao cadastrar";
+            return "⚠️ Houve um erro ao cadastrar ⚠️";
         }
         
     }
@@ -74,9 +74,9 @@ class Cliente {
         $query = mysqli_query($this->con, $sql);
 
         if ($query) {
-            return "registro deletado com sucesso";
+            return "👍 Registro Deletado com Sucesso 👍";
         } else {
-            return "houve um erro ao deletar o cliente";
+            return "⚠️ Houve um Erro ao Deletar o Cliente ⚠️";
         }
         
     }

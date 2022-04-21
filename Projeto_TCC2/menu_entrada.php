@@ -26,8 +26,8 @@
                         </a>
                     </h1>
                 </td>
-                <td width="13%" class="sair">
-                    <p> Olá Ditte.Tattoo <?php/*  include "controler/valida_login.php" */ ?></p>
+                <td width="20%" class="sair">
+                    <p> Olá <?php include "controler/valida_login.php" ?></p>
                     <a href="controler/logout.php">
                      
                         SAIR 

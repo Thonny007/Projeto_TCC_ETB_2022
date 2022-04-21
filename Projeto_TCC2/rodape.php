@@ -56,7 +56,7 @@
                         <li>
                             <a href="desenhos.php">
                                 <img src="img/menu/desenho.png" alt="" >
-                                Desenhos
+                                Portfólio
                             </a>
                         </li>
                         <li>

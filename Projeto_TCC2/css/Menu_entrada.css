@@ -1,5 +1,6 @@
 html {
     display: flex;
+    width: 100%;
 }
 
 body {
@@ -21,10 +22,6 @@ body {
     text-align: left;
     padding: 15px;
     color: white;
-}
-
-table {
-    border-color: white;
 }
 
 h1 a {

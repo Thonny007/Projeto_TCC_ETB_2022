@@ -45,16 +45,8 @@
                     <li>
                         <a href="agendamento.php"> Agendamento </a>
                     </li>
-                        <!-- <li>
-                            <a href="orçamento.php"> Orçamento </a>
-                        </li> -->
                     <li>
-                        <a href="desenhos.php"> Portfólio </a>
-                    </li>
-                    <li>
-                        <nav>
-                            <a href="#rodape_1" href="rodape.php"> Contato/Rede Sociais </a>
-                        </nav>
+                        <a href="altera_adm.php"> Editar Perfil </a>
                     </li>
                     <li>
                         <a href="login.php"> LOGIN </a>

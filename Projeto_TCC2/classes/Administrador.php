@@ -29,9 +29,9 @@ class Administrador {
                senha_adm = '$senha_clt' ";
 
         $query = mysqli_query($con, $sql);
-        $result = mysqli_fetch_row($query);
+        $adm_result = mysqli_fetch_row($query);
 
-        return $result;
+        return $adm_result;
     }
 
     public function insert(): string {

@@ -1,42 +1,38 @@
-.container_menu{
-    max-width: 90vh;
-}
-
-.btn{
+.btn {
     margin: 0px 10px;
     color: white;
 }
 
-.btn.btn-warning:hover{
+.btn.btn-warning:hover {
     margin: 0px 10px;
     color: white;
 }
 
-.btn a{
+.btn a {
     color: white;
     text-decoration: none;
 }
 
-.acoes img{
+.acoes img {
     width: 20px;
     height: 20px;
     margin: 0px 10px;
 }
 
-.acoes img:nth-child(1){
+.acoes img:nth-child(1) {
     background-color: #5bd89eb6;
     border-radius: 10px;
 }
 
-.acoes img:nth-child(2){
+.acoes img:nth-child(2) {
     background-color: rgb(238, 97, 97);
     border-radius: 10px;
 }
 
-#lupa{
+#lupa {
     margin-left: 15px;
 }
 
-#id{
+#id {
     text-align: center;
 }

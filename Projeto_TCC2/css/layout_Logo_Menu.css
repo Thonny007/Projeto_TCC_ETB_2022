@@ -2,6 +2,10 @@ html {
     display: flex;
 }
 
+body {
+    width: 100%;
+}
+
 .logo h1 {
     font-size: 100px;
     margin: 14.6px;

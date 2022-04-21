@@ -21,8 +21,11 @@
 				?>
             <p> <a href="cadastro.php"> Cadastrar Cliente </a> </p>
             <div class="container">
-				<button id='btn_mostrar' type="button" class="btn btn-success">
+				<button id='btn_mostrar' type="button" class="btn btn-dark">
                     Mostrar Clientes Cadastrados
+                </button>
+                <button id='btn_mostrar' type="button" class="btn btn-dark">
+                    Cadastrar Cliente
                 </button>
                 <table class="table" id="table_cliente">
                     <thead>
@@ -42,7 +45,7 @@
                         </tr>
                     </thead>
                     <?php
-								while ($registro = mysqli_fetch_row($listar))
+							    while ($registro = mysqli_fetch_row($listar))
 								{
 					?>
                     <tr>

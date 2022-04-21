@@ -1,3 +1,4 @@
+<?php include "controler/valida_login.php" ?>
 <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/Menu_entrada.css">    
@@ -27,7 +28,7 @@
                     </h1>
                 </td>
                 <td width="20%" class="sair">
-                    <p> Olá <?php include "controler/valida_login.php" ?></p>
+                    <p> Olá <?php echo $_SESSION["nome"]; ?></p>
                     <a href="controler/logout.php">
                      
                         SAIR 

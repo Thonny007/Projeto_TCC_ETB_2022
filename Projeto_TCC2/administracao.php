@@ -14,7 +14,8 @@
 			<ul>		
 				<li> <a href="lista_cadastro.php" > Listar Cadastros </a> </li>
 				<li> <a href="lista_agendamentos.php" > Agendamentos </a> </li>
-				<li> <a href="cadastro_adm.php"> Cadastrar Administrador</li>
+				<li> <a href="cadastro_adm.php"> Cadastrar Administrador</a></li>
+				<li> <a href="lista_adm.php">Listar Administradores </a> </li>
 			</ul>
 		</div>
 	</body>

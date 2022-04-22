@@ -2,7 +2,7 @@
 	session_start();
 	include_once "../classes/Administrador.php";
 	include_once "../classes/cliente.php";
-	
+
 	$login = $_POST["login"];
 	$senha = $_POST["senha"];
 	
@@ -15,7 +15,7 @@
 				location.href = ('../login.php')
          	 </script>";
 	}else if($cliente != null && sizeof($cliente) > 0){
-		var_dump($cliente);
+		/* var_dump($cliente); */
 
 		$_SESSION["id"] = $cliente[0];
 		$_SESSION["nome"] = $cliente[1];
@@ -24,9 +24,9 @@
 		echo "<script>
 				location.href = ('../adm_cliente.php')
          	 </script>";
-		echo $_SESSION['adm'];
+		/* echo $_SESSION['adm']; */
 	}else if ($admin && sizeof($admin) > 0) {
-		var_dump($admin);
+		/* var_dump($admin); */
 		
 		$_SESSION["id"] = $admin[0];
 		$_SESSION["nome"] = $admin[1];
@@ -35,6 +35,6 @@
 		echo "<script>
 				location.href = ('../administracao.php')
          	 </script>";
-		echo $_SESSION['adm'];
+		/* echo $_SESSION['adm']; */
 	}
 ?>

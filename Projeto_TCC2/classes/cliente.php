@@ -35,6 +35,19 @@ class Cliente {
         return $result;
     }
     
+    
+    public static function loginAlredyExist($login){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        
+        $sql = "SELECT DISTINCT id_clt, nome_clt, login_clt, senha_clt
+        FROM cliente
+        WHERE login_clt = '$login' ";
+
+        $query = mysqli_query($con, $sql);
+        
+        return mysqli_fetch_row($query);
+    }
+
     public function insert(): string{
         $sql = "INSERT INTO cliente 
         (nome_clt, data_nascimento, numero_cliente, senha_clt, login_clt)

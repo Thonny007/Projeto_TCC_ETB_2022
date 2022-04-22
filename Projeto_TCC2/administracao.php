@@ -1,3 +1,4 @@
+<?php 	session_start(); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
 </head>
 <div class="container-fluid">
 	<body>
+		<?php include "controler/valida_login.php"?>
 		<?php include "menu_entrada.php"?> 	
 		<div id="adm_lista"> 
 			<ul>		

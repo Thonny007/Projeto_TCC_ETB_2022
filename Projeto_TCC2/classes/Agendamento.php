@@ -14,6 +14,8 @@ class Agendamentos {
         $this->con = mysqli_connect("localhost", "root", "", "agendamentos");
     }
 
+    
+
     public function insert(){
         $sql = "INSERT INTO agendamento
             (data_agnd, imagem_atendimento, descricao_tatto)
@@ -35,9 +37,7 @@ class Agendamentos {
             FROM agendamento
             WHERE status_agnd != 'desmarcado' ";
         }
-        
-
-
+    
         return $result = mysqli_query ($con, $sql_consulta);
     }
 
@@ -48,6 +48,7 @@ class Agendamentos {
         return mysqli_query($con, $sql);
     }
 
+   
     public static function formataData(string $dataRecebida): string{
         $data = new DateTime($dataRecebida);
         

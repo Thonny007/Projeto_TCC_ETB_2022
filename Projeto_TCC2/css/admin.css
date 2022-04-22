@@ -1,39 +1,41 @@
-#adm_lista ul {
-    background-color: blue;
-}
-
-#adm_lista ul li {
-    text-align: center;
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-#adm_lista ul li a {
-    font-size: 30px;
-    text-decoration: none;
-    color: black;
-    font-family: arial black;
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: yellow;
-}
-
-#adm_lista ul li a:hover {
-    text-decoration: none;
-}
-
-
-/*tabela*/
-
-.txt_orçamento table tr td {
-    background-color: blanchedalmond;
-    text-align: center;
-    text-decoration: black;
-    color: black;
-}
-
-.txt_orçamento img {
-    width: 25px;
-    margin: -7px;
-}
+ #adm_lista ul {
+     background-color: rgb(56, 56, 59);
+ }
+ 
+ div {
+     align-items: center;
+ }
+ 
+ #adm_lista ul li {
+     text-align: center;
+     font-size: 20px;
+     color: black;
+     text-decoration: none;
+     display: block;
+ }
+ 
+ #adm_lista ul li a {
+     font-size: 30px;
+     text-decoration: none;
+     color: black;
+     font-family: arial black;
+     -webkit-text-stroke-width: 0.4px;
+     -webkit-text-stroke-color: yellow;
+ }
+ 
+ #adm_lista ul li a:hover {
+     text-decoration: none;
+ }
+ /*tabela*/
+ 
+ .txt_orçamento table tr td {
+     background-color: blanchedalmond;
+     text-align: center;
+     text-decoration: black;
+     color: black;
+ }
+ 
+ .txt_orçamento img {
+     width: 25px;
+     margin: -7px;
+ }

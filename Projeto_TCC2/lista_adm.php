@@ -1,3 +1,4 @@
+<?php  session_start(); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,18 +19,21 @@
         <?php
 			$conectar = mysqli_connect ("localhost", "root", "", "agendamentos");				
 			$sql_consulta = "SELECT id_adm, nome_adm, login_adm, senha_adm 
-                            FROM 
+                             FROM 
                                     administrador";
-			$resultado_consulta = mysqli_query ($conectar, $sql_consulta);
-							
-					?>
-					<table border=1 class="centralizar">
-						<tr>
+			$resultado_consulta = mysqli_query ($conectar, $sql_consulta);			
+		?>
+			<div class="container">
+				<button id='btn_mostrar' type="button" class="btn btn-dark">
+                	    Mostrar Administradores do Sistema
+            	</button>
+					<table class="table table-dark table-striped" id="table_cliente" border=1 >
+						<tr> 
 							<td class="esquerda">
-								<p> Nome </p>
+								<p> <strong> Nome </strong> </p>
 							</td>
 							<td>
-								<p> Login </p>
+								<p> <strong> Login </strong> </p>
 							</td>
 						</tr>
 						<?php		
@@ -56,6 +60,7 @@
 						?>
 					</table>
             </div>
+		</div>
 
 </div>
 </body>

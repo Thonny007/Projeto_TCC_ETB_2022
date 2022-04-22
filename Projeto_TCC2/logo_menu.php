@@ -15,22 +15,22 @@
         /*imagem de fundo*/
         body {
             background-image: url('img/fundo.png');
-            
         }
     </style>
 
     <div class="container-fluid">
         <div class="logo">
             <h1>
-                <a href="index.php">
-                    <img src="img/logo1.png" alt="">
-                    DITTE.TATTOO
-                </a>
+
+                    <a href="index.php">
+                        <img src="img/logo1.png" alt="">
+                        DITTE.TATTOO
+                    </a>
             </h1>
         </div>
         <div class="lista_menu">
         <strong>
-                <ul>
+            <ul>
                 <li>
                     <a href="cadastro.php"> Cadastro </a>
                 </li>
@@ -47,11 +47,11 @@
                     <nav>
                         <a href="#rodape_1"> Contato/Rede Sociais </a>
                     </nav>
-                  </li>
-                  <li>
+                </li>
+                <li>
                     <a href="login.php"> LOGIN </a>
-                    </li>
-                </ul>
+                </li>
+            </ul>
         </strong>
         </div>
     </div>

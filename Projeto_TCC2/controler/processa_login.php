@@ -24,7 +24,7 @@
 		echo "<script>
 				location.href = ('../adm_cliente.php')
          	 </script>";
-		/* echo $_SESSION['adm']; */
+		echo $_SESSION['adm'];
 	}else if ($admin && sizeof($admin) > 0) {
 		/* var_dump($admin); */
 		
@@ -35,6 +35,6 @@
 		echo "<script>
 				location.href = ('../administracao.php')
          	 </script>";
-		/* echo $_SESSION['adm']; */
+		echo $_SESSION['adm'];
 	}
 ?>

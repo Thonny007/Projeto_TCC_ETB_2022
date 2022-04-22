@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,15 +20,15 @@
 				include_once "classes/cliente.php";
 				$listar = Cliente::list();
 				?>
-            <p> <a href="cadastro.php"> Cadastrar Cliente </a> </p>
+            <!-- <p> <a href="cadastro.php"> Cadastrar Cliente </a> </p> -->
             <div class="container">
 				<button id='btn_mostrar' type="button" class="btn btn-dark">
                     Mostrar Clientes Cadastrados
                 </button>
-                <button id='btn_mostrar' type="button" class="btn btn-dark">
+                <button id='btn_mostrar1' type="button" class="btn btn-dark">
                     Cadastrar Cliente
                 </button>
-                <table class="table" id="table_cliente">
+                <table  class="table table-striped table-hover" id="table_cliente">
                     <thead>
                         <tr>
                             <td width="20%">
@@ -82,6 +83,36 @@
 								}
 							?>
                 </table>
+                <table id="table_cliente1">
+                <div class="fomulario_cadastro">
+                <form method="POST" action="controler/processa_cadastro.php">
+                <h3> CADASTRO </h3>
+
+                <p>
+                    Nome Completo:
+                    <input id="nome" type="text" name="nome" required>
+                </p>
+                <p>
+                    Data de Nascimento:
+                    <input id="data_nasc" type="date" name="data_nasc" required>
+                </p>
+                <p>
+                    Telefone para Contado:
+                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
+                </p>
+                <p>
+                    LOGIN:
+                    <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
+                </p>
+                <p>
+                    SENHA:
+                    <input id="senha" type="password" name="senha" placeholder="Minino 6(seis Caracteres)" required>
+                </p>
+                <!-- ENVIAR formulario -->
+                <input id="cadastrar" type="submit" nome="cadastrar" value="cadastrar">
+            </form>
+        </div>
+                            </table>
             </div>
 
 </div>

@@ -41,7 +41,7 @@
             <strong>    
                 <ul>
                     <li>
-                        <a href="cadastro.php"> Cadastro </a>
+                        <a href="administracao.php"> Administração </a>
                     </li>
                     <li>
                         <a href="agendamento.php"> Agendamento </a>

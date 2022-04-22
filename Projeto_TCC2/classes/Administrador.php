@@ -76,16 +76,6 @@ class Administrador {
             }
         }
     }
-    /*  LISTAR OS ADMINISTRADORES DO SISTEMA    */
-    /* public static function list(): mysqli_result /* |bollean */{
-        /* $con = mysqli_connect("localhost", "root", "", "agendamentos");
-
-        $sql_consulta = "SELECT id_adm, nome_adm, login_adm, senha_adm 
-        FROM administrador";
-
-        return $result = mysqli_query ($con, $sql_consulta); */
-    //} */
-
    function delete($id) {
         $sql = "DELETE FROM administrador WHERE id_clt = '$id'";
 

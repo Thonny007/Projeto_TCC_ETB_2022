@@ -5,13 +5,7 @@ class Administrador {
     private $login_clt;
     private $con;
 
-    function __construct($senha_clt, $login_clt) {
-        $this->senha_clt = $senha_clt;
-        $this->login_clt = $login_clt;
-        $this->con = mysqli_connect("localhost", "root", "", "agendamentos");
-    }
-
-    function Administrador($nome_adm, $login_clt, $senha_clt) {
+    function __construct($nome_adm, $login_clt, $senha_clt) {
         $this->nome_adm = $nome_adm;
         $this->login_clt = $login_clt;
         $this->senha_clt = $senha_clt;
@@ -35,10 +29,7 @@ class Administrador {
 
         $sql = "SELECT id_adm, nome_adm, login_adm, senha_adm
         FROM administrador
-        WHERE 
-               login_adm = '$login_clt' 
-        AND
-               senha_adm = '$senha_clt' ";
+        WHERE login_adm = '$login_clt'";
 
         $query = mysqli_query($con, $sql);
         $adm_result = mysqli_fetch_row($query);
@@ -46,36 +37,32 @@ class Administrador {
         return $adm_result;
     }
 
-    public function insert(): string {
-        $sql_consulta = "SELECT login_adm FROM administrador WHERE  = '$this->login_clt'";
+    public function insert(){
+        $sql = "INSERT INTO agendamentos.administrador
+            (nome_adm, login_adm, senha_adm)
+        VALUES 
+            ('$this->nome_adm', '$this->login_clt', '$this->senha_clt')";
 
-        $result = mysqli_query($this->con,$sql_consulta);
-
-        $linhas = mysqli_num_rows($result);
-
-        if ($linhas == 1) {
-
-            die("⚠️ Login já Existente ⚠️ 
+        try {
+            mysqli_query($this->con, $sql);
+            echo 
+            "
                 <script>
-                    locale.href = ('cadastro_adm.php')
-                </script>");
-        } else {
-            $sql = "INSERT INTO administrador (nome_adm, senha_adm, login_adm)
-        VALUES
-        ($this->nome_adm, $this->senha_clt, $this->login_clt)";
-
-            $query = mysqli_query($this->con, $sql);
-            if ($query) {
-                return "Cadastrado com sucesso";
-            } else {
-                return "<script> 
-                            alert ('⚠️⚠️ Erro ao Cadastrar Tente Novamente ⚠️⚠️') 
-                        </script>";
-                 return "<script> location.href = ('../cadastro_adm.php') </script>";
-            }
-            }
+                    alert('administrador cadastrado com sucesso');
+                    location.href = '../cadastro_adm.php'
+                </script>
+            ";
+        } catch (\Throwable $th) {
+            echo
+            "
+                <script>
+                    alert('login já cadastrado favor tente outro');
+                    location.href = '../cadastro_adm.php'
+                </script>
+            ";
         }
     }
+
    function delete($id) {
         $sql = "DELETE FROM administrador WHERE id_clt = '$id'";
 
@@ -125,5 +112,5 @@ class Administrador {
     function setLogin_clt($login_clt) {
         $this->login_clt = $login_clt;
     }
-
+}
 ?>

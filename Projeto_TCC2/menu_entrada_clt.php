@@ -40,13 +40,13 @@
             <strong>    
                 <ul>
                     <li>
-                        <a href="administracao.php"> Administração </a>
+                        <a href="adm_cliente.php"> Administração </a>
                     </li>
                     <li>
                         <a href="agendamento.php"> Agendamento </a>
                     </li>
                     <li>
-                        <a href="altera_adm.php"> Editar Perfil </a>
+                        <a href="altera_clt.php"> Editar Perfil </a>
                     </li>
                     <li>
                         <a href="login.php"> LOGIN </a>

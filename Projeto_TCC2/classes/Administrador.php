@@ -48,7 +48,7 @@ class Administrador {
             echo 
             "
                 <script>
-                    alert('administrador cadastrado com sucesso');
+                    alert('☺ Administrador Cadastrado Com Sucesso ☺');
                     location.href = '../cadastro_adm.php'
                 </script>
             ";
@@ -56,7 +56,7 @@ class Administrador {
             echo
             "
                 <script>
-                    alert('login já cadastrado favor tente outro');
+                    alert('⚠️⚠️ Login Já Cadastrado Favor Tente Outro ⚠️⚠️');
                     location.href = '../cadastro_adm.php'
                 </script>
             ";

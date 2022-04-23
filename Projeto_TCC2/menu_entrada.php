@@ -46,7 +46,7 @@
                         <a href="agendamento.php"> Agendamento </a>
                     </li>
                     <li>
-                        <a href="altera_adm.php"> Editar Perfil </a>
+                        <a href="altera_adm.php?codigo=<?php $registro[0] ?>"> Alterar Dados</a>
                     </li>
                     <li>
                         <a href="login.php"> LOGIN </a>

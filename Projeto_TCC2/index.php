@@ -16,6 +16,7 @@
         <!-- Carousel Bootstrap -->
         <div class="container-fluid">
             <?php include "carousel_index.php"   ?>
+        <hr style="opacity:1%;">  
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">

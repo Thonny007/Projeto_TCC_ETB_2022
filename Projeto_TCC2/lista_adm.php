@@ -42,7 +42,7 @@
 						?>						
 						<tr>
 							<td class="esquerda">
-								<p> 
+								<p <?php $registro[0] ?>>
 										<?php 
 											echo "$registro[1]";
 										?>

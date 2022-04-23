@@ -18,6 +18,7 @@
 				<li> <a href="lista_agendamentos.php" > Agendamentos </a> </li>
 				<li> <a href="cadastro_adm.php"> Cadastrar Administrador</a></li>
 				<li> <a href="lista_adm.php">Listar Administradores </a> </li>
+				<li> <a href="altera_adm.php?codigo=<?php $registro[0]; ?>"> Alterar Dados</a> </li>
 			</ul>
 		</div>
 	</body>

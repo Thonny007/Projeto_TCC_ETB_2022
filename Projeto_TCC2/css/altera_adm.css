@@ -1,0 +1,12 @@
+.container{
+    margin-top: 30px;
+    max-width: 500px;
+}
+
+.form-group{
+    padding: 20px;
+}
+
+.btn.btn-danger{
+    margin-left: 20px;
+}

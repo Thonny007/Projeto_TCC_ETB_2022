@@ -22,8 +22,18 @@ class Agendamentos {
         VALUES
             ('$this->data_agendamento','$this->imagem','$this->desc')";
 
-        return mysqli_query($this->con, $sql);
+        mysqli_query($this->con, $sql);
+
+
+        $getLastId = "SELECT a.id_agnd  FROM agendamento a
+        order by a.id_agnd desc limit 1;";
+
+        $queryLastId = mysqli_query($this->con, $getLastId);
+        $resultLastId = mysqli_fetch_row($queryLastId);
         
+        mysqli_close($this->con);
+
+        return $resultLastId;
     }
 
     public static function list($excluidos = false ): mysqli_result /* | bollean */{

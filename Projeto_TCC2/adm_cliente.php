@@ -14,7 +14,7 @@
 		<div id="adm_lista"> 
 			<ul>		
 				<li> <a href="altera_clt.php" > Alterar meu Cadastro </a> </li>
-				<li> <a href="lista_agendamentos.php" > Agendamentos Realizados  </a> </li>
+				<li> <a href="agendamento.php" > Realizar agendamento  </a> </li>
 
 			</ul>
         <div class="rodape_1">

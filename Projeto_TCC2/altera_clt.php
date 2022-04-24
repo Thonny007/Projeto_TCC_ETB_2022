@@ -29,11 +29,11 @@
 									</div>
 									<div class="form-group">
 										<label>Data de Nascmento</label>
-										<input type="text" class="form-control" name="data_nasc" value="<?php echo cliente::formataData($registro[4]); ?>">
+										<input type="date" class="form-control" name="data_nasc" value="<?php echo $registro[4]; ?>">
 									</div>
 									<div class="form-group">
 										<label>Telefone</label>
-										<input type="text" class="form-control" name="telefone" value="<?php echo $registro[1] ?>">
+										<input type="text" class="form-control" name="telefone" value="<?php echo $registro[7] ?>">
 									</div>
 									<div class="form-group">
 										<label>Login</label>

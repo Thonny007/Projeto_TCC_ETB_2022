@@ -94,7 +94,7 @@ class Cliente {
         
     }
 
-    static function getById($id) {
+    public static function getById($id) {
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
         
         $sql = "SELECT * FROM cliente WHERE id_clt = $id";
@@ -108,33 +108,49 @@ class Cliente {
         SET 
             nome_clt='$this->nome_clt', 
             login_clt='$this->login_clt',
-            senha_clt='$this->senha_clt'
-            data_nasc='$this->data_nascimento',
-            telefone='$this->numero_cliente',
+            senha_clt='$this->senha_clt',
+            data_nascimento='$this->data_nascimento',
+            numero_cliente='$this->numero_cliente'
         WHERE id_clt = '$id' ";
 
         try {
             mysqli_query($this->con, $sql);
-            echo "<script>
-                    alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
-                    location.href = ('../adm_cliente.php')
-                 </script>";
+            echo "
+            <script>
+                alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
+                location.href = ('../adm_cliente.php')
+            </script>";
         } catch (\Throwable $th) {
-            echo "<script>
-                    alert ('⚠️⚠️ ERRO NA ALTERAÇÃO DE DADOS ⚠️⚠️')
-                    location.href = ('../adm_cliente.php')
-                </script>";
+            echo "
+            <script>
+                alert ('⚠️⚠️ ERRO NA ALTERAÇÃO DE DADOS ⚠️⚠️')
+                location.href = ('../adm_cliente.php')
+            </script>";
+
+            echo $th;
         }
 
-        mysqli_close($this->con);
-    }
-   
-   /*  public static function formataData(string $data_nascimento): string{
-        $data = new DateTime($data_nascimento);
-        
-        return $data->format('d/m/Y');
-    } */
+            mysqli_close($this->con);
+        }
 
+
+    public static function geraRelacionamento($id_cliente, $id_agendamento){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        
+        $sql = 
+        "UPDATE agendamentos.cliente
+        SET id_agnd=$id_agendamento[0]
+        WHERE id_clt=$id_cliente";
+
+        try {
+            mysqli_query($con, $sql);
+            echo "certo?";
+        } catch (\Throwable $th) {
+            echo "errado?";
+        }
+
+        mysqli_close($con);
+    }
 
     function getId_agnd() {
         return $this->id_agnd;

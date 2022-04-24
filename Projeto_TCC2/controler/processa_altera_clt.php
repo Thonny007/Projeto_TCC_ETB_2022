@@ -8,7 +8,19 @@
     $data_nasc = $_POST["data_nasc"]; 
     $telefone = $_POST["telefone"];
     
-    $cliente = new Cliente ($nome, $login, $senha,$data_nasc,$telefone);
+    $cliente = new Cliente ($nome, $data_nasc, $telefone,$senha, $login);
 
+    
+    echo 
+    "
+    <p>id: $id</p>
+    <p>nome: $nome</p>
+    <p>login: $login</p>
+    <p>senha: $senha</p>
+    <p>data: $data_nasc</p>
+    <p>telefone: $telefone</p>
+    ";
+    
     $cliente->update($id);
+
 ?>

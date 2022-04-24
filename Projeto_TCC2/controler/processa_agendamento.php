@@ -1,6 +1,8 @@
 <?php
     include_once "../classes/Agendamento.php";
+    include_once "../classes/cliente.php";
     
+    $id = $_POST["id"];
     $data = $_POST["data_agendamento"];
     $hora = $_POST["hora_agendamento"].":00:00";            
     $data_completa = "$data $hora";
@@ -11,6 +13,7 @@
     $foto = $_FILES["ft"];
 
     $agendamento = new Agendamentos($formataData, $foto["tmp_name"], $desc);
+    $id_agnd = $agendamento->insert();
 
-    $agendamento->insert();
+    Cliente::geraRelacionamento($id, $id_agnd);
 ?>

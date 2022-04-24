@@ -94,13 +94,48 @@ class Cliente {
         
     }
 
-    public function getById(int $id): string{
+    static function getById($id) {
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        
         $sql = "SELECT * FROM cliente WHERE id_clt = $id";
-        $query = mysqli_query($this->con, $sql);
-
+        $query = mysqli_query($con, $sql);
+        
         return mysqli_fetch_row($query);
     }
-            
+    
+    public function update($id){        
+        $sql = "UPDATE agendamentos.cliente
+        SET 
+            nome_clt='$this->nome_clt', 
+            login_clt='$this->login_clt',
+            senha_clt='$this->senha_clt'
+            data_nasc='$this->data_nascimento',
+            telefone='$this->numero_cliente',
+        WHERE id_clt = '$id' ";
+
+        try {
+            mysqli_query($this->con, $sql);
+            echo "<script>
+                    alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
+                    location.href = ('../adm_cliente.php')
+                 </script>";
+        } catch (\Throwable $th) {
+            echo "<script>
+                    alert ('⚠️⚠️ ERRO NA ALTERAÇÃO DE DADOS ⚠️⚠️')
+                    location.href = ('../adm_cliente.php')
+                </script>";
+        }
+
+        mysqli_close($this->con);
+    }
+   
+   /*  public static function formataData(string $data_nascimento): string{
+        $data = new DateTime($data_nascimento);
+        
+        return $data->format('d/m/Y');
+    } */
+
+
     function getId_agnd() {
         return $this->id_agnd;
     }

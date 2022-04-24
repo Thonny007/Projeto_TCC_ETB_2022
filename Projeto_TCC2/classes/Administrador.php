@@ -100,7 +100,10 @@ public function insert(){
 
         try {
             mysqli_query($this->con, $sql);
-            echo "deu certo";
+            echo "<script>
+                    alert ('☺ Cadastro do(a) $this->nome_adm Alterado Com Sucesso ☺')
+                    location.href = ('../administracao.php')
+                 </script>";
         } catch (\Throwable $th) {
             echo "deu errado";
         }

@@ -42,7 +42,7 @@
 						<?php
 							}
 							else {
-								echo "alert('erro ao consultar ')";
+								echo "alert(' erro ao consultar ')";
 							}
 						?>
 					</form>

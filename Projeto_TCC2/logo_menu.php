@@ -22,7 +22,7 @@
         <div class="logo">
             <h1>
 
-                    <a href="index.php">
+                    <a href="controler/logout.php">
                         <img src="img/logo1.png" alt="">
                         DITTE.TATTOO
                     </a>

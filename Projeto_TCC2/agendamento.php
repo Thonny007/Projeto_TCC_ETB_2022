@@ -33,7 +33,7 @@
                     Escolha um Horário:
                     <select name="hora_agendamento" id="hora_agendamento" required>
                         <option value="8"selected>8hrs</option>
-                        <option value="10" >10hrs</option>
+                        <option value="10" >12hrs</option>
                         <option value="12">12hrs</option>
                         <option value="14">14hrs</option>
                         <option value="16">16hrs</option>

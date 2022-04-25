@@ -28,15 +28,14 @@
 
 	<?php include "menu_entrada.php"; ?>
 <div class="container-fluid">
-		<button class="btn btn-success">
-			<a href="agendamento.php">novo agendamento</a>
+		<button class="btn btn-dark">
+			<a href="agendamento.php">Novo Agendamento</a>
 		</button>
 
-		<button class="btn btn-warning">listar Clientes excluidos</button>
-		<table id="lista_cadastro"  class="table mt-3 table-warning">
+		<button class="btn btn-dark"> Listar Clientes Excluidos</button>
+		<table id="lista_cadastro" style="opai" class="table table-striped table-hover">
 			<thead>
 				<tr>
-					<td> Número Agend</td>
 					<td>Data Agend</td>
 					<td>Img Referencia</td>
 					<td>status Agend</td>
@@ -48,7 +47,6 @@
 				while ($registro = mysqli_fetch_row($listar)){
 			?>	
 				<tr>
-					<td id="id"><?php echo "$registro[0]";?></td>
 
 					<td><?php echo Agendamentos::formataData($registro[1]); ?></td>
 					<td>

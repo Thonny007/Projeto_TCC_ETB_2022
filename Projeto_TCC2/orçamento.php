@@ -25,8 +25,10 @@
                 <tr>
                     <td>
                         <h5> Como é Realizado os Orçamentos </h5>
-                        <p>
-                            Os orçamentos são feitos via Redes Sociais:
+                        <p> O Preço fixo por Tatuagem: R$ 80,00 com tinta Preta, tatuagem colorida é R$ 100,00 </p>
+                        <p> Valor da Hora: R$ 50,00 </p>
+                     <!--    <p>
+                            O orçamento mais detalhado pode ser realizado pelas Redes Sociais:
                             <a href="https://www.instagram.com/dite.tattoo/">
                                 <img src="img/contados/insta.png" />
                                 Instagram
@@ -37,7 +39,7 @@
                             você pode entrar em contato e me mandar as
                             seguintes informações: Descrição do trabalho que deseja ou algum flash(Desenho Rápido) que
                             tenha interesse.
-                        </p>
+                        </p> -->
                         <p>
                             Fique a vontade para trazer inspirações e referências para desenvolvermos
                             o desenho ideal pra você.

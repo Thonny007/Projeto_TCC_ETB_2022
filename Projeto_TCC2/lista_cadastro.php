@@ -25,9 +25,9 @@
 				<button id='btn_mostrar' type="button" class="btn btn-dark">
                     Mostrar Clientes Cadastrados
                 </button>
-                <button id='btn_mostrar1' type="button" class="btn btn-dark">
+               <!--  <button id='btn_mostrar1' type="button" class="btn btn-dark">
                     Cadastrar Cliente
-                </button>
+                </button> -->
                 <table  class="table table-striped table-hover" id="table_cliente">
                     <thead>
                         <tr>
@@ -42,6 +42,9 @@
                             </td>
                             <td width="20%">
                                 <p> NÚMERO </p>
+                            </td>
+                            <td>
+                                <p>AÇÃO</p>
                             </td>
                         </tr>
                     </thead>
@@ -75,6 +78,11 @@
                                 <?php echo $registro[7]; ?>
                             </p>
                         </td>
+                        <td>
+                            <a href="controler/delete_cliente.php" >
+								Excluir <img width="20px"  src="css/icons/lixo.svg"/>
+							</a>
+                        </td>    
                         <tfoot>
 
                         </tfoot>
@@ -83,7 +91,7 @@
 								}
 							?>
                 </table>
-                <table id="table_cliente1">
+                <!-- <table id="table_cliente1">
                 <div class="fomulario_cadastro">
                 <form method="POST" action="controler/processa_cadastro.php">
                 <h3> CADASTRO </h3>
@@ -108,11 +116,11 @@
                     SENHA:
                     <input id="senha" type="password" name="senha" placeholder="Minino 6(seis Caracteres)" required>
                 </p>
-                <!-- ENVIAR formulario -->
+                 ENVIAR formulario 
                 <input id="cadastrar" type="submit" nome="cadastrar" value="cadastrar">
             </form>
         </div>
-                            </table>
+                            </table> -->
             </div>
 
 </div>

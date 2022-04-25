@@ -27,13 +27,16 @@
 				<button id='btn_mostrar' type="button" class="btn btn-dark">
                 	    Mostrar Administradores do Sistema
             	</button>
-					<table class="table table-dark table-striped" id="table_cliente" border=1 >
+					<table class="table table-striped table-hover" id="table_cliente" border=1 >
 						<tr> 
 							<td class="esquerda">
 								<p> <strong> Nome </strong> </p>
 							</td>
 							<td>
 								<p> <strong> Login </strong> </p>
+							</td>
+							<td>
+								<p> <strong> Ações </strong> </p>
 							</td>
 						</tr>
 						<?php		
@@ -53,6 +56,11 @@
 								<p>									 
 									<?php echo "$registro[2]"; ?>
 								</p>
+							</td>
+							<td>
+								<a href="controler/delete_cliente.php" >
+									Excluir <img width="20px"  src="css/icons/lixo.svg"/>
+								</a>
 							</td>
 						</tr>
 						<?php

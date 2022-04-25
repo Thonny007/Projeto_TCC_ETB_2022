@@ -32,10 +32,10 @@
         <strong>
             <ul>
                 <li>
-                    <a href="cadastro.php"> Cadastro </a>
+                    <a href="cadastro.php"> Cadastro/Agendamento </a>
                 </li>
                 <li>
-                    <a href="agendamento.php"> Agendamento </a>
+                    <a href="agendamento.php">  </a>
                 </li>
                 <li>
                     <a href="orçamento.php"> Orçamento </a>

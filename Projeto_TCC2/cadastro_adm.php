@@ -35,7 +35,7 @@
                 </p>
                 <p>
                     SENHA:
-                    <input id="senha" type="password" name="senha" placeholder="Minino 6(seis Caracteres)" required>
+                    <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
                 </p>
                 <!-- ENVIAR formulario -->
                 <input id="cadastrar" type="submit" nome="cadastrar" value="Cadastrar Administrador">

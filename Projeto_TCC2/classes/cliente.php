@@ -144,9 +144,15 @@ class Cliente {
 
         try {
             mysqli_query($con, $sql);
-            echo "certo?";
+            echo "<script>
+                    alert ('☺ AGENDANDO COM SUCESSO ☺')
+                    location.href = ('../adm_cliente.php')
+                 </script>";
         } catch (\Throwable $th) {
-            echo "errado?";
+            echo "<script>
+                    alert ('⚠️⚠️ ERRO AO AGENDATAR TATTOO ⚠️⚠️')
+                    location.href = ('../adm_cliente.php')
+                 </script>";
         }
 
         mysqli_close($con);

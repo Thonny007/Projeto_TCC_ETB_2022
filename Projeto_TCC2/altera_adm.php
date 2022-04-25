@@ -42,7 +42,10 @@
 						<?php
 							}
 							else {
-								echo "alert(' erro ao consultar ')";
+								echo "<script>
+             							alert ('⚠️ ERRO NA ALTERÇÃO ⚠️')
+										location.href = ('altera_adm.php')
+         	 						 </script>";
 							}
 						?>
 					</form>

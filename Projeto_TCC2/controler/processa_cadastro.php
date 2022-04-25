@@ -34,12 +34,12 @@
 
             echo "<script>
                     alert ('☺ CADASTRO REALIZADO COM SUCESSO ☺')
-                    location.href = ('/Projeto_TCC2/agendamento.php')
+                    location.href = ('/Projeto_TCC2/login.php')
                 </script>";
         }
         }else {    
             echo "<script>
-                    alert ('login já existente favor inserir outro login')
+                    alert ('⚠️ login já existente favor inserir outro login ⚠️')
                     location.href = ('/Projeto_TCC2/cadastro.php')
                 </script>";
         }

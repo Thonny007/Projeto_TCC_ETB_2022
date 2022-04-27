@@ -64,7 +64,7 @@ class Cliente {
         
     }
 
-    public static function list(): mysqli_result /* |bollean */{
+    public static function list(): mysqli_result {
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
         $sql_consulta = "SELECT id_clt, nome_clt, login_clt, senha_clt, 
@@ -81,26 +81,57 @@ class Cliente {
         return $data->format('d/m/Y');
     }
 
-    public function delete(int $id): string{
+    public function delete($id){
         $sql = "DELETE FROM cliente WHERE id_clt = '$id'";
 
-        $query = mysqli_query($this->con, $sql);
+        try {
+            $query = mysqli_query($this->con, $sql);
+            
+            echo "
+                <script>
+                    alert ('Registro Deletado/Apagado com Sucesso') 
+                </script>
+            ";
+            
+            echo "
+            <script> 
+                location.href = ('../lista_cadastro.php') 
+            </script>";
 
-        if ($query) {
-            return "👍 Registro Deletado com Sucesso 👍";
-        } else {
-            return "⚠️ Houve um Erro ao Deletar o Cliente ⚠️";
+            
+        } catch (\Throwable $th) {
+            echo "
+            <script> 
+                alert ('ERRO AO DELETAR DADO') 
+            </script>";
+            
+            echo "
+            <script> 
+                location.href ('../lista_cadastro.php') 
+            </script>";
+            
         }
-        
+
+
     }
 
-    public static function getById($id) {
+    public static function getById($id, $toCLiente=false) {
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
         
         $sql = "SELECT * FROM cliente WHERE id_clt = $id";
         $query = mysqli_query($con, $sql);
         
-        return mysqli_fetch_row($query);
+        $result = mysqli_fetch_row($query);
+        
+        $cliente = new Cliente(
+            $result[1],
+            $result[4],
+            $result[7],
+            $result[3],
+            $result[2],
+        );
+
+       return $toCLiente ? $cliente : $result;
     }
     
     public function update($id){        

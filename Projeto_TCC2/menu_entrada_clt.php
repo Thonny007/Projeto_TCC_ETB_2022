@@ -12,9 +12,7 @@
         body {
             background-image: url('img/fundo1.jpg');
         }
-
     </style>
-
     <div id="menu">
         <div class="logo_entrada">
             <table>    
@@ -44,9 +42,6 @@
                     </li>
                     <li>
                         <a href="agendamento.php"> Agendamento </a>
-                    </li>
-                    <li>
-                        <a href="altera_clt.php"> Editar Perfil </a>
                     </li>
                     <li>
                         <a href="login.php"> LOGIN </a>

@@ -15,7 +15,7 @@
 			<ul>		
 				<li> <a href="altera_clt.php" > Alterar meu Cadastro </a> </li>
 				<li> <a href="agendamento.php" > Realizar agendamento  </a> </li>
-
+                <li> <a href="controler/ver_agendamento.php"> Ver Agendamento </a> </li>
 			</ul>
         <div class="rodape_1">
                 <?php include "rodape.php" ?>

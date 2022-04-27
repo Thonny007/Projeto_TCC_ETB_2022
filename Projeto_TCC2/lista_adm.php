@@ -58,10 +58,12 @@
 								</p>
 							</td>
 							<td>
-								<a href="controler/delete_cliente.php" >
-									Excluir <img width="20px"  src="css/icons/lixo.svg"/>
-								</a>
-							</td>
+                            <button>
+                                <a href="controler/processa_delete_adm.php?id=<?php echo $registro[0] ?>" >
+                                    Excluir <img width="20px"  src="css/icons/lixo.svg"/>
+                                </a>
+                            </button>
+                        </td>  
 						</tr>
 						<?php
 							}

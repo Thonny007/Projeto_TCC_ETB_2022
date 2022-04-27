@@ -32,7 +32,7 @@
 			<a href="agendamento.php">Novo Agendamento</a>
 		</button>
 
-		<button class="btn btn-dark"> Listar Clientes Excluidos</button>
+		<button class="btn btn-dark"> Listar Agendamentos Excluidos</button>
 		<table id="lista_cadastro" style="opai" class="table table-striped table-hover">
 			<thead>
 				<tr>

@@ -44,6 +44,9 @@
                                 <p> NÚMERO </p>
                             </td>
                             <td>
+                               <p>Nº Agend</p> 
+                            </td>
+                            <td width="5%">
                                 <p>AÇÃO</p>
                             </td>
                         </tr>
@@ -69,9 +72,16 @@
                             <?php echo $registro[7]; ?>
                         </td>
                         <td>
-                            <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>" >
-								Excluir <img width="20px"  src="css/icons/lixo.svg"/>
-							</a>
+                            <a href="ver_agendamento.clt.php?id_agnd=<?php echo $registro_agnd[0] ?>">
+                                    <?php echo $registro[5]; ?>
+                            </a>
+                        </td>
+                        <td>
+                            <button>
+                                <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>" >
+                                    Excluir <img width="20px"  src="css/icons/lixo.svg"/>
+                                </a>
+                            </button>
                         </td>    
                     </tr>
                     <tfoot>

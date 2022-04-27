@@ -63,31 +63,79 @@ public function insert(){
                 ";
             }
     }
-    
-    function delete($id) {
-        $sql = "DELETE FROM administrador WHERE id_clt = '$id'";
+    public function delete($id){
+        $sql = "DELETE FROM administrador WHERE id_adm = '$id'";
+
+        try {
+            $query = mysqli_query($this->con, $sql);
+            
+            echo "
+                <script>
+                    alert ('☺ Registro de Administrador Deletado/Apagado com Sucesso ☺') 
+                </script>
+            ";
+            echo "
+            <script> 
+                location.href = ('../lista_adm.php') 
+            </script>";
+
+            
+        } catch (\Throwable $th) {
+            echo "
+            <script> 
+                alert ('ERRO AO DELETAR ADMINISTRADOR') 
+            </script>";
+            
+            echo "
+            <script> 
+                location.href ('../lista_cadastro_adm.php') 
+            </script>";
+            
+        }
+
+
+    }
+
+    /* function delete($id) {
+        $sql = "DELETE FROM administrador WHERE id_adm = '$id'";
         
         $query = mysqli_query($this->con, $sql);
         
         if ($query) {
             return "<script> 
-            alert ('☺ Registro Deletado com Sucesso ☺') 
-            </script>";
+                        alert ('☺ Registro Deletado com Sucesso ☺') 
+                    </script>";
             return"<script> location.href = ('../administracao.php') </script>";;
         } else {
             return "<script> 
-            alert ('⚠️⚠️ Houve um Erro ao Deletar o Cliente ⚠️⚠️') 
-            </script>";
-        }
-    }
+                        alert ('⚠️⚠️ Houve um Erro ao Deletar o Administrador ⚠️⚠️') 
+                    </script>";
+        } 
+    }*/
     
-    static function getById($id) {
+    /* static function getById($id) {
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
         
         $sql = "SELECT * FROM administrador WHERE id_adm = $id";
         $query = mysqli_query($con, $sql);
         
         return mysqli_fetch_row($query);
+    } */
+    public static function getById($id, $toAdmin=false) {
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        
+        $sql = "SELECT * FROM administrador WHERE id_adm = $id";
+        $query = mysqli_query($con, $sql);
+        
+        $result = mysqli_fetch_row($query);
+        
+        $admin = new Administrador(
+            $result[1],
+            $result[2],
+            $result[3],
+        );
+
+       return $toAdmin ? $admin : $result;
     }
     
     public function update($id){        

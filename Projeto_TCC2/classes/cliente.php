@@ -89,7 +89,7 @@ class Cliente {
             
             echo "
                 <script>
-                    alert ('Registro Deletado/Apagado com Sucesso') 
+                    alert ('☺ Registro Deletado/Apagado com Sucesso ☺') 
                 </script>
             ";
             

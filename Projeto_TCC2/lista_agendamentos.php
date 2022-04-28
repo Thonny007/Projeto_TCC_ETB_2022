@@ -23,7 +23,7 @@
 <body>
 	<?php 
 		include_once "classes/Agendamento.php";
-		$listar = Agendamentos::list(false);
+		$listar = Agendamentos::list();
 	?>
 
 	<?php include "menu_entrada.php"; ?>
@@ -33,13 +33,14 @@
 		</button>
 
 		<button class="btn btn-dark"> Listar Agendamentos Excluidos</button>
-		<table id="lista_cadastro" style="opai" class="table table-striped table-hover">
+		<table id="lista_cadastro" style="opai" class="table table-striped table-hover mt-3">
 			<thead>
 				<tr>
 					<td>Data Agend</td>
 					<td>Img Referencia</td>
 					<td>status Agend</td>
 					<td>Descrição Tattoo</td>
+					<td>Nome Cliente</td>
 					<td>Ação</td>
 				</tr>
 			</thead>
@@ -55,9 +56,9 @@
 							<img src="css/icons/lupa.svg" alt="icone lupa">
 						</a>
 					</td>		
-					<td><?php echo $registro[2]; ?></td>				
-					<td><?php echo $registro[3]; ?></td>
-					
+					<td><?php echo $registro[2];?></td>				
+					<td><?php echo $registro[3];?></td>
+					<td><?php echo $registro[4];?></td>
 					<td class="acoes">
 						<img src="css/icons/check.svg" alt="icone check">
 						<img src="css/icons/cancel.svg" alt="icone cancelar">

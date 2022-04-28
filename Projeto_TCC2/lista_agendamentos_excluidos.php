@@ -40,6 +40,7 @@
 				<td>Img Referencia</td>
 					<td>status Agend</td>
 					<td>Descrição Tattoo</td>
+					<td>nome do cliente</td>
 					<td>Ação</td>
 				</tr>
 			</thead>
@@ -55,9 +56,9 @@
 							<img src="css/icons/lupa.svg" alt="icone lupa">
 						</a>
 					</td>		
-					<td><?php echo $registro[2]; ?></td>				
-					<td><?php echo $registro[3]; ?></td>
-					
+					<td><?php echo $registro[2];?></td>				
+					<td><?php echo $registro[3];?></td>
+					<td><?php echo $registro[4];?></td>
 					<td class="acoes">
 						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado">
 							<img class="confirma" src="css/icons/check.svg" alt="icone check">

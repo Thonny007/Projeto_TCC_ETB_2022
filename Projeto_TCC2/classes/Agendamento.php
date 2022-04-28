@@ -39,13 +39,30 @@ class Agendamentos {
     public static function list($excluidos = false ): mysqli_result /* | bollean */{
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
         
-        if ($excluidos) {
-            $sql_consulta = "SELECT id_agnd, data_agnd, status_agnd, descricao_tatto
-            FROM agendamento";
+        if (!$excluidos) {
+            $sql_consulta = 
+            "SELECT 
+                ag.id_agnd as 'id', 
+                ag.data_agnd as 'data', 
+                ag.status_agnd as 'status', 
+                ag.descricao_tatto as 'desc',
+                c.nome_clt as 'cliente', 
+                c.id_clt as 'id cliente'
+            FROM agendamento ag
+            inner join cliente c on c.id_agnd  = ag.id_agnd
+            where ag.status_agnd  != 'desmarcado'";
         } else {
-            $sql_consulta = "SELECT id_agnd, data_agnd, status_agnd, descricao_tatto
-            FROM agendamento
-            WHERE status_agnd != 'desmarcado' ";
+            $sql_consulta = 
+            "SELECT 
+                ag.id_agnd as 'id', 
+                ag.data_agnd as 'data', 
+                ag.status_agnd as 'status', 
+                ag.descricao_tatto as 'desc',
+                c.nome_clt as 'cliente', 
+                c.id_clt as 'id cliente'
+            FROM agendamento ag
+            inner join cliente c on c.id_agnd  = ag.id_agnd
+            where ag.status_agnd = 'desmarcado' ";
         }
     
         return $result = mysqli_query ($con, $sql_consulta);

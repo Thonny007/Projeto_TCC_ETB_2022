@@ -30,7 +30,8 @@ class Administrador {
         
         $sql = "SELECT id_adm, nome_adm, login_adm, senha_adm
         FROM administrador
-        WHERE login_adm = '$login_clt'";
+        WHERE login_adm = '$login_clt'
+        AND senha_adm = '$senha_clt'; ";
 
         $query = mysqli_query($con, $sql);
         $adm_result = mysqli_fetch_row($query);

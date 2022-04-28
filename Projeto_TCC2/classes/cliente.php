@@ -134,6 +134,24 @@ class Cliente {
        return $toCLiente ? $cliente : $result;
     }
     
+    public function getAgendamento($id){
+        $sql = "SELECT 
+            a.data_agnd, 
+            a.status_agnd, 
+            a.descricao_tatto  
+        from agendamento a
+        inner join cliente c on a.id_agnd = c.id_agnd
+        where c.id_clt = '$id'";
+
+        $query = mysqli_query($this->con, $sql);
+        
+        $result = mysqli_fetch_row($query);
+
+        mysqli_close($this->con);
+
+        return $result;
+    }
+
     public function update($id){        
         $sql = "UPDATE agendamentos.cliente
         SET 

@@ -13,21 +13,34 @@
     text-decoration: none;
 }
 
-.acoes img {
-    width: 20px;
-    height: 20px;
+.acoes .cancela {
+    width: 25px;
+    height: 25px;
     margin: 0px 10px;
 }
 
-.acoes img:nth-child(1) {
-    background-color: #5bd89eb6;
-    border-radius: 10px;
+.acoes .confirma {
+    width: 27px;
+    height: 27px;
+    margin: 0px 10px;
 }
 
-.acoes img:nth-child(2) {
+#lista_cadastro {
+    background-color: #A9A9A9;
+    font-size: 17px;
+}
+
+
+/* .acoes img:nth-child(1) {
+    background-color: #5bd89eb6;
+    border-radius: 10px;
+} */
+
+
+/* .acoes img:nth-child(2) {
     background-color: rgb(238, 97, 97);
     border-radius: 10px;
-}
+} */
 
 #lupa {
     margin-left: 15px;
@@ -35,4 +48,8 @@
 
 #id {
     text-align: center;
+}
+
+td a {
+    text-decoration: none;
 }

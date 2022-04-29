@@ -33,18 +33,18 @@
 		</button>
 
 		<button class="btn btn-dark">
-			<a href="lista_agendamentos_excluidos.php">listar Clientes excluidos</a>
+			<a href="lista_agendamentos_excluidos.php">listar Agendamentos Cancelados</a>
 		</button>
 
 		<table id="lista_cadastro" style="opai" class="table table-hover mt-3">
 			<thead>
 				<tr>
-					<td>Data Agend</td>
-					<td>Img Referencia</td>
-					<td>status Agend</td>
-					<td>Descrição Tattoo</td>
-					<td>Nome Cliente</td>
-					<td>Ação</td>
+					<td> Data Agend </td>
+					<td> Img Referencia </td>
+					<td> status Agend </td>
+					<td> Descrição Tattoo </td>
+					<td> Nome Cliente </td>
+					<td> Ação </td>
 				</tr>
 			</thead>
 			<?php		

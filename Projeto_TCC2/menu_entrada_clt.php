@@ -31,6 +31,9 @@
                         SAIR 
                     </a>
                 </td>
+                <td><!--  Gato para o nome não passar a tela -->
+                    <p style="opacity:0%;">a</p>
+                </td>
             </tr>
             </table>
         </div>

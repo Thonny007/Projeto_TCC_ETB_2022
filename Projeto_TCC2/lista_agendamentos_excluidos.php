@@ -18,6 +18,7 @@
 		}
 		</style>
 </head>
+<div class="container-fluid">
 <body>
 	<?php 
 		include_once "classes/Agendamento.php";
@@ -26,9 +27,8 @@
 	?>
 
 <?php include "menu_entrada.php"; ?>
-<div class="container-fluid">
 	<button class="btn btn-dark">
-		<a href="agendamento.php">novo agendamento</a>
+		<a href="lista_agendamentos.php">Agendamentos</a>
 	</button>
 	
 	<button class="btn btn-dark">

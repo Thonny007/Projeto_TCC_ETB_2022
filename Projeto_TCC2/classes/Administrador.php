@@ -96,7 +96,6 @@ public function insert(){
 
 
     }
-
     public static function getById($id, $toAdmin=false) {
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
         
@@ -131,20 +130,24 @@ public function insert(){
         } catch (\Throwable $th) {
             echo "deu errado";
         }
-
-        mysqli_close($this->con);
-    }
-    public function id_adm_agnd() {
+    function id_adm_agnd($nome_clt,$nome_adm){
             $slq = "SELECT a.*,
-	            c.nome_clt as 'nome do cliente',
-	            c.id_clt as 'id do cliente',
-	            adm.nome_adm as 'nome do adm'
+                c.nome_clt as 'nome do cliente',
+                c.id_clt as 'id do cliente',
+                adm.nome_adm as 'nome do adm'
             from agendamento a 
                 inner join cliente c on a.id_agnd = c.id_agnd
                 inner join administrador adm on adm.id_adm = c.id_adm  
-            where adm.id_adm  = 1;"
-            }
+            where adm.id_adm  = 1"; 
+    }    
 
+
+
+
+
+        mysqli_close($this->con);
+    }
+    
     function getNome_adm() {
         return $this->nome_adm;
     }

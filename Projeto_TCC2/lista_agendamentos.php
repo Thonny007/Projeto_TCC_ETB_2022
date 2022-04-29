@@ -32,8 +32,11 @@
 			<a href="agendamento.php">Novo Agendamento</a>
 		</button>
 
-		<button class="btn btn-dark"> Listar Agendamentos Excluidos</button>
-		<table id="lista_cadastro" style="opai" class="table table-striped table-hover mt-3">
+		<button class="btn btn-dark">
+			<a href="lista_agendamentos_excluidos.php">listar Clientes excluidos</a>
+		</button>
+
+		<table id="lista_cadastro" style="opai" class="table table-hover mt-3">
 			<thead>
 				<tr>
 					<td>Data Agend</td>
@@ -59,10 +62,15 @@
 					<td><?php echo $registro[2];?></td>				
 					<td><?php echo $registro[3];?></td>
 					<td><?php echo $registro[4];?></td>
+					
 					<td class="acoes">
-						<img src="css/icons/check.svg" alt="icone check">
-						<img src="css/icons/cancel.svg" alt="icone cancelar">
-					</td>							
+						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado">
+							<img class="confirma" src="css/icons/check.svg" alt="icone check">
+						</a>
+						<a  href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=desmarcado">
+							<img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">						
+						</a>
+					</td>						
 				</tr>
 			<?php } ?>
 			<tfoot></tfoot>

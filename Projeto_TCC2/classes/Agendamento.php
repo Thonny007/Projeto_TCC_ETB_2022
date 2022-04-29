@@ -75,7 +75,17 @@ class Agendamentos {
         return mysqli_query($con, $sql);
     }
 
-   
+    public static function updateStatus($id, $new_status){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        
+        $sql = 
+        "UPDATE agendamento SET status_agnd='$new_status'
+	    WHERE id_agnd=$id;";
+
+        mysqli_query($con, $sql);
+        mysqli_close($con);
+    }
+    
     public static function formataData(string $dataRecebida): string{
         $data = new DateTime($dataRecebida);
         

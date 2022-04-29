@@ -1,6 +1,6 @@
 <?php
     include_once "classes/Agendamento.php";
-    
+        
     $id = $_GET['id'];
     $new_status = $_GET['ns'];
 

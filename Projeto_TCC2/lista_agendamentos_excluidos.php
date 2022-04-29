@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,19 +21,20 @@
 <body>
 	<?php 
 		include_once "classes/Agendamento.php";
+
 		$listar = Agendamentos::list(true);
-		?>
+	?>
 
 <?php include "menu_entrada.php"; ?>
 <div class="container-fluid">
-	<button class="btn btn-success">
+	<button class="btn btn-dark">
 		<a href="agendamento.php">novo agendamento</a>
 	</button>
 	
-	<button class="btn btn-warning">
+	<button class="btn btn-dark">
 		<a href="lista_agendamentos.php">listar Clientes confirmados e em espera</a>
 	</button>
-	<table id="lista_cadastro"  class="table mt-3 table-warning">
+	<table id="lista_cadastro"  class="table mt-3 table-hover">
 		<thead>
 			<tr>
 				<td> Número Agend</td>

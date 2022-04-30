@@ -47,8 +47,10 @@ div .accordion h2 {
 #img__flash td img {
     margin: 1px;
     border-radius: 10px;
+    width: 300px;
 }
 
-#accordionPanelsStayOpenExample button {
+
+/* #accordionFlushExample .accordion-item #button_teste button {
     background-color: rgb(136, 134, 130);
-}
+} */

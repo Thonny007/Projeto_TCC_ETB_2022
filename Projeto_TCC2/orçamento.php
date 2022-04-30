@@ -8,52 +8,68 @@
     <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <title> Orçamento.Ditte.Tattoo </title>
+    <style>
+       .tabela_orç{
+                width: 100%;
+                margin:auto;
+                }
+
+    </style>
 </head>
 <div class="container-fluid">
 
     <body>
         <?php include "logo_menu.php " ?>
         <div class="txt_orçamento">
-            <table border="1">
+            <table class="tabela_orç" border="1">
                 <tr>
                     <td>
-                        <h5> <u>Como é Realizado os Orçamentos </u> </h5>
-                        <p> O Preço fixo por Tatuagem: R$ 80,00 com tinta Preta, tatuagem colorida é R$ 100,00 <br>
-                            Valor da Hora: R$ 50,00 </p>
+                        <h5> <img src="img/menu/cards.png"> <u>Como é Realizado os Orçamentos </u> </h5>
+                        <p> ♣️ O Preço fixo por Tatuagem: R$ 80,00 com tinta Preta, tatuagem colorida R$ 100,00 <br>
+                            Valor da Hora: R$ 50,00 <br>
+                            Fique a vontade para trazer inspirações e referências para desenvolvermos
+                            o desenho ideal pra você.
                         
-                        <div class="accordion" id="accordionPanelsStayOpenExample">                 
+                        
+                        </p>
+                        
+                        <div class="accordion accordion-flush" id="accordionFlushExample">         
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="0" aria-controls="panelsStayOpen-collapseOne">
-                                        <strong> Tattoo's Flash </strong>
+                                <h2 lass="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <strong> <img src="img/menu/cards.png"> Tattoo's Flash </strong>
                                     </button>
                                 </h2>
-                                <div  id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <table id="img__flash" class="img_flash">
                                             <tr>
-                                                <p> ( Tamanhos Podem Ser Alterados)</p>
+                                                <p> 
+                                                    ♣️Algumas modificações podem ser feitas nos flashs(Desenhos Rápido),
+                                                    como tamanho, cores e elementos, é só me falar e conversamos sobre a
+                                                    possibilidade das alterações.
+                                                </p>
                                             </tr>
                                             <tr>
                                                 <td><img src="img/flash/1.png"></td>
                                                 <td>
                                                     <p> 
                                                         <strong>"Posso explicar uma porção de coisas... Mas não posso explicar a mim mesma."</strong> <br>
-                                                        ♡ Grifo tirando uma soneca: 14cm x 4cm - 250,00 <br>
-                                                        ♤ Bebê porquinho: 6,5cm x 3.5 cm - 180,00<br>
-                                                        ◇ Coelho Branco: 5cm x 6,5 cm - 180,00 <br>
-                                                        ♧ Pássaro gaiola: 16cm x 4cm - 250,00 
+                                                        I. Grifo tirando uma soneca: 14cm x 4cm - 250,00 <br>
+                                                        II. Bebê porquinho: 6,5cm x 3.5 cm - 180,00<br>
+                                                        III. Coelho Branco: 5cm x 6,5 cm - 180,00 <br>
+                                                        IV. Pássaro gaiola: 16cm x 4cm - 250,00 
                                                     </p>
                                                 </td>
                                                 <td> <img src="img/flash/2.png"> </td>
                                                 <td>
                                                     <p>
                                                         <strong> "A questão é: Quem é você?" </strong> <br>
-                                                        ♡ Pintando rosas brancas de vermelho: 7,5cm x 3cm - 180,00<br>
-                                                        ♤ Fechadura: 5cm x 3.5 cm - 180,00<br>
-                                                        ◇ Chave: 6cm x 2cm - 180,00<br>
-                                                        ♧ Xícara: 5cm × 3cm - 180,00<br>
-                                                        ♡ Livro: Indisponível
+                                                        I. Pintando rosas brancas de vermelho: 7,5cm x 3cm - 180,00<br>
+                                                        II. Fechadura: 5cm x 3.5 cm - 180,00<br>
+                                                        III. Chave: 6cm x 2cm - 180,00<br>
+                                                        IV. Xícara: 5cm × 3cm - 180,00<br>
+                                                        V. Livro: Indisponível
                                                     </p>
                                                 </td>    
                                             </tr>
@@ -62,11 +78,11 @@
                                                 <td>
                                                     <p>
                                                         <strong>"Quando acordei de manhã, eu sabia quem eu era, mas acho que mudei muitas vezes desde então..." </strong> <br>
-                                                        ♡ Cavalo voador: 3.5 cm x 3.5 cm - 150,00<br>
-                                                        ♤ Toast butterfly: 3cm x 2.5cm - 150,00 <br>
-                                                        ♧ Alice: 8cm por 4cm - 180,0 <br>
-                                                        ◇ Dormindongo no bule: 3,5cm x 5cm - 180,00 <br>
-                                                        ♡ Lagarta: indisponível 
+                                                        I. Cavalo voador: 3.5 cm x 3.5 cm - 150,00<br>
+                                                        II. Toast butterfly: 3cm x 2.5cm - 150,00 <br>
+                                                        III. Alice: 8cm por 4cm - 180,0 <br>
+                                                        IV. Dormindongo no bule: 3,5cm x 5cm - 180,00 <br>
+                                                        V Lagarta: indisponível 
                                                     </p>
                                                 </td>
                                                 <td><img src="img/flash/4.png"></td>
@@ -76,8 +92,8 @@
                                                         I. Mariposa - indisponível <br>
                                                         II. Casulo - 6cm x 3cm - 180,00<br>
                                                         III. Ninho - 9cm x 6cm: 220,00<br>
-                                                        V. Crânio de passarinho - indisponível<br>
-                                                        VI. Trevo da sorte - 3cm x 4,5cm - 140,00 </p>
+                                                        IV. Crânio de passarinho - indisponível<br>
+                                                        V. Trevo da sorte - 3cm x 4,5cm - 140,00 </p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -124,68 +140,77 @@
                             seguintes informações: Descrição do trabalho que deseja ou algum flash(Desenho Rápido) que
                             tenha interesse.
                         </p> -->
+                        
+                        
                         <p>
-                            Fique a vontade para trazer inspirações e referências para desenvolvermos
-                            o desenho ideal pra você.
-                        </p>
-                        <p>
-                            Algumas modificações podem ser feitas nos flashs(Desenhos Rápido),
-                            como tamanho, cores e elementos, é só me falar e conversamos sobre a
-                            possibilidade das alterações.
-                        </p>
-                        <p>
-                            Tamanho em centímetros da área que você pretende tatuar.
-                            Caso seja um projeto grande ou uma área difícil de medir podemos
+                            ♣️ Tamanho em centímetros da área que você pretende tatuar, <br>
+                            caso seja um projeto grande ou uma área difícil de medir podemos
                             marcar um encontro para fazer o orçamento.
                         </p>
                         <p>
-                            Local da tatuagem, caso você já tenha definido. Caso não tenha ainda
+                            ♣️ Local da tatuagem: Caso você já tenha definido. Caso não tenha ainda <br>
                             pode me pedir aconselhamento ou podemos testar as áreas no dia do
                             procedimento.
                         </p>
-                        <p>
+                        <!-- <p>
                             Ao fecharmos o orçamento será necessário o pagamento de 50,00 reais de sinal
                             para o agendamento, que será descontado do valor final da tatuagem.
-                        </p>
+                        </p> -->
                         <p>
-                            Caso queira cancelar a sessão o valor é devolvido caso seja feito com 5 dias de
+                            ♣️ Caso queira cancelar a sessão o valor é devolvido caso seja feito com 5 dias de
                             antecedência.
                         </p>
                         <p>
-                            Se desenho tenha já sido feito e o cliente desistir será descontado o valor
+                            ♣️ Se desenho tenha já sido feito e o cliente desistir será descontado o valor
                             referente ao desenvolvimento deste.
                         </p>
-                        <p>
-                            <u> Sessões e Retoques </u>
-                        </p>
-                        <p>
 
-                            Caso você precise terminar o desenho em uma segunda sessão, não planejada no
-                            orçamento, será cobrado um valor de 80,00 reais para cobrir os gastos com material.
-                        </p>
-                        <p>
-                            Você tem direito a um retoque gratuito, 30 dias após a tatuagem cicatrizar,
-                            e um encontro para avaliação da cicatrização caso sinta necessidade
-                        </p>
-                        <p>
-                            <u>OBSERVAÇÕES:</u>
-                        </p>
-                        <p>
-                            Você pode compartilhar suas expectativas e dúvidas comigo durante o orçamento, para que
-                            possamos nos entender melhor.
-                        </p>
-                        <p>
-                            Caso você tenha estabelecido um limite de orçamento, posso baseado nele te propor a arte que
-                            caiba no seu bolso.
-                        </p>
-                        <p>
-                            Os horários que eu respondo os orçamentos é de 13h às 18h, de segunda a sábado. Não se preocupe,
-                            pode me mandar mensagem a qualquer hora que assim irei em até 24 horas.
-                        </p>
-                        <p>
-                            Eu trabalho sozinha, desenho, administro, faço o orçamento, tatuo e estudo também por isso que
-                            estabeleci horários para atendimento.
-                        </p>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    <strong> <img src="img/menu/cards.png"> Sessões e Retoques </strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        ♣️ Caso você precise terminar o desenho em uma segunda sessão, não planejada no orçamento, <br> 
+                                        será cobrado um valor de 80,00 reais para cobrir os gastos com material. <br>
+                                        ♣️ Você tem direito a um retoque gratuito, 30 dias após a tatuagem cicatrizar,<br>
+                                        e um encontro para avaliação da cicatrização caso sinta necessidade.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong> <img src="img/menu/cards.png"> OBSERVAÇÕES </strong> 
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        ♣️ Você pode compartilhar suas expectativas e dúvidas comigo durante o orçamento caso o orçamento <br> 
+                                        for realizado pelas redes sociais, para que possamos nos entender melhor.
+                                    </p>
+                                    <p>
+                                        ♣️ Caso você tenha estabelecido um limite de orçamento, posso baseado nele te propor a arte que
+                                        caiba no seu bolso.
+                                    </p>
+                                    <p>
+                                        ♣️ Os horários que eu respondo os orçamentos pela redes sociais de 13h às 18h, de segunda a sábado. <br> 
+                                        Não se preocupe, pode me mandar mensagem a qualquer hora que assim irei em até 24 horas.
+                                    </p>
+                                    <p>
+                                        ♣️ Eu trabalho sozinha, desenho, administro, faço o orçamento, tatuo e estudo também por isso que
+                                        estabeleci horários para atendimento.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </td>
                 </tr>
             </table>
@@ -193,6 +218,7 @@
         <div class="rodape_1">
             <?php include "rodape.php" ?>
         </div>
+        
     </body>
 </div>
 

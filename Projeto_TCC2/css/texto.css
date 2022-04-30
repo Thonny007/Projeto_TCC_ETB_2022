@@ -46,6 +46,7 @@ div .accordion h2 {
 
 #img__flash td img {
     margin: 1px;
+    border-radius: 10px;
 }
 
 #accordionPanelsStayOpenExample button {

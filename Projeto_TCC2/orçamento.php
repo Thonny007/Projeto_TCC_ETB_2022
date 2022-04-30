@@ -18,13 +18,13 @@
                 <tr>
                     <td>
                         <h5> <u>Como é Realizado os Orçamentos </u> </h5>
-                        <p> O Preço fixo por Tatuagem: R$ 80,00 com tinta Preta, tatuagem colorida é R$ 100,00 </p>
-                        <p> Valor da Hora: R$ 50,00 </p>
+                        <p> O Preço fixo por Tatuagem: R$ 80,00 com tinta Preta, tatuagem colorida é R$ 100,00 <br>
+                            Valor da Hora: R$ 50,00 </p>
                         
                         <div class="accordion" id="accordionPanelsStayOpenExample">                 
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="0" aria-controls="panelsStayOpen-collapseOne">
                                         <strong> Tattoo's Flash </strong>
                                     </button>
                                 </h2>
@@ -32,33 +32,78 @@
                                     <div class="accordion-body">
                                         <table id="img__flash" class="img_flash">
                                             <tr>
+                                                <p> ( Tamanhos Podem Ser Alterados)</p>
+                                            </tr>
+                                            <tr>
                                                 <td><img src="img/flash/1.png"></td>
                                                 <td>
-                                                    <p> ( Tamanhos Podem Ser Alterados) </p>
-                                                    <p> ♡ Grifo tirando uma soneca: 14cm x 4cm - 250,00 </p>
-                                                    <p> ♤ Bebê porquinho: 6,5cm x 3.5 cm - 180,00</p>
-                                                    <p> ◇ Coelho Branco: 5cm x 6,5 cm - 180,00 </p>
-                                                    <p> ♧ Pássaro gaiola: 16cm x 4cm - 250,00 </p>
+                                                    <p> 
+                                                        <strong>"Posso explicar uma porção de coisas... Mas não posso explicar a mim mesma."</strong> <br>
+                                                        ♡ Grifo tirando uma soneca: 14cm x 4cm - 250,00 <br>
+                                                        ♤ Bebê porquinho: 6,5cm x 3.5 cm - 180,00<br>
+                                                        ◇ Coelho Branco: 5cm x 6,5 cm - 180,00 <br>
+                                                        ♧ Pássaro gaiola: 16cm x 4cm - 250,00 
+                                                    </p>
                                                 </td>
                                                 <td> <img src="img/flash/2.png"> </td>
                                                 <td>
-                                                    <p>♡ Pintando rosas brancas de vermelho: 7,5cm x 3cm - 180,00</p>
-                                                    <p>♤ Fechadura: 5cm x 3.5 cm - 180,00</p>
-                                                    <p>◇ Chave: 6cm x 2cm - 180,00</p>
-                                                    <p>♧ Xícara: 5cm × 3cm - 180,00</p>
-                                                    <p>♡ Livro: Indisponível</p>
+                                                    <p>
+                                                        <strong> "A questão é: Quem é você?" </strong> <br>
+                                                        ♡ Pintando rosas brancas de vermelho: 7,5cm x 3cm - 180,00<br>
+                                                        ♤ Fechadura: 5cm x 3.5 cm - 180,00<br>
+                                                        ◇ Chave: 6cm x 2cm - 180,00<br>
+                                                        ♧ Xícara: 5cm × 3cm - 180,00<br>
+                                                        ♡ Livro: Indisponível
+                                                    </p>
                                                 </td>    
                                             </tr>
                                             <tr>
                                                 <td> <img src="img/flash/3.png"> </td>
                                                 <td>
-                                                    <p> ♡ Cavalo voador: 3.5 cm x 3.5 cm - 150,00 </p>
-                                                    <p> ♤ Toast butterfly: 3cm x 2.5cm - 150,00 </p>
-                                                    <p> ♧ Alice: 8cm por 4cm - 180,0 </p>
-                                                    <p> ◇ Dormindongo no bule: 3,5cm x 5cm - 180,00 </p>
-                                                    <p> ♡ Lagarta: indisponível </p>
+                                                    <p>
+                                                        <strong>"Quando acordei de manhã, eu sabia quem eu era, mas acho que mudei muitas vezes desde então..." </strong> <br>
+                                                        ♡ Cavalo voador: 3.5 cm x 3.5 cm - 150,00<br>
+                                                        ♤ Toast butterfly: 3cm x 2.5cm - 150,00 <br>
+                                                        ♧ Alice: 8cm por 4cm - 180,0 <br>
+                                                        ◇ Dormindongo no bule: 3,5cm x 5cm - 180,00 <br>
+                                                        ♡ Lagarta: indisponível 
+                                                    </p>
                                                 </td>
-
+                                                <td><img src="img/flash/4.png"></td>
+                                                <td>
+                                                    <p> 
+                                                        <strong>Pequenos tesouros</strong> <br>
+                                                        I. Mariposa - indisponível <br>
+                                                        II. Casulo - 6cm x 3cm - 180,00<br>
+                                                        III. Ninho - 9cm x 6cm: 220,00<br>
+                                                        V. Crânio de passarinho - indisponível<br>
+                                                        VI. Trevo da sorte - 3cm x 4,5cm - 140,00 </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <img src="img/flash/5.png"> </td>
+                                                <td>
+                                                    <p> 
+                                                        <strong> Caixinha de Lembranças </strong><br>
+                                                        I. Ganso - 10cm x 8cm - 240,00<br>
+                                                        II.Xícara - indisponível<br>
+                                                        III.Mecha de cabelo de alguém de quem se gosta - 8cm x 4.5cm - 180,00<br>
+                                                        IV. Tinteiro de pena para escrever bobagens - 7cm x 3cm - indisponível <br>
+                                                        V. Relicário com pintura do olho de um amor - 3cm² - indisponível </p>
+                                                </td>
+                                                <td><img src="img/flash/6.png"></td>
+                                                <td>
+                                                    <p>  <strong>Pera, uva, maça, salada mista...  </strong> <br>
+                                                        I. Morango - 5cmx3cm - 180,00 <br>
+                                                        II. Morango Felipe- 4,5cm² - 180,00<br>
+                                                        III. Physalis: 4cm x 5cm - 180,00<br>
+                                                        IV. Romã: 7 cm² - 250,00<br>
+                                                        V. Limão: 6cm x2.5cm - 180,00 <br>
+                                                        VI. Figo: 9cm x 6cm - indisponível  <br>
+                                                        VII. Pera: 9cmx7cm - 250,00 <br>
+                                                        VIII. Kiwi: 5cmx3cm -180,00
+                                                    </p>
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>

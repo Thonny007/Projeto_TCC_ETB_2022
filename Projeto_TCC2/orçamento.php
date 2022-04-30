@@ -7,13 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/texto.css">
-    <!-- bot css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <!-- bot css -->
-    <!-- bot js -->
-    <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
-    <!-- bot js -->
-
     <title> Orçamento.Ditte.Tattoo </title>
 </head>
 <div class="container-fluid">
@@ -24,10 +17,56 @@
             <table border="1">
                 <tr>
                     <td>
-                        <h5> Como é Realizado os Orçamentos </h5>
+                        <h5> <u>Como é Realizado os Orçamentos </u> </h5>
                         <p> O Preço fixo por Tatuagem: R$ 80,00 com tinta Preta, tatuagem colorida é R$ 100,00 </p>
                         <p> Valor da Hora: R$ 50,00 </p>
-                     <!--    <p>
+                        
+                        <div class="accordion" id="accordionPanelsStayOpenExample">                 
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                        <strong> Tattoo's Flash </strong>
+                                    </button>
+                                </h2>
+                                <div  id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        <table id="img__flash" class="img_flash">
+                                            <tr>
+                                                <td><img src="img/flash/1.png"></td>
+                                                <td>
+                                                    <p> ( Tamanhos Podem Ser Alterados) </p>
+                                                    <p> ♡ Grifo tirando uma soneca: 14cm x 4cm - 250,00 </p>
+                                                    <p> ♤ Bebê porquinho: 6,5cm x 3.5 cm - 180,00</p>
+                                                    <p> ◇ Coelho Branco: 5cm x 6,5 cm - 180,00 </p>
+                                                    <p> ♧ Pássaro gaiola: 16cm x 4cm - 250,00 </p>
+                                                </td>
+                                                <td> <img src="img/flash/2.png"> </td>
+                                                <td>
+                                                    <p>♡ Pintando rosas brancas de vermelho: 7,5cm x 3cm - 180,00</p>
+                                                    <p>♤ Fechadura: 5cm x 3.5 cm - 180,00</p>
+                                                    <p>◇ Chave: 6cm x 2cm - 180,00</p>
+                                                    <p>♧ Xícara: 5cm × 3cm - 180,00</p>
+                                                    <p>♡ Livro: Indisponível</p>
+                                                </td>    
+                                            </tr>
+                                            <tr>
+                                                <td> <img src="img/flash/3.png"> </td>
+                                                <td>
+                                                    <p> ♡ Cavalo voador: 3.5 cm x 3.5 cm - 150,00 </p>
+                                                    <p> ♤ Toast butterfly: 3cm x 2.5cm - 150,00 </p>
+                                                    <p> ♧ Alice: 8cm por 4cm - 180,0 </p>
+                                                    <p> ◇ Dormindongo no bule: 3,5cm x 5cm - 180,00 </p>
+                                                    <p> ♡ Lagarta: indisponível </p>
+                                                </td>
+
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--    <p>
                             O orçamento mais detalhado pode ser realizado pelas Redes Sociais:
                             <a href="https://www.instagram.com/dite.tattoo/">
                                 <img src="img/contados/insta.png" />

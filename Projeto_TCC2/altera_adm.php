@@ -38,15 +38,15 @@
 									<input type="hidden" name="id" value="<?php echo $registro[0]?>">
 
 									<div class="form-group">
-										<label>Nome:</label>
+										<label> Nome: </label>
 										<input type="text" class="form-control" name="nome" value="<?php echo $registro[1] ?>">
 									</div>
 									<div class="form-group">
-										<label>Login:</label>
+										<label> Login: </label>
 										<input type="text" class="form-control" name="login" value="<?php echo $registro[2] ?>">
 									</div>
 									<div class="form-group">
-										<label >Senha:</label>
+										<label > Senha: </label>
 										<input type="password" class="form-control" name="senha" value="<?php echo $registro[3]?>">
 									</div>
 									<button type="submit" class="btn btn-danger"> ALTERAR </button>

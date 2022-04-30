@@ -17,7 +17,7 @@ div .accordion h2 {
 /*tabela*/
 
 .txt_orçamento table tr td {
-    background-color: blanchedalmond;
+    background-color: rgb(203, 201, 198);
     text-align: center;
     text-decoration: black;
     color: black;
@@ -26,4 +26,28 @@ div .accordion h2 {
 .txt_orçamento img {
     width: 25px;
     margin: -7px;
+}
+
+#panelsStayOpen-collapseOne img {
+    width: 300px;
+    height: 300px;
+}
+
+#img__flash td {
+    background-color: white;
+    margin: 10px;
+    width: 20%;
+}
+
+#img__flash td p {
+    text-align: left;
+    font-size: 15px;
+}
+
+#img__flash td img {
+    margin: 1px;
+}
+
+#accordionPanelsStayOpenExample button {
+    background-color: rgb(136, 134, 130);
 }

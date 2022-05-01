@@ -18,7 +18,7 @@ class Administrador {
         
         $sql = "SELECT DISTINCT id_clt, nome_clt, login_clt, senha_clt
         FROM cliente
-        WHERE login_clt = '$login' ";
+        WHERE login_clt = '$login'";
 
         $query = mysqli_query($con, $sql);
 

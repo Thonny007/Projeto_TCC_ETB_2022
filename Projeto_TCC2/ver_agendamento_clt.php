@@ -19,15 +19,24 @@
             * argumento true para retotnar um objeto de cliente
             * sem esse parametro retorna um array com todos os campos da tabela cliente
         */
-        $cliente = Cliente :: getById($id, true);
+        $cliente = Cliente::getById($id, true);
 
         // retorna o agendamento que estpa acossiado ao cliente
         $data = $cliente->getAgendamento($id);
 
-        // pega a data e o horário do agendamento e separa em duas variáveis
-        $agendamento = explode(" ", $data[0]);
-        $dia = $agendamento[0];
-        $horario = $agendamento[1];
+        if ($data != null){
+            // pega a data e o horário do agendamento e separa em duas variáveis
+            $agendamento = explode(" ", $data[0]);
+            $dia = $agendamento[0];
+            $horario = $agendamento[1];
+        }else {
+            $data = [0, "Cliente não possui agendamentos", "Cliente não possui agendamentos"];
+
+            $dia = null;
+            $horario = '00:00:00';
+        }
+
+
     ?>
 
     <div class="container">

@@ -37,20 +37,20 @@
 	<table id="lista_cadastro"  class="table mt-3 table-hover">
 		<thead>
 			<tr>
-				<td> Número Agend</td>
+				<!-- <td> Número Agend</td> -->
 				<td>Data Agend</td>
 				<td>Img Referencia</td>
-					<td>status Agend</td>
-					<td>Descrição Tattoo</td>
-					<td>nome do cliente</td>
-					<td>Ação</td>
-				</tr>
-			</thead>
+				<td>status Agend</td>
+				<td>Descrição Tattoo</td>
+				<td>nome do cliente</td>
+				<td>Ação</td>
+			</tr>
+		</thead>
 			<?php		
 				while ($registro = mysqli_fetch_row($listar)){
 					?>	
 				<tr>
-					<td id="id"><?php echo $registro[0];?></td>
+					<!-- <td id="id"><?php /* echo $registro[0]; */?></td> -->
 					<td><?php echo Agendamentos::formataData($registro[1]); ?></td>
 					<td>
 						ver foto
@@ -62,12 +62,16 @@
 					<td><?php echo $registro[3];?></td>
 					<td><?php echo $registro[4];?></td>
 					<td class="acoes">
-						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado">
+						<!-- <a href="set_agnd_status.php?id=<?php/*  echo $registro[0]; */?>&ns=confirmado">
 							<img class="confirma" src="css/icons/check.svg" alt="icone check">
 						</a>
-						<a  href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=desmarcado">
+						<a  href="set_agnd_status.php?id=<?php /* echo $registro[0]; */?>&ns=desmarcado">
 							<img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">						
-						</a>
+						</a> -->
+						<button>
+							<a href="controler/processa_delete_agnd.php?id=<?php echo $registro[0] ?>"> 
+							<img src="css/icons/lixo.svg"> </a>
+						</button>
 					</td>
 				</tr>
 			<?php } ?>

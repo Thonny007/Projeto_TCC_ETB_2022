@@ -43,9 +43,9 @@
                     <li>
                         <a href="adm_cliente.php"> Administração </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="agendamento.php"> Agendamento </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="login.php"> LOGIN </a>
                     </li>

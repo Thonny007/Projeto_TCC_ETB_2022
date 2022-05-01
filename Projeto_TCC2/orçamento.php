@@ -28,9 +28,7 @@
                         <p> ♣️ O Preço fixo por Tatuagem: R$ 80,00 com tinta Preta, tatuagem colorida R$ 100,00 <br>
                             Valor da Hora: R$ 50,00 <br>
                             Fique a vontade para trazer inspirações e referências para desenvolvermos
-                            o desenho ideal pra você.
-                        
-                        
+                            o desenho ideal pra você.                        
                         </p>
                         
                         <div class="accordion accordion-flush" id="accordionFlushExample">         
@@ -55,20 +53,20 @@
                                                 <td>
                                                     <p> 
                                                         <strong>"Posso explicar uma porção de coisas... Mas não posso explicar a mim mesma."</strong> <br>
-                                                        I. Grifo tirando uma soneca: 14cm x 4cm - 250,00 <br>
-                                                        II. Bebê porquinho: 6,5cm x 3.5 cm - 180,00<br>
-                                                        III. Coelho Branco: 5cm x 6,5 cm - 180,00 <br>
-                                                        IV. Pássaro gaiola: 16cm x 4cm - 250,00 
+                                                        I. Grifo tirando uma soneca: 14cm x 4cm - R$250,00 <br>
+                                                        II. Bebê porquinho: 6,5cm x 3.5 cm - R$180,00<br>
+                                                        III. Coelho Branco: 5cm x 6,5 cm - R$180,00 <br>
+                                                        IV. Pássaro gaiola: 16cm x 4cm - R$250,00 
                                                     </p>
                                                 </td>
                                                 <td> <img src="img/flash/2.png"> </td>
                                                 <td>
                                                     <p>
                                                         <strong> "A questão é: Quem é você?" </strong> <br>
-                                                        I. Pintando rosas brancas de vermelho: 7,5cm x 3cm - 180,00<br>
-                                                        II. Fechadura: 5cm x 3.5 cm - 180,00<br>
-                                                        III. Chave: 6cm x 2cm - 180,00<br>
-                                                        IV. Xícara: 5cm × 3cm - 180,00<br>
+                                                        I. Pintando rosas brancas de vermelho: 7,5cm x 3cm - R$180,00<br>
+                                                        II. Fechadura: 5cm x 3.5 cm - R$180,00<br>
+                                                        III. Chave: 6cm x 2cm - R$180,00<br>
+                                                        IV. Xícara: 5cm × 3cm - R$180,00<br>
                                                         V. Livro: Indisponível
                                                     </p>
                                                 </td>    
@@ -78,11 +76,11 @@
                                                 <td>
                                                     <p>
                                                         <strong>"Quando acordei de manhã, eu sabia quem eu era, mas acho que mudei muitas vezes desde então..." </strong> <br>
-                                                        I. Cavalo voador: 3.5 cm x 3.5 cm - 150,00<br>
-                                                        II. Toast butterfly: 3cm x 2.5cm - 150,00 <br>
-                                                        III. Alice: 8cm por 4cm - 180,0 <br>
-                                                        IV. Dormindongo no bule: 3,5cm x 5cm - 180,00 <br>
-                                                        V Lagarta: indisponível 
+                                                        I. Cavalo voador: 3.5 cm x 3.5 cm - R$150,00<br>
+                                                        II. Toast butterfly: 3cm x 2.5cm - R$150,00 <br>
+                                                        III. Alice: 8cm por 4cm - R$180,0 <br>
+                                                        IV. Dormindongo no bule: 3,5cm x 5cm - R$180,00 <br>
+                                                        V. Lagarta: indisponível 
                                                     </p>
                                                 </td>
                                                 <td><img src="img/flash/4.png"></td>
@@ -90,10 +88,10 @@
                                                     <p> 
                                                         <strong>Pequenos tesouros</strong> <br>
                                                         I. Mariposa - indisponível <br>
-                                                        II. Casulo - 6cm x 3cm - 180,00<br>
-                                                        III. Ninho - 9cm x 6cm: 220,00<br>
+                                                        II. Casulo - 6cm x 3cm - R$180,00<br>
+                                                        III. Ninho - 9cm x 6cm: R$220,00<br>
                                                         IV. Crânio de passarinho - indisponível<br>
-                                                        V. Trevo da sorte - 3cm x 4,5cm - 140,00 </p>
+                                                        V. Trevo da sorte - 3cm x 4,5cm - R$140,00 </p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -101,23 +99,23 @@
                                                 <td>
                                                     <p> 
                                                         <strong> Caixinha de Lembranças </strong><br>
-                                                        I. Ganso - 10cm x 8cm - 240,00<br>
+                                                        I. Ganso - 10cm x 8cm - R$240,00<br>
                                                         II.Xícara - indisponível<br>
-                                                        III.Mecha de cabelo de alguém de quem se gosta - 8cm x 4.5cm - 180,00<br>
+                                                        III.Mecha de cabelo de alguém de quem se gosta - 8cm x 4.5cm - R$180,00<br>
                                                         IV. Tinteiro de pena para escrever bobagens - 7cm x 3cm - indisponível <br>
                                                         V. Relicário com pintura do olho de um amor - 3cm² - indisponível </p>
                                                 </td>
                                                 <td><img src="img/flash/6.png"></td>
                                                 <td>
                                                     <p>  <strong>Pera, uva, maça, salada mista...  </strong> <br>
-                                                        I. Morango - 5cmx3cm - 180,00 <br>
-                                                        II. Morango Felipe- 4,5cm² - 180,00<br>
-                                                        III. Physalis: 4cm x 5cm - 180,00<br>
-                                                        IV. Romã: 7 cm² - 250,00<br>
-                                                        V. Limão: 6cm x2.5cm - 180,00 <br>
+                                                        I. Morango - 5cmx3cm - R$180,00 <br>
+                                                        II. Morango Felipe- 4,5cm² - R$180,00<br>
+                                                        III. Physalis: 4cm x 5cm - R$180,00<br>
+                                                        IV. Romã: 7 cm² - R$250,00<br>
+                                                        V. Limão: 6cm x2.5cm - R$180,00 <br>
                                                         VI. Figo: 9cm x 6cm - indisponível  <br>
-                                                        VII. Pera: 9cmx7cm - 250,00 <br>
-                                                        VIII. Kiwi: 5cmx3cm -180,00
+                                                        VII. Pera: 9cmx7cm - R$250,00 <br>
+                                                        VIII. Kiwi: 5cmx3cm - R$180,00
                                                     </p>
                                                 </td>
                                             </tr>

@@ -64,10 +64,10 @@
 					<td><?php echo $registro[4];?></td>
 					
 					<td class="acoes">
-						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado">
+						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado&id_adm=<?php echo $_SESSION['id']; ?>">
 							<img class="confirma" src="css/icons/check.svg" alt="icone check">
 						</a>
-						<a  href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=desmarcado">
+						<a  href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=desmarcado&id_adm=<?php echo $_SESSION['id']; ?>">
 							<img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">						
 						</a>
 					</td>						

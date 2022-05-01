@@ -1,13 +1,18 @@
 <?php
     include_once "classes/Agendamento.php";
+    include_once "classes/Administrador.php";
         
-    $id = $_GET['id'];
+    $id_agnd = $_GET['id'];
+    $id_adm = $_GET['id_adm'];
     $new_status = $_GET['ns'];
 
-    Agendamentos::updateStatus($id, $new_status);
+    $adm = Administrador::getById($id_adm, true);
+
+    Agendamentos::updateStatus($id_agnd, $new_status);
+    $adm->setMyAgnds($id_adm, $id_agnd);
 
     echo 
     "
-        <script>location.href = 'lista_agendamentos.php'</script>
+         <script>location.href = 'lista_agendamentos.php'</script>
     ";
 ?>

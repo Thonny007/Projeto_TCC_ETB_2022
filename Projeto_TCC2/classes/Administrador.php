@@ -39,30 +39,30 @@ class Administrador {
         return $adm_result;
     }
 
-public function insert(){
-    $sql = "INSERT INTO agendamentos.administrador
+    public function insert(){
+        $sql = "INSERT INTO agendamentos.administrador
             (nome_adm, login_adm, senha_adm)
         VALUES 
             ('$this->nome_adm', '$this->login_clt', '$this->senha_clt')";
 
-    try {
-        mysqli_query($this->con, $sql);
-        echo 
-        "
-        <script>
-        alert('☺ Administrador Cadastrado Com Sucesso ☺');
-        location.href = '../cadastro_adm.php'
-        </script>
-        ";
-    } catch (\Throwable $th) {
-        echo
-        "
-        <script>
-        alert('⚠️⚠️ Login Já Cadastrado Favor Tente Outro ⚠️⚠️');
-        location.href = '../cadastro_adm.php'
-        </script>
-                ";
-            }
+        try {
+            mysqli_query($this->con, $sql);
+            echo 
+            "
+            <script>
+            alert('☺ Administrador Cadastrado Com Sucesso ☺');
+            location.href = '../cadastro_adm.php'
+            </script>
+            ";
+        } catch (\Throwable $th) {
+            echo
+            "
+            <script>
+            alert('⚠️⚠️ Login Já Cadastrado Favor Tente Outro ⚠️⚠️');
+            location.href = '../cadastro_adm.php'
+            </script>
+                    ";
+        }
     }
     public function delete($id){
         $sql = "DELETE FROM administrador WHERE id_adm = '$id'";
@@ -130,20 +130,43 @@ public function insert(){
         } catch (\Throwable $th) {
             echo "deu errado";
         }
-    function id_adm_agnd($nome_clt,$nome_adm){
-            $slq = "SELECT a.*,
-                c.nome_clt as 'nome do cliente',
-                c.id_clt as 'id do cliente',
-                adm.nome_adm as 'nome do adm'
-            from agendamento a 
-                inner join cliente c on a.id_agnd = c.id_agnd
-                inner join administrador adm on adm.id_adm = c.id_adm  
-            where adm.id_adm  = 1"; 
-    }    
 
+        mysqli_close($this->con);
 
+    }
 
+    public static function getMyAgnds($id_adm){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
+        $sql = "SELECT
+            a.id_agnd as 'id do agendamento',
+            a.data_agnd as 'data do agendamento',
+            a.descricao_tatto 'descrição da tatuagem',
+            c.nome_clt as 'nome do cliente',
+            c.id_clt as 'id do cliente'
+        from agendamento a
+
+        inner join cliente c on a.id_agnd = c.id_agnd
+
+        inner join administrador adm on adm.id_adm = c.id_adm
+        where adm.id_adm = '$id_adm';"; 
+
+        $result = mysqli_query ($con, $sql);
+
+        mysqli_close($con);
+
+        return $result; 
+    }
+
+    public function setMyAgnds($id_adm, $id_agnd){
+        $sql = "UPDATE cliente set id_adm = '$id_adm'
+        where id_agnd = '$id_agnd';";
+
+        try {
+            mysqli_query($this->con, $sql);
+        } catch (\Throwable $th) {
+            echo "algo deu errado";
+        }
 
         mysqli_close($this->con);
     }

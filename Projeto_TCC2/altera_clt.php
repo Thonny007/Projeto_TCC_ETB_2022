@@ -8,11 +8,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="css/altera_adm.css">
-        <title> Ditte.Tattoo </title>
+        <title> Altera.Cadastro.Ditte.Tattoo </title>
+		<style>
+        form{
+            width: 50%;
+            margin: auto;
+            background-color:#808080;
+            font-size: 20px;
+            border-radius:10px;
+            color: white;
+            text-align:center;
+        }
+    </style>
     </head>
     <body>
     <?php 
-          include "controler/valida_login.php"?>
+          include "controler/valida_login.php";
+		  include "menu_entrada_clt.php";
+	?>
     <div id="funcionalidade" class="div_direita">
 					<?php $registro = cliente::getById($_SESSION["id"]);?>
 					<form method="post" action="controler/processa_altera_clt.php">

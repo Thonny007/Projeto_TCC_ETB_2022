@@ -16,4 +16,5 @@
     $id_agnd = $agendamento->insert();
 
     Cliente::geraRelacionamento($id, $id_agnd);
+
 ?>

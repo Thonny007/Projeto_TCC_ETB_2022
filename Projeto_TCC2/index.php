@@ -33,7 +33,7 @@
                             </p>
                             <p>
                                 <img width="20px" src="https://img.icons8.com/wired/64/000000/clubs.png" alt="" />
-                                Entre 2 a 3 dias (até criar a casquinha) é importante fazer a limpeza da
+                                Entre 2 a 3 dias (até criar a casquinha) é importante fazer a limpeza da <br>
                                 área com a água e sabão, 3 vezes ao dia. ou sempre que ela for exposta a
                                 sujeira.
                             </p>

@@ -16,10 +16,9 @@
     <body>
         <!-- LOGO -->
         <?php include "menu_entrada_clt.php";?>
-        
         <form method="POST" action="controler/processa_agendamento.php" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo $_SESSION["id"]; ?>">
-        <div class="agm">
+            <input type="hidden" name="id" value="<?php echo $_SESSION["id"]; ?>">
+            <div class="agm">
                 <h3> Agendamento </h3>
                 <p>
                     Escolha uma Data:
@@ -51,6 +50,7 @@
                     Atenção dependendo do tempo da sessão a tatuatora podera mudar os dias ou o horários
                     dos proxímos agendamentos.
                 </div>
+                <p> Endereço: Coletivo Sul - St. B Sul QSB 10 - Taguatinga - DF</p>
                 <!-- ENVIAR formulario -->
                 
                 <input id="cadastrar" type="submit" nome="agendar" value="AGENDAR">

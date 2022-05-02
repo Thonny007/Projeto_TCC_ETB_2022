@@ -7,11 +7,23 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/altera_adm.css">
     <title> Ditte.Tattoo </title>
+    <style>
+        form{
+            width: 50%;
+            margin: auto;
+            background-color:#808080;
+            font-size: 20px;
+            border-radius:10px;
+            color: white;
+            text-align:center;
+        }
+    </style>
 </head>
 <body>
     <?php 
         session_start();
         include "classes/cliente.php";
+        include "menu_entrada_clt.php";
         $id = $_SESSION["id"];
         $isAdm = $_SESSION["adm"];
 

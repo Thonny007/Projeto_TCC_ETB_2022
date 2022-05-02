@@ -43,9 +43,9 @@
                             <td width="20%">
                                 <p> NÚMERO </p>
                             </td>
-                            <td>
+                            <!-- <td>
                                <p>Nº Agend</p> 
-                            </td>
+                            </td> -->
                             <td width="5%">
                                 <p>AÇÃO</p>
                             </td>
@@ -71,11 +71,11 @@
                         <td class="esquerda">
                             <?php echo $registro[7]; ?>
                         </td>
-                        <td>
+                     <!--    <td>
                             <a href="ver_agendamento.clt.php?id_agnd=<?php echo $registro_agnd[0] ?>">
                                     <?php echo $registro[5]; ?>
                             </a>
-                        </td>
+                        </td> -->
                         <td>
                             <button>
                                 <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>" >

@@ -1,5 +1,4 @@
 <!-- RODAPÉ -->
-
 <head>
     <link rel="stylesheet" type="text/css" href="css/rodape.css">
 </head>
@@ -30,6 +29,11 @@
                                 clarice.terra42@gmail.com
                             </a>
                         </li>
+                        <li> <h5> <U> ENDEREÇO </U> </h5> </li>
+                        <li class="ender">
+                            <img src="img/menu/map.png">
+                            <img  src="img/qr_localizacao.png">
+                        </li>
                     </ol>
                 </td>
                 <td style="width: 40%;">
@@ -43,25 +47,25 @@
                         </li>
                         <li>
                             <a href="agendamento.php">
-                                <img src="img/menu/calendar.png" alt="" />
+                                <img src="img/menu/calendar.png" />
                                 Agendamento
                             </a>
                         </li>
                         <li>
                             <a href="orçamento.php">
-                                <img src="img/menu/orçamento.png" alt="" />
+                                <img src="img/menu/orçamento.png" />
                                 Orçamento
                             </a>
                         </li>
                         <li>
                             <a href="desenhos.php">
-                                <img src="img/menu/desenho.png" alt="" >
+                                <img src="img/menu/desenho.png">
                                 Portfólio
                             </a>
                         </li>
                         <li>
                             <a href="login.php">
-                                <img src="img/menu/login.png" alt="" >
+                                <img src="img/menu/login.png">
                                 LOGIN
                             </a>
                         </li>

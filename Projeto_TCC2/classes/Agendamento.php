@@ -70,9 +70,61 @@ class Agendamentos {
 
     public static function getImgById($id){
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
-        $sql = "SELECT imagem_atendimento FROM agendamento WHERE id_agnd = $id";
+        $sql = "SELECT id_agnd FROM agendamento WHERE id_agnd = $id";
         
         return mysqli_query($con, $sql);
+    }
+    public function delete($id){
+        $sql = "DELETE FROM agendamento WHERE id_agnd = '$id'";
+
+        try {
+            $query = mysqli_query($this->con, $sql);
+            
+            echo "
+                <script>
+                    alert ('☺ Registro Deletado/Apagado com Sucesso ☺') 
+                </script>
+            ";
+            
+            echo "
+            <script> 
+                location.href = ('../lista_agendamento_excluido.php') 
+            </script>";
+
+            
+        } catch (\Throwable $th) {
+            echo "
+            <script> 
+                alert ('ERRO AO DELETAR DADO') 
+            </script>";
+            
+            echo "
+            <script> 
+                location.href ('../lista_agendamento_excluido.php') 
+            </script>";
+            
+        }
+
+
+    }
+
+    public static function getById($id, $toAgnd=false) {
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+        
+        $sql = "SELECT * FROM agendamento WHERE id_agnd = $id";
+        $query = mysqli_query($con, $sql);
+        
+        $result = mysqli_fetch_row($query);
+        
+        $agnd = new Agendamentos (
+            $result[1],
+            $result[2],
+            $result[3],
+            $result[4],
+            $result[5],
+        );
+
+       return $toAgnd ? $agnd : $result;
     }
 
     public static function updateStatus($id, $new_status){

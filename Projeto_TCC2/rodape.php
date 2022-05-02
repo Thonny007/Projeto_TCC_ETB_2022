@@ -29,9 +29,15 @@
                                 clarice.terra42@gmail.com
                             </a>
                         </li>
-                        <li> <h5> <U> ENDEREÇO </U> </h5> </li>
+                        <li> 
+                            <h5> 
+                                <U> ENDEREÇO </U> 
+                            </h5> 
+                        </li>
                         <li class="ender">
-                            <img src="img/menu/map.png">
+                            <a href="https://maps.app.goo.gl/kXXQeBLzujkS4NUk9"> 
+                                <img src="img/menu/map.png">
+                            </a>
                             <img  src="img/qr_localizacao.png">
                         </li>
                     </ol>

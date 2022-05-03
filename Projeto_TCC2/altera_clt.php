@@ -26,8 +26,16 @@
           include "controler/valida_login.php";
 		  include "menu_entrada_clt.php";
 	?>
+    <?php
+        if($_SESSION['adm']){
+            $registro = cliente::getById($_SESSION["id"]);
+        }else{
+            $id_cliente = $_GET["id_cliente"];
+
+            $registro = Cliente::getById($id_cliente);
+        }
+    ?>
     <div id="funcionalidade" class="div_direita">
-					<?php $registro = cliente::getById($_SESSION["id"]);?>
 					<form method="post" action="controler/processa_altera_clt.php">
 						<?php 
 							if ($registro != null) { 

@@ -152,7 +152,7 @@ class Cliente {
         return $result;
     }
 
-    public function update($id){        
+    public function update($id, $adm){
         $sql = "UPDATE agendamentos.cliente
         SET 
             nome_clt='$this->nome_clt', 
@@ -164,11 +164,22 @@ class Cliente {
 
         try {
             mysqli_query($this->con, $sql);
-            echo "
-            <script>
-                alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
-                location.href = ('../adm_cliente.php')
-            </script>";
+
+            if ($adm){
+                echo "
+                    <script>
+                        alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
+                        location.href = ('../adm_cliente.php')
+                    </script>";
+            }else{
+                echo "
+                    <script>
+                        alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
+                        location.href = ('../administracao.php')
+                    </script>";
+            }
+
+
         } catch (\Throwable $th) {
             echo "
             <script>

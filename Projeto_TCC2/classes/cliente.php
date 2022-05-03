@@ -30,9 +30,7 @@ class Cliente {
                senha_clt = '$senha' ";
 
         $query = mysqli_query($con, $sql);
-        $result = mysqli_fetch_row($query);
-
-        return $result;
+        return mysqli_fetch_row($query);
     }
     
     
@@ -72,9 +70,12 @@ class Cliente {
         FROM cliente";
 
 
-        return $result = mysqli_query ($con, $sql_consulta);
+        return mysqli_query ($con, $sql_consulta);
     }
 
+    /**
+     * @throws Exception
+     */
     public static function formataData(string $dataRecebida): string{
         $data = new DateTime($dataRecebida);
         
@@ -85,8 +86,8 @@ class Cliente {
         $sql = "DELETE FROM cliente WHERE id_clt = '$id'";
 
         try {
-            $query = mysqli_query($this->con, $sql);
-            
+            mysqli_query($this->con, $sql);
+
             echo "
                 <script>
                     alert ('☺ Registro Deletado/Apagado com Sucesso ☺') 
@@ -99,7 +100,7 @@ class Cliente {
             </script>";
 
             
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             echo "
             <script> 
                 alert ('ERRO AO DELETAR DADO') 
@@ -180,7 +181,7 @@ class Cliente {
             }
 
 
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             echo "
             <script>
                 alert ('⚠️⚠️ ERRO NA ALTERAÇÃO DE DADOS ⚠️⚠️')
@@ -208,7 +209,7 @@ class Cliente {
                     alert ('☺ AGENDANDO COM SUCESSO ☺')
                     location.href = ('../adm_cliente.php')
                  </script>";
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             echo "<script>
                     alert ('⚠️⚠️ ERRO AO AGENDATAR TATTOO ⚠️⚠️')
                     location.href = ('../adm_cliente.php')

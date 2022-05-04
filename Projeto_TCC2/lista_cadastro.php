@@ -10,6 +10,19 @@
     <script src="js/jQuery.js" defer></script>
     <script src="js/table_clientes.js" defer></script>
     <script src="js/form_cadastro.js" defer></script>
+    <style>
+        ul li{
+            display: inline-block;
+            list-style-type: none;
+        }
+        .acao{
+            width: 90px;
+            height: 30px ;
+        }
+        .txt{
+            text-align: center;
+        }
+    </style>
 </head>
 <div class="container-fluid">
 
@@ -31,23 +44,24 @@
                 <table  class="table table-striped table-hover" id="table_cliente">
                     <thead>
                         <tr>
-                            <td width="20%">
+                            <td>
                                 <p> NOME </p>
                             </td>
-                            <td width="20%">
+                            <td>
                                 <p> LOGIN </p>
                             </td>
-                            <td width="20%">
+                            <td >
                                 <p> DATA NASC. </p>
                             </td>
-                            <td width="20%">
+                            <td width="5%" >
                                 <p> NÚMERO </p>
                             </td>
                             <!-- <td>
                                <p>Nº Agend</p> 
                             </td> -->
-                            <td width="5%">
-                                <p>AÇÃO</p>
+                            <td width="30%" >
+                              <!-- gato para empurrar a plavra ação -->  
+                            <p><a style="opacity:1%;" >aaaaaaaa</a> AÇÃO</p>
                             </td>
                         </tr>
                     </thead>
@@ -58,7 +72,7 @@
                     <tr>
 
                         <td>
-                            <?php echo "$registro[1]";?>
+                            <?php echo "$registro[1]";?><img width="30px">
                         </td>
                         <td class="esquerda">
                             <p>
@@ -77,11 +91,27 @@
                             </a>
                         </td> -->
                         <td>
-                            <button>
-                                <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>" >
-                                    Excluir <img width="20px"  src="css/icons/lixo.svg"/>
-                                </a>
-                            </button>
+                            <ul>
+                                <li>
+                                    <button class="acao">
+                                        <a href="processa_delete_clt.php?id=<?php echo $registro[0] ?>">
+                                            Editar <img width="24px" src="img/menu/pencil.png">
+                                        </a>
+                                    </button>
+
+                                </li>
+                                <li>
+
+                                    <button class="acao">
+                                        <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>" >
+                                            Excluir <img width="20px"  src="css/icons/lixo.svg"/>
+                                        </a>
+                                    </button>
+
+                                </li>
+
+                            </ul>
+
                         </td>    
                     </tr>
                     <tfoot>

@@ -94,7 +94,7 @@
                             <ol class="açao_ol">
                                 <dd class="açao_li">
                                     <button class="acao">
-                                        <a href="processa_delete_clt.php?id=<?php echo $registro[0] ?>">
+                                        <a href="altera_clt.php?id_cliente=<?php echo $registro[0] ?>">
                                             Editar <img width="24px" src="img/menu/pencil.png">
                                         </a>
                                     </button>

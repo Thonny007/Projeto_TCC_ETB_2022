@@ -138,8 +138,6 @@
                             seguintes informações: Descrição do trabalho que deseja ou algum flash(Desenho Rápido) que
                             tenha interesse.
                         </p> -->
-                        
-                        
                         <p>
                             ♣️ Tamanho em centímetros da área que você pretende tatuar, <br>
                             caso seja um projeto grande ou uma área difícil de medir podemos

@@ -11,7 +11,7 @@
     <script src="js/table_clientes.js" defer></script>
     <script src="js/form_cadastro.js" defer></script>
     <style>
-        ul li{
+        .açao_td .açao_ol dd{
             display: inline-block;
             list-style-type: none;
         }
@@ -90,28 +90,23 @@
                                     <?php echo $registro[5]; ?>
                             </a>
                         </td> -->
-                        <td>
-                            <ul>
-                                <li>
+                        <td class="açao_td">
+                            <ol class="açao_ol">
+                                <dd class="açao_li">
                                     <button class="acao">
                                         <a href="processa_delete_clt.php?id=<?php echo $registro[0] ?>">
                                             Editar <img width="24px" src="img/menu/pencil.png">
                                         </a>
                                     </button>
-
-                                </li>
-                                <li>
-
+                                </dd>
+                                <dd>
                                     <button class="acao">
                                         <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>" >
                                             Excluir <img width="20px"  src="css/icons/lixo.svg"/>
                                         </a>
                                     </button>
-
-                                </li>
-
-                            </ul>
-
+                                </dd>
+                            </ol>
                         </td>    
                     </tr>
                     <tfoot>

@@ -1,5 +1,5 @@
 #adm_lista ul {
-    background-color: rgba(189, 189, 189, 0.785);
+    background-color: #04040487;
 }
 
 div {
@@ -17,9 +17,9 @@ div {
 #adm_lista ul li a {
     font-size: 30px;
     text-decoration: none;
-    color: SaddleBrown;
+    color: #ffffff;
     font-family: arial black;
-    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-width: 0.9px;
     -webkit-text-stroke-color: black;
 }
 

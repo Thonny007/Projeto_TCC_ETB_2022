@@ -27,7 +27,6 @@
         $cliente = new Cliente ($nome, $data_nasc, $telefone,$senha, $login);
 
         $cliente->update($id, $_SESSION['adm']);
-
     }
     
 ?>

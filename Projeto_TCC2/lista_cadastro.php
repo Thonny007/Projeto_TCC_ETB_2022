@@ -11,15 +11,17 @@
     <script src="js/table_clientes.js" defer></script>
     <script src="js/form_cadastro.js" defer></script>
     <style>
-        .açao_td .açao_ol dd{
+        .açao_td .açao_ol dd {
             display: inline-block;
             list-style-type: none;
         }
-        .acao{
+
+        .acao {
             width: 90px;
-            height: 30px ;
+            height: 30px;
         }
-        .txt{
+
+        .txt {
             text-align: center;
         }
     </style>
@@ -27,52 +29,47 @@
 <div class="container-fluid">
 
     <body>
-        <?php include "menu_entrada.php"?>
-        <div id="list_cadastro" class="list_cadastro">
-            <?php 
-				include_once "classes/cliente.php";
-				$listar = Cliente::list();
-			?>
-            <!-- <p> <a href="cadastro.php"> Cadastrar Cliente </a> </p> -->
-            <div class="container">
-				<button id='btn_mostrar' type="button" class="btn btn-dark">
-                    Mostrar Clientes Cadastrados
-                </button>
-               <!--  <button id='btn_mostrar1' type="button" class="btn btn-dark">
-                    Cadastrar Cliente
-                </button> -->
-                <table  class="table table-striped table-hover" id="table_cliente">
-                    <thead>
-                        <tr>
-                            <td>
-                                <p> NOME </p>
-                            </td>
-                            <td>
-                                <p> LOGIN </p>
-                            </td>
-                            <td >
-                                <p> DATA NASC. </p>
-                            </td>
-                            <td width="5%" >
-                                <p> NÚMERO </p>
-                            </td>
-                            <!-- <td>
-                               <p>Nº Agend</p> 
-                            </td> -->
-                            <td width="30%" >
-                              <!-- gato para empurrar a plavra ação -->  
-                            <p><a style="opacity:1%;" >aaaaaaaa</a> AÇÃO</p>
-                            </td>
-                        </tr>
-                    </thead>
-                    <?php
-                    while ($registro = mysqli_fetch_row($listar))
-                    {
-					?>
+    <?php include "menu_entrada.php" ?>
+    <div id="list_cadastro" class="list_cadastro">
+        <?php
+            include_once "classes/cliente.php";
+            $listar = Cliente::list();
+        ?>
+        <div class="container">
+            <button id='btn_mostrar' type="button" class="btn btn-dark">
+                Mostrar Clientes Cadastrados
+            </button>
+            <table class="table table-striped table-hover" id="table_cliente">
+                <thead>
+                <tr>
+                    <td>
+                        <p> NOME </p>
+                    </td>
+                    <td>
+                        <p> LOGIN </p>
+                    </td>
+                    <td>
+                        <p> DATA NASC. </p>
+                    </td>
+                    <td width="5%">
+                        <p> NÚMERO </p>
+                    </td>
+                    <!-- <td>
+                       <p>Nº Agend</p>
+                    </td> -->
+                    <td width="30%">
+                        <!-- gato para empurrar a plavra ação -->
+                        <p><a style="opacity:1%;">aaaaaaaa</a> AÇÃO</p>
+                    </td>
+                </tr>
+                </thead>
+                <?php
+                while ($registro = mysqli_fetch_row($listar)) {
+                    ?>
                     <tr>
 
                         <td>
-                            <?php echo "$registro[1]";?><img width="30px">
+                            <?php echo "$registro[1]"; ?><img width="30px">
                         </td>
                         <td class="esquerda">
                             <p>
@@ -85,11 +82,6 @@
                         <td class="esquerda">
                             <?php echo $registro[7]; ?>
                         </td>
-                     <!--    <td>
-                            <a href="ver_agendamento.clt.php?id_agnd=<?php echo $registro_agnd[0] ?>">
-                                    <?php echo $registro[5]; ?>
-                            </a>
-                        </td> -->
                         <td class="açao_td">
                             <ol class="açao_ol">
                                 <dd class="açao_li">
@@ -101,23 +93,21 @@
                                 </dd>
                                 <dd>
                                     <button class="acao">
-                                        <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>" >
-                                            Excluir <img width="20px"  src="css/icons/lixo.svg"/>
+                                        <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
+                                            Excluir <img width="20px" src="css/icons/lixo.svg"/>
                                         </a>
                                     </button>
                                 </dd>
                             </ol>
-                        </td>    
+                        </td>
                     </tr>
                     <tfoot>
                     </tfoot>
                     <?php
-					    }
-					?>
-                </table>
-              
-            </div>
-
-</div>
-</body>
+                }
+                ?>
+            </table>
+        </div>
+    </div>
+    </body>
 </div>

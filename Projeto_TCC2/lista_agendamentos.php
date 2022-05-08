@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/lista_agendamentos.css">
 	<script src="js/jQuery.js"></script>
-    <title> Lista_agnd.Ditte.Tattoo </title>
+    <title> Lista.agnd.Ditte.Tattoo </title>
 	<style>
 		body{
 			width: 100%;
@@ -62,11 +62,8 @@
 					<td><?php echo $registro[2];?></td>				
 					<td><?php echo $registro[3];?></td>
                     <td>
-                        <a href="altera_clt.php?id_cliente=<?php echo $registro[5];?>">
-                            <?php echo $registro[4];?>
-                        </a>
+                        <!-- <a href="altera_clt.php?id_cliente=<?php /* echo $registro[5]; */?>"> -->                            <?php echo $registro[4];?>
                     </td>
-					
 					<td class="acoes">
 						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado&id_adm=<?php echo $_SESSION['id']; ?>">
 							<img class="confirma" src="css/icons/check.svg" alt="icone check">

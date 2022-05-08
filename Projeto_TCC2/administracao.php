@@ -18,7 +18,7 @@
 				<li> <a href="lista_agendamentos.php" > Agendamentos </a> </li>
 				<li> <a href="cadastro_adm.php"> Cadastrar Administrador</a></li>
 				<li> <a href="lista_adm.php">Listar Administradores </a> </li>
-				<li> <a href="altera_adm.php"> Alterar Dados</a> </li>
+				<li> <a href="altera_adm.php"> Alterar Meus Dados</a> </li>
 			</ul>
 		</div>
 	</body>

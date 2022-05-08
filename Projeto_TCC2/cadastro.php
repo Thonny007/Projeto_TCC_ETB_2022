@@ -40,7 +40,7 @@
                     <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
                 </p>
                 <p>
-                    LOGIN:
+                    LOGIN/Nome de Úsuario:
                     <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
                 </p>
                 <p>

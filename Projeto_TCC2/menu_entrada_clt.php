@@ -19,8 +19,8 @@
             <tr>
                 <td>
                     <h1>
-                        <a href="index.php">
-                            <img  src="img/logo1.png">
+                        <a href=".php">
+                            <img src="img/logo1.png">
                             DITTE.TATTOO
                         </a>
                     </h1>
@@ -41,11 +41,11 @@
             <strong>    
                 <ul>
                     <li>
+                        <a href="controler/logout.php">Home-Page</a>
+                    </li>
+                    <li>
                         <a href="adm_cliente.php"> Administração </a>
                     </li>
-                    <!-- <li>
-                        <a href="agendamento.php"> Agendamento </a>
-                    </li> -->
                     <li>
                         <a href="login.php"> LOGIN </a>
                     </li>

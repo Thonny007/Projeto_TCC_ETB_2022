@@ -21,7 +21,7 @@
             <tr>
                 <td>
                     <h1>
-                        <a href="index.php">
+                        <a href="administracao.php">
                             <img  src="img/logo1.png">
                             DITTE.TATTOO
                         </a>
@@ -39,6 +39,9 @@
         <div class="lista_menu">
             <strong>    
                 <ul>
+                    <li>
+                        <a href="controler/logout.php">Home-Page</a>
+                    </li>
                     <li>
                         <a href="administracao.php"> Administração </a>
                     </li>

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/menu_entrada.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/lista_agendamentos.css">
-    <title> Lista_agnd.Ditte.Tattoo </title>
+    <title> Lista.agnd.Ditte.Tattoo </title>
 	<style>
 		body{
 			width: 100%;
@@ -32,7 +32,7 @@
 	</button>
 	
 	<button class="btn btn-dark">
-		<a href="lista_agendamentos.php">listar Clientes confirmados e em espera</a>
+		<a href="lista_agendamentos.php">Listar Clientes Confirmados e em Espera</a>
 	</button>
 	<table id="lista_cadastro"  class="table mt-3 table-hover">
 		<thead>
@@ -77,9 +77,7 @@
 			<?php } ?>
 			<tfoot></tfoot>				
 		</table>
-
 	</div>
-	
 </body>
 </html>
 </div>

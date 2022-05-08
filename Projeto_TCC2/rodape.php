@@ -29,17 +29,6 @@
                                 clarice.terra42@gmail.com
                             </a>
                         </li>
-                        <li> 
-                            <h5> 
-                                <U> ENDEREÇO </U> 
-                            </h5> 
-                        </li>
-                        <li class="ender">
-                            <a href="https://maps.app.goo.gl/kXXQeBLzujkS4NUk9"> 
-                                <img src="img/menu/map.png">
-                            </a>
-                            <img  src="img/qr_localizacao.png">
-                        </li>
                     </ol>
                 </td>
                 <td style="width: 40%;">
@@ -47,16 +36,16 @@
                         <h5> <U> MENU </U> </h5>
                         <li>
                             <a href="cadastro.php">
-                                <img src="img/menu/cadastro.png" alt="" />
+                                <img src="img/menu/cadastro.png" />
                                 Cadastro
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="agendamento.php">
                                 <img src="img/menu/calendar.png" />
                                 Agendamento
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="orçamento.php">
                                 <img src="img/menu/orçamento.png" />
@@ -77,10 +66,29 @@
                         </li>
                     </ol>
                 </td>
+                <td width="20%">
+                    <ol>
+                        <li>    
+                            <h5> 
+                                <U> ENDEREÇO </U> 
+                            </h5> 
+                            <h6>
+                               
+                            Localização do Estúdio
+                            </h6>
+                        </li>
+                        <li class="ender">
+                            <a href="https://maps.app.goo.gl/kXXQeBLzujkS4NUk9"> 
+                                <img src="img/menu/map.png">
+                            </a>
+                            <img  src="img/qr_localizacao.png">
+                        </li>
+                    </ol>
+                </td>
                 <td>
                     <img class="apresenta" src="img/Clarice_Maria_Terra.jpg" alt="" />
                 </td>
-                <td>
+                <td  width="20%">
                     <p> <u> Tatuadora:</u> Clarice Maria Terra </p>
                 </td>
             </tr>

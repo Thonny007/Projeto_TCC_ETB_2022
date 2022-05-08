@@ -66,10 +66,8 @@ class Administrador {
     }
     public function delete($id){
         $sql = "DELETE FROM administrador WHERE id_adm = '$id'";
-
         try {
             $query = mysqli_query($this->con, $sql);
-            
             echo "
                 <script>
                     alert ('☺ Registro de Administrador Deletado/Apagado com Sucesso ☺') 

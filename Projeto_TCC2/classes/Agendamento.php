@@ -50,7 +50,7 @@ class Agendamentos {
                 c.id_clt as 'id cliente'
             FROM agendamento ag
             inner join cliente c on c.id_agnd  = ag.id_agnd
-            where ag.status_agnd  != 'desmarcado'";
+            where ag.status_agnd  = 'espera'";
         } else {
             $sql_consulta = 
             "SELECT 

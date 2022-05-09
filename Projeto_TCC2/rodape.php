@@ -12,20 +12,20 @@
                             <h5> <U> CONTADOS </U> </h5>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/dite.tattoo/">
-                                <img src="img/contados/insta.png" alt="">
+                            <a href="https://www.instagram.com/dite.tattoo/" target="_blank"> 
+                                <img src="img/contados/insta.png">
                                 Instagram
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/dite.tattoo">
-                                <img src="img/contados/facebook.png" alt="">
+                            <a href="https://www.facebook.com/dite.tattoo" target="_blank">
+                                <img src="img/contados/facebook.png">
                                 Facebook
                             </a>
                         </li>
                         <li>
-                            <img src="img/contados/gmail.png" alt="" />
-                            <a href="mailto:clarice.terra42@gmail.com?subject=(ORÇAMENTO TATOO) mensagem&body=(Bom Dia, Boa Tarde/Noite)">
+                            <img src="img/contados/gmail.png" />
+                            <a href="mailto:clarice.terra42@gmail.com?subject=(ORÇAMENTO TATOO) &body=(Bom Dia, Boa Tarde/Noite)">
                                 clarice.terra42@gmail.com
                             </a>
                         </li>
@@ -73,12 +73,11 @@
                                 <U> ENDEREÇO </U> 
                             </h5> 
                             <h6>
-                               
-                            Localização do Estúdio
+                                Localização do Estúdio
                             </h6>
                         </li>
                         <li class="ender">
-                            <a href="https://maps.app.goo.gl/kXXQeBLzujkS4NUk9"> 
+                            <a href="https://maps.app.goo.gl/kXXQeBLzujkS4NUk9" target="_blank"> 
                                 <img src="img/menu/map.png">
                             </a>
                             <img  src="img/qr_localizacao.png">

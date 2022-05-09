@@ -14,7 +14,7 @@
     <style>
         /*imagem de fundo*/
         body {
-            background-image: url('img/fundo.png');
+            background-image: url('img/fundo1.jpg');
         }
     </style>
 
@@ -32,10 +32,9 @@
         <strong>
             <ul>
                 <li>
-                    <a href="cadastro.php"> Cadastro/Agendamento </a>
-                </li>
+                    <a href="controler/logout.php"> Home-Page </a>
                 <li>
-                    <a href="agendamento.php">  </a>
+                    <a href="cadastro.php"> Cadastro/Agendamento </a>
                 </li>
                 <li>
                     <a href="orçamento.php"> Orçamento </a>

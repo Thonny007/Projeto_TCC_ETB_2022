@@ -1,22 +1,16 @@
 <?php
 
-class Cliente
-{
-
-    private $nome_clt;
+class Cliente extends Pessoa {
     private $data_nascimento;
     private $numero_cliente;
-    private $senha_clt;
-    private $login_clt;
-    private $con;
 
-    public function __construct($nome_clt, $data_nascimento, $numero_cliente, $senha_clt, $login_clt)
+    public function __construct($nome, $data_nascimento, $numero_cliente, $senha, $login)
     {
-        $this->nome_clt = $nome_clt;
+        $this->nome = $nome;
         $this->data_nascimento = $data_nascimento;
         $this->numero_cliente = $numero_cliente;
-        $this->senha_clt = $senha_clt;
-        $this->login_clt = $login_clt;
+        $this->senha = $senha;
+        $this->login = $login;
         $this->con = mysqli_connect("localhost", "root", "", "agendamentos");
     }
 
@@ -53,7 +47,7 @@ class Cliente
         $sql = "INSERT INTO cliente 
         (nome_clt, data_nascimento, numero_cliente, senha_clt, login_clt)
         VALUES
-        ('$this->nome_clt', '$this->data_nascimento', '$this->numero_cliente', '$this->senha_clt', '$this->login_clt')";
+        ('$this->nome', '$this->data_nascimento', '$this->numero_cliente', '$this->senha', '$this->login')";
 
         $query = mysqli_query($this->con, $sql);
 
@@ -114,7 +108,7 @@ class Cliente
 
             echo "
             <script> 
-                location.href ('../lista_cadastro.php') 
+                location.href = ('../lista_cadastro.php')
             </script>";
 
         }
@@ -161,13 +155,13 @@ class Cliente
         return $result;
     }
 
-    public function update($id, $adm)
+    public function update($id, $adm=0)
     {
         $sql = "UPDATE agendamentos.cliente
         SET 
-            nome_clt='$this->nome_clt', 
-            login_clt='$this->login_clt',
-            senha_clt='$this->senha_clt',
+            nome_clt='$this->nome', 
+            login_clt='$this->login',
+            senha_clt='$this->senha',
             data_nascimento='$this->data_nascimento',
             numero_cliente='$this->numero_cliente'
         WHERE id_clt = '$id' ";
@@ -177,14 +171,14 @@ class Cliente
 
             if (!$adm) {
                 echo "
-                    <script>
-                        alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
+                    <script> 
+                        alert ('☺ Cadastro do(a) $this->nome Alterado Com Sucesso ☺')
                         location.href = ('../adm_cliente.php')
                     </script>";
             } else {
                 echo "
                     <script>
-                        alert ('☺ Cadastro do(a) $this->nome_clt Alterado Com Sucesso ☺')
+                        alert ('☺ Cadastro do(a) $this->nome Alterado Com Sucesso ☺')
                         location.href = ('../administracao.php')
                     </script>";
             }

@@ -1,23 +1,16 @@
 <?php
 
-class Administrador
-{
-    private $nome_adm;
-    private $senha_clt;
-    private $login_clt;
-    private $con;
+class Administrador extends Pessoa {
 
-    function __construct($nome_adm, $login_clt, $senha_clt)
-    {
-        $this->nome_adm = $nome_adm;
-        $this->login_clt = $login_clt;
-        $this->senha_clt = $senha_clt;
+    function __construct($nome, $login, $senha){
+        $this->nome = $nome;
+        $this->login = $login;
+        $this->senha = $senha;
         $this->con = mysqli_connect("localhost", "root", "", "agendamentos");
     }
 
 
-    public static function loginAlredyExist($login)
-    {
+    public static function loginAlredyExist($login){
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
         $sql = "SELECT DISTINCT id_clt, nome_clt, login_clt, senha_clt
@@ -29,8 +22,7 @@ class Administrador
         return mysqli_fetch_row($query);
     }
 
-    public static function verificaAdmin($login_clt, $senha_clt)
-    {
+    public static function verificaAdmin($login_clt, $senha_clt){
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
         $sql = "SELECT id_adm, nome_adm, login_adm, senha_adm
@@ -41,15 +33,16 @@ class Administrador
         $query = mysqli_query($con, $sql);
         $adm_result = mysqli_fetch_row($query);
 
+        mysqli_close($con);
+
         return $adm_result;
     }
 
-    public function insert()
-    {
+    public function insert(){
         $sql = "INSERT INTO agendamentos.administrador
             (nome_adm, login_adm, senha_adm)
         VALUES 
-            ('$this->nome_adm', '$this->login_clt', '$this->senha_clt')";
+            ('$this->nome', '$this->login', '$this->senha')";
 
         try {
             mysqli_query($this->con, $sql);
@@ -60,7 +53,7 @@ class Administrador
             location.href = '../cadastro_adm.php'
             </script>
             ";
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             echo
             "
             <script>
@@ -71,8 +64,7 @@ class Administrador
         }
     }
 
-    public function delete($id)
-    {
+    public function delete($id){
         $sql = "DELETE FROM agendamentos.administrador WHERE id_adm = $id";
 
         try {
@@ -88,7 +80,7 @@ class Administrador
             </script>";
 
 
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             echo "
             <script> 
                 alert ('ERRO AO DELETAR ADMINISTRADOR') 
@@ -96,7 +88,7 @@ class Administrador
 
             echo "
             <script> 
-                location.href ('../lista_cadastro_adm.php') 
+                location.href = ('../lista_cadastro_adm.php') 
             </script>";
 
         }
@@ -104,8 +96,7 @@ class Administrador
 
     }
 
-    public static function getById($id, $toAdmin = false)
-    {
+    public static function getById($id, $toAdmin = false){
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
         $sql = "SELECT * FROM administrador WHERE id_adm = $id";
@@ -122,22 +113,21 @@ class Administrador
         return $toAdmin ? $admin : $result;
     }
 
-    public function update($id)
-    {
+    public function update($id, $adm=0){
         $sql = "UPDATE agendamentos.administrador
         SET 
-            login_adm='$this->login_clt',
-            nome_adm='$this->nome_adm', 
-            senha_adm='$this->senha_clt'
+            login_adm='$this->login',
+            nome_adm='$this->nome', 
+            senha_adm='$this->senha'
         WHERE id_adm = '$id' ";
 
         try {
             mysqli_query($this->con, $sql);
             echo "<script>
-                    alert ('☺ Cadastro do(a) $this->nome_adm Alterado Com Sucesso ☺')
+                    alert ('☺ Cadastro do(a) $this->nome Alterado Com Sucesso ☺')
                     location.href = ('../administracao.php')
                  </script>";
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             echo "deu errado";
         }
 
@@ -145,8 +135,7 @@ class Administrador
 
     }
 
-    public static function getMyAgnds($id_adm)
-    {
+    public static function getMyAgnds($id_adm){
         $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
         $sql = "SELECT
@@ -169,49 +158,18 @@ class Administrador
         return $result;
     }
 
-    public function setMyAgnds($id_adm, $id_agnd)
-    {
+    public function setMyAgnds($id_adm, $id_agnd){
         $sql = "UPDATE cliente set id_adm = '$id_adm'
         where id_agnd = '$id_agnd';";
 
         try {
             mysqli_query($this->con, $sql);
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             echo "algo deu errado";
         }
 
         mysqli_close($this->con);
     }
 
-    function getNome_adm()
-    {
-        return $this->nome_adm;
-    }
 
-    function getSenha_clt()
-    {
-        return $this->senha_clt;
-    }
-
-    function getLogin_clt()
-    {
-        return $this->login_clt;
-    }
-
-    function setNome_adm($nome_adm)
-    {
-        $this->nome_adm = $nome_adm;
-    }
-
-    function setSenha_clt($senha_clt)
-    {
-        $this->senha_clt = $senha_clt;
-    }
-
-    function setLogin_clt($login_clt)
-    {
-        $this->login_clt = $login_clt;
-    }
 }
-
-?>

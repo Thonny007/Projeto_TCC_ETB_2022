@@ -137,7 +137,7 @@ class Agendamentos {
             $result[1],
             $result[2],
             $result[3],
-            $result[4],
+            $result[4]
         );
 
         return $toAgnd ? $agnd : $result;
@@ -156,13 +156,13 @@ class Agendamentos {
     /**
      * @throws Exception
      */
-    public static function formataData(string $dataRecebida): string{
+    public static function formataData($dataRecebida){
         $data = new DateTime($dataRecebida);
 
         return $data->format('d/m/Y H:i');
     }
 
-    public function setStatus($status): void{
+    public function setStatus($status){
         $this->status = $status;
     }
 

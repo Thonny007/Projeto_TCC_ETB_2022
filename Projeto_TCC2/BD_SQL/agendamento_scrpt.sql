@@ -37,7 +37,6 @@ CREATE TABLE IF NOT EXISTS `Agendamentos`.`Agendamento` (
   `status_agendamento` ENUM('espera', 'confirmado', 'desmarcado') NOT NULL DEFAULT 'espera',
   `imagem` LONGBLOB NULL,
   `descricao` VARCHAR(255) NOT NULL,
-  `time` DATETIME NOT NULL,
   PRIMARY KEY (`idAgendamento`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;

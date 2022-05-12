@@ -30,7 +30,7 @@
                 <td width="20%" class="sair">
                     <p> Olá <?php echo $_SESSION["nome"]; ?></p>
                     <a href="controler/logout.php">                     
-                        SAIR 
+                        SAIR <img src="" alt="logout">
                     </a>
                 </td>
             </tr>

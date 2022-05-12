@@ -46,7 +46,7 @@ h1 a:hover {
     background-color: black;
 }
 
-.lista_menu ul {
+.lista_menu .aaa {
     text-align: center;
     padding: -3px;
     background-color: #DCDCDC;
@@ -56,7 +56,7 @@ h1 a:hover {
     margin: 15px;
 }
 
-.lista_menu ul li {
+.lista_menu .aaa .li {
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -68,12 +68,12 @@ h1 a:hover {
     font-size: 25px;
 }
 
-.lista_menu li a {
+.aaa .li a {
     text-decoration: none;
     color: SaddleBrown;
 }
 
-li a:hover {
+.aaa .li li a:hover {
     color: black;
     text-decoration: none;
     font-weight: bold;

@@ -2,8 +2,8 @@ footer {
     width: fit-content;
     margin: 10px;
     padding: 10px;
-    background-color: rgba(10, 23, 55, 0.37);
-    color: rgb(255, 0, 0);
+    background-color: rgba(0, 0, 0, 0.834);
+    color: SaddleBrown;
     font-family: Arial black;
     border-radius: 10px;
     -webkit-text-stroke-width: 0.4px;
@@ -21,7 +21,7 @@ table {
     border-color: red;
 }
 
-footer ol li {
+footer dl li {
     list-style-type: none;
     border-radius: 10px;
 }
@@ -35,15 +35,16 @@ img {
 
 footer a:hover {
     text-decoration: none;
-    color: rgb(17, 17, 17)
+    color: rgb(195, 65, 65)
 }
 
 
 /* link selecionado */
 
-footer a:active {
+
+/* footer a:active {
     color: green;
-}
+} */
 
 footer {
     max-width: 100%;
@@ -64,7 +65,7 @@ table tr td p {
     font-size: 20px;
 }
 
-table tr td ol {
+table tr td dl {
     text-align: center;
 }
 
@@ -75,4 +76,39 @@ table tr td a {
 .ender img {
     width: 60px;
     height: 60px;
+}
+
+.map img {
+    width: 90px;
+    height: 90px;
+}
+
+footer #contatos_menu dd:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: red;
+}
+
+#contatos_menu dd:hover .map {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: red;
+}
+
+#contatos_menu .ender:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: red;
 }

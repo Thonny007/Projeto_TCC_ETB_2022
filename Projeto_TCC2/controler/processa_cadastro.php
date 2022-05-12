@@ -2,7 +2,8 @@
 <?php
     include_once "../classes/cliente.php";
 
-    $login = Cliente::loginAlredyExist($_POST["login"]);
+    $login = new Cliente();
+    $login = $login->loginAlredyExist($_POST["login"]);
 
     if ($login == null) {
         $hoje = new DateTime();

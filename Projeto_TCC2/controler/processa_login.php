@@ -5,9 +5,12 @@
 
 	$login = $_POST["login"];
 	$senha = $_POST["senha"];
-	
-	$cliente = Cliente::verificaCliente($login, $senha);
-	$admin = Administrador::verificaAdmin($login, $senha);
+
+    $admin = new Administrador();
+    $cliente = new Cliente();
+
+    $cliente = $cliente->verificaCliente($login, $senha);
+    $admin = $admin->verificaAdmin($login, $senha);
 	
  	if ( $cliente == null && $admin == null )  {
 		echo "<script>

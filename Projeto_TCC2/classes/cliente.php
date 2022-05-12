@@ -1,11 +1,24 @@
 <?php
 
+require_once 'Pessoa.php';
+
 class Cliente extends Pessoa {
     private $data_nascimento;
     private $numero_cliente;
 
-    public function __construct($nome, $data_nascimento, $numero_cliente, $senha, $login)
-    {
+    public function __construct(
+        $id = null,
+        $nome = null,
+        $data_nascimento = null,
+        $numero_cliente = null,
+        $senha = null,
+        $login = null
+    ){
+        $this->Cliente($id, $nome, $data_nascimento, $numero_cliente, $senha, $login);
+    }
+
+    private function Cliente($id, $nome, $data_nascimento, $numero_cliente, $senha, $login){
+        $this->id = $id;
         $this->nome = $nome;
         $this->data_nascimento = $data_nascimento;
         $this->numero_cliente = $numero_cliente;
@@ -14,36 +27,29 @@ class Cliente extends Pessoa {
         $this->con = mysqli_connect("localhost", "root", "", "agendamentos");
     }
 
-    public static function verificaCliente($login, $senha)
-    {
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
-        $sql = "SELECT id_clt, nome_clt, login_clt, senha_clt
-        FROM cliente
+    public function verificaCliente($login, $senha){
+        $sql = "SELECT * FROM cliente
         WHERE 
                login_clt = '$login' 
         AND
                senha_clt = '$senha' ";
 
-        $query = mysqli_query($con, $sql);
+        $query = mysqli_query($this->con, $sql);
         return mysqli_fetch_row($query);
     }
 
 
-    public static function loginAlredyExist($login)
-    {
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
-
+    public function loginAlredyExist($login){
         $sql = "SELECT DISTINCT id_clt, nome_clt, login_clt, senha_clt
         FROM cliente
         WHERE login_clt = '$login' ";
 
-        $query = mysqli_query($con, $sql);
+        $query = mysqli_query($this->con, $sql);
 
         return mysqli_fetch_row($query);
     }
 
-    public function insert(): string
-    {
+    public function insert(): string{
         $sql = "INSERT INTO cliente 
         (nome_clt, data_nascimento, numero_cliente, senha_clt, login_clt)
         VALUES
@@ -81,9 +87,9 @@ class Cliente extends Pessoa {
         return $data->format('d/m/Y');
     }
 
-    public function delete($id)
+    public function delete()
     {
-        $sql = "DELETE FROM cliente WHERE id_clt = '$id'";
+        $sql = "DELETE FROM cliente WHERE id_clt = '$this->id'";
 
         try {
             mysqli_query($this->con, $sql);
@@ -126,6 +132,7 @@ class Cliente extends Pessoa {
         $result = mysqli_fetch_row($query);
 
         $cliente = new Cliente(
+            $result[0],
             $result[1],
             $result[4],
             $result[7],
@@ -198,17 +205,14 @@ class Cliente extends Pessoa {
     }
 
 
-    public static function geraRelacionamento($id_cliente, $id_agendamento)
-    {
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
-
+    public function geraRelacionamento($id_agendamento){
         $sql =
             "UPDATE agendamentos.cliente
         SET id_agnd=$id_agendamento[0]
-        WHERE id_clt=$id_cliente";
+        WHERE id_clt= $this->id";
 
         try {
-            mysqli_query($con, $sql);
+            mysqli_query($this->con, $sql);
             echo "<script>
                     alert ('☺ AGENDANDO COM SUCESSO ☺')
                     location.href = ('../adm_cliente.php')
@@ -220,6 +224,6 @@ class Cliente extends Pessoa {
                  </script>";
         }
 
-        mysqli_close($con);
+        mysqli_close($this->con);
     }
 }

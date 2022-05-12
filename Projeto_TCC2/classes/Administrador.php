@@ -1,8 +1,15 @@
 <?php
 
+require_once "Pessoa.php";
+
 class Administrador extends Pessoa {
 
-    function __construct($nome, $login, $senha){
+    function __construct($id = null, $nome = null, $login = null, $senha = null){
+        $this->Administrador($id, $nome, $login, $senha);
+    }
+
+    private function Administrador($id, $nome, $login, $senha){
+        $this->id = $id;
         $this->nome = $nome;
         $this->login = $login;
         $this->senha = $senha;
@@ -10,30 +17,26 @@ class Administrador extends Pessoa {
     }
 
 
-    public static function loginAlredyExist($login){
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+    public function loginAlredyExist($login){
 
-        $sql = "SELECT DISTINCT id_clt, nome_clt, login_clt, senha_clt
-        FROM cliente
-        WHERE login_clt = '$login'";
+        $sql = "SELECT * FROM administrador
+        WHERE login_adm = '$login'";
 
-        $query = mysqli_query($con, $sql);
+        $query = mysqli_query($this->con, $sql);
 
         return mysqli_fetch_row($query);
     }
 
-    public static function verificaAdmin($login_clt, $senha_clt){
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
-
+    public function verificaAdmin($login_clt, $senha_clt){
         $sql = "SELECT id_adm, nome_adm, login_adm, senha_adm
         FROM administrador
         WHERE login_adm = '$login_clt'
-        AND senha_adm = '$senha_clt'; ";
+        AND senha_adm = '$senha_clt' ";
 
-        $query = mysqli_query($con, $sql);
+        $query = mysqli_query($this->con, $sql);
         $adm_result = mysqli_fetch_row($query);
 
-        mysqli_close($con);
+        mysqli_close($this->con);
 
         return $adm_result;
     }
@@ -64,8 +67,8 @@ class Administrador extends Pessoa {
         }
     }
 
-    public function delete($id){
-        $sql = "DELETE FROM agendamentos.administrador WHERE id_adm = $id";
+    public function delete(){
+        $sql = "DELETE FROM agendamentos.administrador WHERE id_adm = $this->id";
 
         try {
             mysqli_query($this->con, $sql);
@@ -96,18 +99,16 @@ class Administrador extends Pessoa {
 
     }
 
-    public static function getById($id, $toAdmin = false){
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
-
+    public function getById($id, $toAdmin = false){
         $sql = "SELECT * FROM administrador WHERE id_adm = $id";
-        $query = mysqli_query($con, $sql);
+        $query = mysqli_query($this->con, $sql);
 
         $result = mysqli_fetch_row($query);
 
         $admin = new Administrador(
             $result[1],
             $result[2],
-            $result[3],
+            $result[3]
         );
 
         return $toAdmin ? $admin : $result;

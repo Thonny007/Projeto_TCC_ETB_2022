@@ -86,11 +86,12 @@ class Agendamentos {
     }
 
     public function getImg(){
-        $sql = "SELECT id_agnd FROM agendamento WHERE id_agnd = $this->id";
+        $sql = "SELECT imagem_atendimento FROM agendamento WHERE id_agnd = $this->id";
         $query = mysqli_query($this->con, $sql);
 
         return mysqli_fetch_row($query);
     }
+
     public function delete(){
         $sql = "DELETE FROM agendamento WHERE id_agnd = '$this->id'";
 
@@ -125,10 +126,11 @@ class Agendamentos {
 
     }
 
-    public function getById($id, $toAgnd=false) {
+    public static function getById($id, $toAgnd=false) {
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
         $sql = "SELECT * FROM agendamento WHERE id_agnd = $id";
-        $query = mysqli_query($this->con, $sql);
+        $query = mysqli_query($con, $sql);
 
         $result = mysqli_fetch_row($query);
 

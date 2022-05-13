@@ -27,11 +27,10 @@
 		  include "menu_entrada_clt.php";
 	?>
     <?php
-        if($_SESSION['adm']){
+        if(!$_SESSION['adm']){
             $registro = cliente::getById($_SESSION["id"]);
         }else{
             $id_cliente = $_GET["id_cliente"];
-
             $registro = Cliente::getById($id_cliente);
         }
     ?>

@@ -2,8 +2,16 @@
 <?php
     include_once "../classes/cliente.php";
 
-    $login = new Cliente();
-    $login = $login->loginAlredyExist($_POST["login"]);
+    $cliente = new Cliente(
+        null,
+        $_POST["nome"],
+        $_POST["data_nasc"],
+        $_POST["telefone"],
+        $_POST["senha"],
+        $_POST["login"]
+    );
+
+    $login = $cliente->loginAlredyExist();
 
     if ($login == null) {
         $hoje = new DateTime();
@@ -22,14 +30,6 @@
                     location.href = ('/Projeto_TCC2/cadastro.php')
                 </script>";
         }else {
-            
-            $cliente = new Cliente(
-                $_POST["nome"],
-                $_POST["data_nasc"],
-                $_POST["telefone"],
-                $_POST["senha"],
-                $_POST["login"]
-            );
 
             $cliente->insert();
 
@@ -38,11 +38,9 @@
                     location.href = ('/Projeto_TCC2/login.php')
                 </script>";
         }
-        }else {    
+    }else {
             echo "<script>
                     alert ('⚠️ login já existente favor inserir outro login ⚠️')
                     location.href = ('/Projeto_TCC2/cadastro.php')
                 </script>";
         }
-    
-?>

@@ -13,7 +13,7 @@
 		<?php include "menu_entrada_clt.php"?> 	
 		<div id="adm_lista"> 
 			<ul>		
-				<li> <a href="altera_clt.php" > Alterar meu Cadastro </a> </li>
+				<li> <a href="altera_clt.php?id_cliente=<?php echo $_SESSION['id']?>" > Alterar meu Cadastro </a> </li>
 				<li> <a href="agendamento.php" > Realizar Agendamento  </a> </li>
                 <li> <a href="ver_agendamento_clt.php"> Ver Agendamento </a> </li>
 			</ul>

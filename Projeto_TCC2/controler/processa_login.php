@@ -9,8 +9,8 @@
     $admin = new Administrador();
     $cliente = new Cliente();
 
-    $cliente = $cliente->verificaCliente($login, $senha);
-    $admin = $admin->verificaAdmin($login, $senha);
+    $cliente = $cliente->verifica($login, $senha);
+    $admin = $admin->verifica($login, $senha);
 	
  	if ( $cliente == null && $admin == null )  {
 		echo "<script>

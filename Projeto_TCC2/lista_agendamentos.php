@@ -23,7 +23,8 @@
 <body>
 	<?php 
 		include_once "classes/Agendamento.php";
-		$listar = Agendamentos::list();
+        $agnd = new Agendamentos();
+		$listar = $agnd->list();
 	?>
 
 	<?php include "menu_entrada.php"; ?>

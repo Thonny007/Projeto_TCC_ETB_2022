@@ -33,7 +33,8 @@
     <div id="list_cadastro" class="list_cadastro">
         <?php
             include_once "classes/cliente.php";
-            $listar = Cliente::list();
+            $cliente = new Cliente();
+            $listar = $cliente->list();
         ?>
         <div class="container">
             <button id='btn_mostrar' type="button" class="btn btn-dark">

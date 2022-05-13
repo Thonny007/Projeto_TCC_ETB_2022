@@ -24,7 +24,7 @@
         $senha = $_POST["senha"];
         $data_nasc = $_POST["data_nasc"];
         $telefone = $_POST["telefone"];
-        $cliente = new Cliente ($nome, $data_nasc, $telefone,$senha, $login);
+        $cliente = new Cliente (null, $nome, $data_nasc, $telefone,$senha, $login);
 
         $cliente->update($id, $_SESSION['adm']);
     }

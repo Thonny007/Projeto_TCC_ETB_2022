@@ -21,20 +21,12 @@
 </head>
 <body>
     <?php
-        $id = $_GET['id'];
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
-        $querySelecionaPorCodigo = "SELECT imagem_atendimento FROM agendamento WHERE id_agnd = $id";
-        $resultado = mysqli_query($con, $querySelecionaPorCodigo);
-        $imagem = mysqli_fetch_row($resultado);
-
+        require_once "classes/Agendamento.php";
+        $agnd = Agendamentos::getById($_GET['id'], true);
+        $foto = $agnd->getImg();
     ?>
     <div class="carrega-imagem">
-        <img src="data:image/jpeg;base64,<?= base64_encode($imagem[0]) ?>" />
-        <button>
-            <a href="data:image/jpeg;base64,<?= base64_encode($imagem[0]) ?>" download>
-                Download
-            </a>
-        </button>
+        <img src="controler/<?php echo $foto[0]; ?>" alt="foto_exemplo"/>
     </div>
 </body>
 </html>

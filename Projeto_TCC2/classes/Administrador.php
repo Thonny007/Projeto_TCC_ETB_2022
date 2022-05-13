@@ -17,21 +17,21 @@ class Administrador extends Pessoa {
     }
 
 
-    public function loginAlredyExist($login){
+    public function loginAlredyExist(){
 
         $sql = "SELECT * FROM administrador
-        WHERE login_adm = '$login'";
+        WHERE login_adm = '$this->login'";
 
         $query = mysqli_query($this->con, $sql);
 
         return mysqli_fetch_row($query);
     }
 
-    public function verificaAdmin($login_clt, $senha_clt){
+    public function verifica($login, $senha){
         $sql = "SELECT id_adm, nome_adm, login_adm, senha_adm
         FROM administrador
-        WHERE login_adm = '$login_clt'
-        AND senha_adm = '$senha_clt' ";
+        WHERE login_adm = '$login'
+        AND senha_adm = '$senha' ";
 
         $query = mysqli_query($this->con, $sql);
         $adm_result = mysqli_fetch_row($query);
@@ -60,7 +60,7 @@ class Administrador extends Pessoa {
             echo
             "
             <script>
-            alert('⚠️⚠️ Login Já Cadastrado Favor Tente Outro ⚠️⚠️');
+            alert('⚠️⚠️ Erro ao cadastrar ⚠️⚠️');
             location.href = '../cadastro_adm.php'
             </script>
                     ";
@@ -99,9 +99,11 @@ class Administrador extends Pessoa {
 
     }
 
-    public function getById($id, $toAdmin = false){
+    public static function getById($id, $toObj = false){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+
         $sql = "SELECT * FROM administrador WHERE id_adm = $id";
-        $query = mysqli_query($this->con, $sql);
+        $query = mysqli_query($con, $sql);
 
         $result = mysqli_fetch_row($query);
 
@@ -111,7 +113,7 @@ class Administrador extends Pessoa {
             $result[3]
         );
 
-        return $toAdmin ? $admin : $result;
+        return $toObj ? $admin : $result;
     }
 
     public function update($id, $adm=0){

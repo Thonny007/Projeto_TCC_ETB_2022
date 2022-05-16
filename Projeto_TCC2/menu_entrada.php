@@ -40,7 +40,7 @@
             <strong>    
                 <ul>
                     <li>
-                        <a href="controler/logout.php">Home-Page</a>
+                        <a href="controler/logout.php"><span data-tooltip="Volta para a Página Principal \n Fecha a Sessão automaticamente" >Home-Page</span>  </a>
                     </li>
                     <li>
                         <a href="administracao.php"> Administração </a>

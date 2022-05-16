@@ -8,8 +8,8 @@
 		/* echo "must be logged"; */
 		echo "<script>
                 alert ('🚷⚠️ Acesso Negado 🚷⚠️')
-                // location.href = ('../Projeto_TCC2/index.php')
+					location.href = ('../Projeto_TCC2/index.php')
              </script>";
-			  exit();
+		exit();
 	}
 ?>

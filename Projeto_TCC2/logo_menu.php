@@ -32,7 +32,8 @@
         <strong>
             <ul class="aaa">
                 <li class="li">
-                    <a href="controler/logout.php"> Home-Page </a>
+                    <a href="controler/logout.php"><span data-tooltip="Volta para a Página Principal">Home-Page</span>  </a>
+                </li>
                 <li>
                     <a href="cadastro.php"> Cadastro/Agendamento </a>
                 </li>

@@ -50,7 +50,7 @@
     <form action="controler/processa_altera_clt.php" method="post">
         <input width="30%" type="hidden" name="id" value="<?php echo $cliente[0] ?>">
         <div class="form-group">
-            <label for="nome">Nome</label>
+            <label for="nome"> Nome </label>
             <input type="text" class="form-control" name="nome" value="<?php echo $cliente[1] ?>">
         </div>
         <div class="form-group">
@@ -58,19 +58,19 @@
             <input type="date" class="form-control" name="data_nasc" value="<?php echo $cliente[4]; ?>">
         </div>
         <div class="form-group">
-            <label>Telefone</label>
+            <label> Telefone </label>
             <input type="text" class="form-control" name="telefone" value="<?php echo $cliente[7] ?>">
         </div>
         <div class="form-group">
-            <label>Login</label>
+            <label> Login </label>
             <input type="text" class="form-control" name="login" value="<?php echo $cliente[2] ?>">
         </div>
         <div class="form-group">
-            <label for="senha">Senha</label>
+            <label for="senha"> Senha </label>
             <input type="password" class="form-control" name="senha" value="<?php echo $cliente[3] ?>">
         </div>
         <p></p>
-        <button type="submit" class="btn btn-danger">Alterar Usuário</button>
+            <button type="submit" class="btn btn-danger"> Alterar Usuário </button>
         <hr>
     </form>
 </body>

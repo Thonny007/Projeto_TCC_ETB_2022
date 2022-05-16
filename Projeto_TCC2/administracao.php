@@ -14,6 +14,7 @@
     <?php include "menu_entrada.php" ?>
     <div id="adm_lista">
         <ul>
+            <li><a href="adm_cadastra_clt.php"> Cadastrar Cliente </a></li>
             <li><a href="lista_cadastro.php"> Listar Cadastros </a></li>
             <li><a href="lista_agendamentos.php"> Agendamentos </a></li>
             <li><a href="cadastro_adm.php"> Cadastrar Administrador</a></li>

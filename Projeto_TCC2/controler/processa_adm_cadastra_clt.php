@@ -21,26 +21,26 @@
         
         if($idade <= 17){
             echo "<script>
-            alert ('⚠️🔞 Você ainda é Jovem para realiza uma Tattoo 🔞⚠️')
+            alert ('⚠️🔞 O(a) Cliente ainda é Jovem para realiza uma Tattoo 🔞⚠️')
             location.href = ('/Projeto_TCC2/cadastro.php')
         </script>";
         }else if(strlen($_POST["senha"]) < 6){
             echo "<script>
                     alert ('⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️')
-                    location.href = ('/Projeto_TCC2/cadastro.php')
+                    location.href = ('adm_cadastra_clt.php')
                 </script>";
         }else {
 
             $cliente->insert();
 
-            return "<script>
+            echo "<script>
                     alert ('☺ CADASTRO REALIZADO COM SUCESSO ☺')
-                    location.href = ('/Projeto_TCC2/login.php')
+                    location.href = ('adm_cadastra_clt.php')
                 </script>";
         }
     }else {
-        return "<script>
+            echo "<script>
                     alert ('⚠️ login já existente favor inserir outro login ⚠️')
-                    location.href = ('/Projeto_TCC2/cadastro.php')
+                    location.href = ('adm_cadastra_clt.php')
                 </script>";
         }

@@ -22,6 +22,9 @@
         <?php include "logo_menu.php" ?>
         <div class="fomulario_cadastro">
             <form method="POST" action="controler/processa_cadastro.php">
+                <div style="opacity:100%;" class="alert alert-warning" role="alert">
+                    <strong>  É Necessário Estar Conectado no Sistema para Realiza o Agendamento </strong>
+                </div>
                 <h3> CADASTRO </h3>
 
                 <p>
@@ -37,15 +40,15 @@
                     <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
                 </p>
                 <p>
-                    LOGIN:
+                    LOGIN/Nome de Úsuario:
                     <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
                 </p>
                 <p>
                     SENHA:
-                    <input id="senha" type="password" name="senha" placeholder="Minino 6(seis Caracteres)" required>
+                    <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
                 </p>
                 <!-- ENVIAR formulario -->
-                <input id="cadastrar" type="submit" nome="cadastrar" value="cadastrar">
+                <input id="cadastrar" type="submit" name="cadastrar" value="cadastrar">
             </form>
         </div>
         <div class="rodape_1">

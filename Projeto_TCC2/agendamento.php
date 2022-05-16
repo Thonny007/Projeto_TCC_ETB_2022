@@ -6,23 +6,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/formulario.css">
-    <!-- bot css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <!-- bot css -->
-    <!-- bot js -->
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
-    <!-- bot js -->
     <title> Agendamento.Ditte.Tattoo </title>
 </head>
 <div class="container-fluid">
     <body>
         <!-- LOGO -->
-        <?php include "menu_entrada.php";?>
-        
+        <?php include "menu_entrada_clt.php";?>
         <form method="POST" action="controler/processa_agendamento.php" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo $_SESSION["id"]; ?>">
             <div class="agm">
                 <h3> Agendamento </h3>
                 <p>
@@ -32,12 +27,12 @@
                 <p>
                     Escolha um Horário:
                     <select name="hora_agendamento" id="hora_agendamento" required>
-                        <option value="8"selected>8hrs</option>
-                        <option value="10" >10hrs</option>
-                        <option value="12">12hrs</option>
-                        <option value="14">14hrs</option>
-                        <option value="16">16hrs</option>
-                        <option value="18">18hrs</option>
+                        <option value="8"selected> 8hrs </option>
+                        <option value="10" > 10hrs </option>
+                        <option value="12"> 12hrs </option>
+                        <option value="14"> 14hrs </option>
+                        <option value="16"> 16hrs </option>
+                        <option value="18"> 18hrs </option>
                     </select>
                 </p>
                 <p>
@@ -55,6 +50,7 @@
                     Atenção dependendo do tempo da sessão a tatuatora podera mudar os dias ou o horários
                     dos proxímos agendamentos.
                 </div>
+                <p> Endereço: Coletivo Sul - St. B Sul QSB 10 - Taguatinga - DF</p>
                 <!-- ENVIAR formulario -->
                 
                 <input id="cadastrar" type="submit" nome="agendar" value="AGENDAR">

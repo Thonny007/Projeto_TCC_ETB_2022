@@ -1,5 +1,4 @@
 <!-- RODAPÉ -->
-
 <head>
     <link rel="stylesheet" type="text/css" href="css/rodape.css">
 </head>
@@ -8,69 +7,77 @@
         <table style="width:100%;">
             <tr>
                 <td>
-                    <ol>
-                        <li>
-                            <h5> <U> CONTADOS </U> </h5>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/dite.tattoo/">
-                                <img src="img/contados/insta.png" alt="">
+                    <dl id="contatos_menu" class="contatos_menu">
+                        <h5> <U> CONTATOS </U> </h5>
+                        <dd>
+                            <a href="https://www.instagram.com/dite.tattoo/" target="_blank"> 
+                                <img src="img/contados/insta.png">
                                 Instagram
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/dite.tattoo">
-                                <img src="img/contados/facebook.png" alt="">
+                        </dd>
+                        <dd>
+                            <a href="https://www.facebook.com/dite.tattoo" target="_blank">
+                                <img src="img/contados/facebook.png">
                                 Facebook
                             </a>
-                        </li>
-                        <li>
-                            <img src="img/contados/gmail.png" alt="" />
-                            <a href="mailto:clarice.terra42@gmail.com?subject=(ORÇAMENTO TATOO) mensagem&body=(Bom Dia, Boa Tarde/Noite)">
+                        </dd>
+                        <dd>
+                            <img src="img/contados/gmail.png" />
+                            <a href="mailto:clarice.terra42@gmail.com?subject=(ORÇAMENTO TATOO) &body=(Bom Dia, Boa Tarde/Noite)">
                                 clarice.terra42@gmail.com
                             </a>
-                        </li>
-                    </ol>
+                        </dd>
+                    </dl>
                 </td>
                 <td style="width: 40%;">
-                    <ol>
+                    <dl>
                         <h5> <U> MENU </U> </h5>
-                        <li>
+                        <dd>
                             <a href="cadastro.php">
-                                <img src="img/menu/cadastro.png" alt="" />
+                                <img src="img/menu/cadastro.png" />
                                 Cadastro
                             </a>
-                        </li>
-                        <li>
-                            <a href="agendamento.php">
-                                <img src="img/menu/calendar.png" alt="" />
-                                Agendamento
-                            </a>
-                        </li>
-                        <li>
+                        </dd>
+                        <dd>
                             <a href="orçamento.php">
-                                <img src="img/menu/orçamento.png" alt="" />
+                                <img src="img/menu/orçamento.png" />
                                 Orçamento
                             </a>
                         </li>
-                        <li>
+                        <dd>
                             <a href="desenhos.php">
-                                <img src="img/menu/desenho.png" alt="" >
-                                Desenhos
+                                <img src="img/menu/desenho.png">
+                                Portfólio
                             </a>
-                        </li>
-                        <li>
+                        </dd>
+                        <dd>
                             <a href="login.php">
-                                <img src="img/menu/login.png" alt="" >
+                                <img width="60px" src="img/menu/login.png">
                                 LOGIN
                             </a>
-                        </li>
-                    </ol>
+                        </dd>
+                    </dl>
+                </td>
+                <td width="20%">
+                    <dl>
+                        <h5> 
+                            <U> ENDEREÇO </U> 
+                        </h5> 
+                        <h6>
+                             Localização do Estúdio
+                        </h6>
+                        <dd class="ender">
+                            <a href="https://maps.app.goo.gl/kXXQeBLzujkS4NUk9" target="_blank"> 
+                                <img class="map" src="img/menu/map.png">
+                            </a>
+                            <img  src="img/qr_localizacao.jpg">
+                        </dd>
+                    </dl>
                 </td>
                 <td>
                     <img class="apresenta" src="img/Clarice_Maria_Terra.jpg" alt="" />
                 </td>
-                <td>
+                <td  width="20%">
                     <p> <u> Tatuadora:</u> Clarice Maria Terra </p>
                 </td>
             </tr>

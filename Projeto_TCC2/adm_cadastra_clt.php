@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt_br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,19 +17,26 @@
     <title> Cadastro.Ditte.Tattoo </title>
 </head>
 <div class="container-fluid">
-
     <body>
         <?php include "menu_entrada.php" ?>
         <div class="fomulario_cadastro">
-            <form method="POST" action="controler/processa_cadastro_adm.php">
-                <h3> Cadastro de Administrador </h3>
+            <form method="POST" action="controler/processa_adm_cadastra_clt.php">
+                <h3> <u> CADASTRA USUÁRIOS </u></h3>
 
                 <p>
-                    Nome do Adm:
+                    Nome Completo:
                     <input id="nome" type="text" name="nome" required>
                 </p>
                 <p>
-                    LOGIN:
+                    Data de Nascimento:
+                    <input id="data_nasc" type="date" name="data_nasc" required>
+                </p>
+                <p>
+                    Telefone para Contado:
+                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
+                </p>
+                <p>
+                    LOGIN/Nome de Úsuario:
                     <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
                 </p>
                 <p>
@@ -38,7 +44,7 @@
                     <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
                 </p>
                 <!-- ENVIAR formulario -->
-                <input id="cadastrar" type="submit" nome="cadastrar" value="Cadastrar Administrador">
+                <input id="cadastrar" type="submit" name="cadastrar" value="Cadastrar Usuário">
             </form>
         </div>
     </body>

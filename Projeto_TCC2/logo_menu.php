@@ -14,28 +14,28 @@
     <style>
         /*imagem de fundo*/
         body {
-            background-image: url('img/fundo.png');
-            
+            background-image: url('img/fundo1.jpg');
         }
     </style>
 
     <div class="container-fluid">
         <div class="logo">
             <h1>
-                <a href="index.php">
-                    <img src="img/logo1.png" alt="">
-                    DITTE.TATTOO
-                </a>
+
+                    <a href="controler/logout.php">
+                        <img src="img/logo1.png" alt="">
+                        DITTE.TATTOO
+                    </a>
             </h1>
         </div>
         <div class="lista_menu">
         <strong>
-                <ul>
-                <li>
-                    <a href="cadastro.php"> Cadastro </a>
+            <ul class="aaa">
+                <li class="li">
+                    <a href="controler/logout.php"><span data-tooltip="Volta para a Página Principal">Home-Page</span>  </a>
                 </li>
                 <li>
-                    <a href="agendamento.php"> Agendamento </a>
+                    <a href="cadastro.php"> Cadastro/Agendamento </a>
                 </li>
                 <li>
                     <a href="orçamento.php"> Orçamento </a>
@@ -47,11 +47,11 @@
                     <nav>
                         <a href="#rodape_1"> Contato/Rede Sociais </a>
                     </nav>
-                  </li>
-                  <li>
+                </li>
+                <li>
                     <a href="login.php"> LOGIN </a>
-                    </li>
-                </ul>
+                </li>
+            </ul>
         </strong>
         </div>
     </div>

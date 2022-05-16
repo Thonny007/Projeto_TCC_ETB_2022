@@ -12,17 +12,15 @@
         body {
             background-image: url('img/fundo1.jpg');
         }
-
     </style>
-
     <div id="menu">
         <div class="logo_entrada">
             <table>    
             <tr>
                 <td>
                     <h1>
-                        <a href="administracao.php">
-                            <img  src="img/logo1.png">
+                        <a href=".php">
+                            <img src="img/logo1.png">
                             DITTE.TATTOO
                         </a>
                     </h1>
@@ -30,8 +28,11 @@
                 <td width="20%" class="sair">
                     <p> Olá <?php echo $_SESSION["nome"]; ?></p>
                     <a href="controler/logout.php">                     
-                        SAIR <!-- <img src="" alt="logout"> -->
+                        SAIR 
                     </a>
+                </td>
+                <td><!--  Gato para o nome não passar a tela -->
+                    <p style="opacity:0%;">a</p>
                 </td>
             </tr>
             </table>
@@ -39,11 +40,11 @@
         <div class="lista_menu">
             <strong>    
                 <ul>
-                    <!-- <li>
-                        <a href="controler/logout.php"><span data-tooltip="Volta para a Página Principal e Fecha a Sessão automaticamente">Home-Page</span>  </a>
-                    </li> -->
                     <li>
-                        <a href="administracao.php"> Administração </a>
+                        <a href="controler/logout.php">Home-Page</a>
+                    </li>
+                    <li>
+                        <a href="adm_cliente.php"> Administração </a>
                     </li>
                     <li>
                         <a href="login.php"> LOGIN </a>

@@ -16,11 +16,12 @@
         <!-- Carousel Bootstrap -->
         <div class="container-fluid">
             <?php include "carousel_index.php"   ?>
+        <hr style="opacity:1%;">  
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <strong> 1° COMO CUIDAR DA SUA TATUAGEM <i style="opacity:1%">T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O  T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O  T   E   S    T   E   C   O   R   R   E   Ç   Ã  O   D   E   E   R   R   O T   E   S    T   E   C   O   R   R</i> </strong>
+                            <strong> 1° COMO CUIDAR DA SUA TATUAGEM</strong>
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -32,7 +33,7 @@
                             </p>
                             <p>
                                 <img width="20px" src="https://img.icons8.com/wired/64/000000/clubs.png" alt="" />
-                                Entre 2 a 3 dias (até criar a casquinha) é importante fazer a limpeza da
+                                Entre 2 a 3 dias (até criar a casquinha) é importante fazer a limpeza da <br>
                                 área com a água e sabão, 3 vezes ao dia. ou sempre que ela for exposta a
                                 sujeira.
                             </p>

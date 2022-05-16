@@ -1,53 +1,58 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/lista_clt.css">
 	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.js">
 	<link rel="stylesheet" type="text/css" href="css/menu_entrada.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/lista_agendamentos.css">
-    <title> Lista_agnd.Ditte.Tattoo </title>
+	<script src="js/jQuery.js"></script>
+    <title> Lista.agnd.Ditte.Tattoo </title>
 	<style>
 		body{
 			width: 100%;
+			width: 100vw;
 		}
-		</style>
+	</style>
 </head>
+<div class="container-fluid">
 <body>
 	<?php 
 		include_once "classes/Agendamento.php";
-			$listar = Agendamentos::list(false);
-		?>
+        $agnd = new Agendamentos();
+		$listar = $agnd->list();
+	?>
 
-<?php include "menu_entrada.php"; ?>
+	<?php include "menu_entrada.php"; ?>
 <div class="container-fluid">
-	<button class="btn btn-success">
-		<a href="agendamento.php">novo agendamento</a>
-	</button>
-	
-	<button class="btn btn-warning">
-		<a href="lista_agendamentos_excluidos.php">listar Clientes excluidos</a>
-	</button>
-	<table id="lista_cadastro"  class="table mt-3 table-warning">
-		<thead>
-			<tr>
-				<td> Número Agend</td>
-				<td>Data Agend</td>
-				<td>Img Referencia</td>
-					<td>status Agend</td>
-					<td>Descrição Tattoo</td>
-					<td>Ação</td>
+		<button class="btn btn-dark">
+			<a href="agendamento.php">Novo Agendamento</a>
+		</button>
+
+		<button class="btn btn-dark">
+			<a href="lista_agendamentos_excluidos.php">listar Agendamentos Cancelados</a>
+		</button>
+
+		<table id="lista_cadastro" style="opai" class="table table-hover mt-3">
+			<thead>
+				<tr>
+					<td> Data Agend </td>
+					<td> Img Referencia </td>
+					<td> status Agend </td>
+					<td> Descrição Tattoo </td>
+					<td> Nome Cliente </td>
+					<td> Ação </td>
 				</tr>
 			</thead>
 			<?php		
 				while ($registro = mysqli_fetch_row($listar)){
-					?>	
+			?>	
 				<tr>
-					<td id="id"><?php echo $registro[0];?></td>
+
 					<td><?php echo Agendamentos::formataData($registro[1]); ?></td>
 					<td>
 						ver foto
@@ -55,20 +60,27 @@
 							<img src="css/icons/lupa.svg" alt="icone lupa">
 						</a>
 					</td>		
-					<td><?php echo $registro[2]; ?></td>				
-					<td><?php echo $registro[3]; ?></td>
-					
+					<td><?php echo $registro[2];?></td>				
+					<td><?php echo $registro[3];?></td>
+                    <td>
+                        <!-- <a href="altera_clt.php?id_cliente=<?php /* echo $registro[5]; */?>"> -->                            <?php echo $registro[4];?>
+                    </td>
 					<td class="acoes">
-						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado">
+						<a href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=confirmado&id_adm=<?php echo $_SESSION['id']; ?>">
 							<img class="confirma" src="css/icons/check.svg" alt="icone check">
 						</a>
-						<a  href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=desmarcado">
+						<a  href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=desmarcado&id_adm=<?php echo $_SESSION['id']; ?>">
 							<img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">						
 						</a>
-					</td>
+						<button>
+                            <a href="<?php echo $link_editar; ?>">
+                                Editar <img width="24px" src="img/menu/pencil.png">
+                            </a>
+                        </button>
+					</td>						
 				</tr>
 			<?php } ?>
-			<tfoot></tfoot>				
+			<tfoot></tfoot>
 		</table>
 
 	</div>

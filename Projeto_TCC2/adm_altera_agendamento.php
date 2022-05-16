@@ -34,45 +34,52 @@
 <body>
 <?php
     /* include "controler/valida_login.php"; */
-    /* include "menu_entrada.php"; */
+    include "menu_entrada.php";
     include_once "classes/Agendamento.php";
 ?>
 <div id="funcionalidade" class="div_direita">
     <?php
-        $cod = $_GET["id"];
-
-        $$agnd = Agendamento::getById($cod);
+         $cod = $_GET["id"];
+        $agnd = AgendamentoS::getById($cod);
 
     ?>
-    <button class="btn btn-dark">
+   <!--  <button class="btn btn-dark">
 		<a href="lista_cadastro.php"></a>
-	</button>
-    <form action="controler/processa_altera_clt.php" method="post">
-        <input width="30%" type="hidden" name="id" value="<?php echo $cliente[0] ?>">
-        <div class="form-group">
-            <label for="nome"> Nome </label>
-            <input type="text" class="form-control" name="nome" value="<?php echo $cliente[1] ?>">
-        </div>
-        <div class="form-group">
-            <label for="data_nasc">Data de Nascmento</label>
-            <input type="date" class="form-control" name="data_nasc" value="<?php echo $cliente[4]; ?>">
-        </div>
-        <div class="form-group">
-            <label> Telefone </label>
-            <input type="text" class="form-control" name="telefone" value="<?php echo $cliente[7] ?>">
-        </div>
-        <div class="form-group">
-            <label> Login </label>
-            <input type="text" class="form-control" name="login" value="<?php echo $cliente[2] ?>">
-        </div>
-        <div class="form-group">
-            <label for="senha"> Senha </label>
-            <input type="password" class="form-control" name="senha" value="<?php echo $cliente[3] ?>">
-        </div>
-        <p></p>
-            <button type="submit" class="btn btn-danger"> Alterar Usuário </button>
-        <hr>
-    </form>
+	</button> -->
+    <form style="width:90%;" method="POST" action="controler/processa_altera_agnd.php" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo $agnd[0] ?>">
+            <div class="agm">
+                <h3> Altera Agendamento </h3>
+                <p>
+                    Escolha uma Data:
+                    <input id="data_agenda" type="date" name="data_agendamento" value="<?php echo $agnd[1] ?>" required>
+                </p>
+                <p>
+                    Escolha um Horário:
+                    <select name="hora_agendamento" id="hora_agendamento" required>
+                        <option value="8"selected> 8hrs </option>
+                        <option value="10" > 10hrs </option>
+                        <option value="12"> 12hrs </option>
+                        <option value="14"> 14hrs </option>
+                        <option value="16"> 16hrs </option>
+                        <option value="18"> 18hrs </option>
+                    </select>
+                </p>
+                <p>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">
+                        <p> Descreva como você quer a tatuagem </p>
+                    </label>
+                    <textarea class="form-control" name="desc" rows="3" value="<?php echo $agnd[4] ?>"></textarea>
+                </div>
+                <p>    
+                    Imagem/Foto de Referência
+                    <input type="file" name="ft" id="ft" value="<?php echo $agnd[2] ?>">
+                </p>
+                <!-- ENVIAR formulario -->
+                <input id="cadastrar" type="submit" nome="agendar" value="ALTERAR AGENDAMENTO">
+            </div>
+        </form>
 </body>
     </div>
 </html>

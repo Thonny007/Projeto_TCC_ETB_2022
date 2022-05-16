@@ -34,7 +34,7 @@
         <img src="controler/<?php echo $foto[0]; ?>" alt="foto_exemplo"/>
     </div>
     <button>
-        <a href="/imgs_atendiment/<?php echo foto[0]?>" download>download</a>
+        <a href="controler/<?php echo $foto[0]?>" download>download</a>
     </button>
 </body>
 </html>

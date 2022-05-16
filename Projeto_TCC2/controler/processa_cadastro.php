@@ -33,14 +33,14 @@
 
             $cliente->insert();
 
-            return "<script>
-                    alert ('☺ CADASTRO REALIZADO COM SUCESSO ☺')
-                    location.href = ('/Projeto_TCC2/login.php')
-                </script>";
+            echo "<script>
+                        alert ('☺ CADASTRO REALIZADO COM SUCESSO ☺')
+                        location.href = ('/Projeto_TCC2/login.php')
+                    </script>";
         }
     }else {
-        return "<script>
-                    alert ('⚠️ login já existente favor inserir outro login ⚠️')
+        echo "<script>
+                    alert ('⚠️ Login Já Existente Favor Inserir Outro Login ⚠️')
                     location.href = ('/Projeto_TCC2/cadastro.php')
                 </script>";
         }

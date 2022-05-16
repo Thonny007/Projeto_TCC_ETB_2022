@@ -29,7 +29,7 @@ footer dl li {
 footer a,
 img {
     color: inherit;
-    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: white;
 }
 

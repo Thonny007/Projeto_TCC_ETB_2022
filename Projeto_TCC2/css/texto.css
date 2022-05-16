@@ -28,6 +28,10 @@ div .accordion h2 {
     margin: -7px;
 }
 
+.tabela_orç p {
+    color: black;
+}
+
 #panelsStayOpen-collapseOne img {
     width: 300px;
     height: 300px;

@@ -30,7 +30,7 @@
                 <td width="20%" class="sair">
                     <p> Olá <?php echo $_SESSION["nome"]; ?></p>
                     <a href="controler/logout.php">                     
-                        SAIR <img src="" alt="logout">
+                        SAIR <!-- <img src="" alt="logout"> -->
                     </a>
                 </td>
             </tr>
@@ -39,9 +39,9 @@
         <div class="lista_menu">
             <strong>    
                 <ul>
-                    <li>
-                        <a href="controler/logout.php"><span data-tooltip="Volta para a Página Principal \n Fecha a Sessão automaticamente" >Home-Page</span>  </a>
-                    </li>
+                    <!-- <li>
+                        <a href="controler/logout.php"><span data-tooltip="Volta para a Página Principal e Fecha a Sessão automaticamente">Home-Page</span>  </a>
+                    </li> -->
                     <li>
                         <a href="administracao.php"> Administração </a>
                     </li>

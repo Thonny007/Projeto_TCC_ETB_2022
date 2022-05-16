@@ -72,6 +72,11 @@
 						<a  href="set_agnd_status.php?id=<?php echo $registro[0];?>&ns=desmarcado&id_adm=<?php echo $_SESSION['id']; ?>">
 							<img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">						
 						</a>
+						<button>
+                            <a href="<?php echo $link_editar; ?>">
+                                Editar <img width="24px" src="img/menu/pencil.png">
+                            </a>
+                        </button>
 					</td>						
 				</tr>
 			<?php } ?>

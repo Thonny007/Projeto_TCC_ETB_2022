@@ -21,7 +21,7 @@
         <?php include "menu_entrada.php" ?>
         <div class="fomulario_cadastro">
             <form method="POST" action="controler/processa_adm_cadastra_clt.php">
-                <h3> <u> CADASTRA CLIENTE </u></h3>
+                <h3> <u> CADASTRA USUÁRIOS </u></h3>
 
                 <p>
                     Nome Completo:
@@ -44,7 +44,7 @@
                     <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
                 </p>
                 <!-- ENVIAR formulario -->
-                <input id="cadastrar" type="submit" name="cadastrar" value="cadastrar">
+                <input id="cadastrar" type="submit" name="cadastrar" value="Cadastrar Usuário">
             </form>
         </div>
     </body>

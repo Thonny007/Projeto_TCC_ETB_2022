@@ -1,118 +1,178 @@
 <?php
-class Administrador {
-    private $nome_adm;
-    private $senha_clt;
-    private $login_clt;
-    private $con;
 
-    function __construct($senha_clt, $login_clt) {
-        $this->senha_clt = $senha_clt;
-        $this->login_clt = $login_clt;
+require_once "Pessoa.php";
+
+class Administrador extends Pessoa {
+
+    function __construct($id = null, $nome = null, $login = null, $senha = null){
+        $this->Administrador($id, $nome, $login, $senha);
+    }
+
+    private function Administrador($id, $nome, $login, $senha){
+        $this->id = $id;
+        $this->nome = $nome;
+        $this->login = $login;
+        $this->senha = $senha;
         $this->con = mysqli_connect("localhost", "root", "", "agendamentos");
     }
 
-    function Administrador($nome_adm, $login_clt, $senha_clt) {
-        $this->nome_adm = $nome_adm;
-        $this->login_clt = $login_clt;
-        $this->senha_clt = $senha_clt;
-        $this->con = mysqli_connect("localhost", "root", "", "agendamentos");
+
+    public function loginAlredyExist(){
+
+        $sql = "SELECT * FROM administrador
+        WHERE login_adm = '$this->login'";
+
+        $query = mysqli_query($this->con, $sql);
+
+        return mysqli_fetch_row($query);
     }
 
-    public static function verificaAdmin($login_clt, $senha_clt) {
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
-
+    public function verifica($login, $senha){
         $sql = "SELECT id_adm, nome_adm, login_adm, senha_adm
         FROM administrador
-        WHERE 
-               login_adm = '$login_clt' 
-        AND
-               senha_adm = '$senha_clt' ";
+        WHERE login_adm = '$login'
+        AND senha_adm = '$senha' ";
 
-        $query = mysqli_query($con, $sql);
-        $result = mysqli_fetch_row($query);
+        $query = mysqli_query($this->con, $sql);
+        $adm_result = mysqli_fetch_row($query);
 
-        return $result;
+        mysqli_close($this->con);
+
+        return $adm_result;
     }
 
-    public function insert(): string {
-        $sql_consulta = "SELECT login_adm FROM administrador WHERE  = '$this->login_clt'";
+    public function insert(){
+        $sql = "INSERT INTO agendamentos.administrador
+            (nome_adm, login_adm, senha_adm)
+        VALUES 
+            ('$this->nome', '$this->login', '$this->senha')";
 
-        $result = mysqli_query($this->con,$sql_consulta);
+        try {
+            mysqli_query($this->con, $sql);
+            echo
+            "
+            <script>
+            alert('☺ Administrador Cadastrado Com Sucesso ☺');
+            location.href = '../cadastro_adm.php'
+            </script>
+            ";
+        } catch (Throwable $th) {
+            echo
+            "
+            <script>
+            alert('⚠️⚠️ Erro ao cadastrar ⚠️⚠️');
+            location.href = '../cadastro_adm.php'
+            </script>
+                    ";
+        }
+    }
 
-        $linhas = mysqli_num_rows($result);
+    public function delete(){
+        $sql = "DELETE FROM agendamentos.administrador WHERE id_adm = $this->id";
 
-        if ($linhas == 1) {
-
-            die("⚠️ Login já Existente ⚠️ 
+        try {
+            mysqli_query($this->con, $sql);
+            echo "
                 <script>
-                    locale.href = ('cadastro_adm.php')
-                </script>");
-        } else {
-            $sql = "INSERT INTO administrador (nome_adm, senha_adm, login_adm)
-        VALUES
-        ($this->nome_adm, $this->senha_clt, $this->login_clt)";
+                    alert ('☺ Registro de Administrador Deletado/Apagado com Sucesso ☺') 
+                </script>
+            ";
+            echo "
+            <script> 
+                location.href = ('../lista_adm.php') 
+            </script>";
 
-            $query = mysqli_query($this->con, $sql);
-            if ($query) {
-                return "Cadastrado com sucesso";
-            } else {
-                return "<script> 
-                            alert ('⚠️⚠️ Erro ao Cadastrar Tente Novamente ⚠️⚠️') 
-                        </script>";
-                 return "<script> location.href = ('../cadastro_adm.php') </script>";
-  }
-            }
+
+        } catch (Throwable $th) {
+            echo "
+            <script> 
+                alert ('ERRO AO DELETAR ADMINISTRADOR') 
+            </script>";
+
+            echo "
+            <script> 
+                location.href = ('../lista_cadastro_adm.php') 
+            </script>";
+
         }
+
+
     }
 
-   function delete($id) {
-        $sql = "DELETE FROM administrador WHERE id_clt = '$id'";
+    public static function getById($id, $toObj = false){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
 
-        $query = mysqli_query($this->con, $sql);
-
-        if ($query) {
-            return "<script> 
-                        alert ('☺ Registro Deletado com Sucesso ☺') 
-                    </script>";
-            return"<script> location.href = ('../administracao.php') </script>";;
-        } else {
-            return "<script> 
-                        alert ('⚠️⚠️ Houve um Erro ao Deletar o Cliente ⚠️⚠️') 
-                    </script>";
-        }
-    }
-
-     function getById(int $id): string {
         $sql = "SELECT * FROM administrador WHERE id_adm = $id";
-        $query = mysqli_query($this->con, $sql);
+        $query = mysqli_query($con, $sql);
+
         $result = mysqli_fetch_row($query);
+
+        $admin = new Administrador(
+            $result[1],
+            $result[2],
+            $result[3]
+        );
+
+        return $toObj ? $admin : $result;
+    }
+
+    public function update($id, $adm=0){
+        $sql = "UPDATE agendamentos.administrador
+        SET 
+            login_adm='$this->login',
+            nome_adm='$this->nome', 
+            senha_adm='$this->senha'
+        WHERE id_adm = '$id' ";
+
+        try {
+            mysqli_query($this->con, $sql);
+            echo "<script>
+                    alert ('☺ Cadastro do(a) $this->nome Alterado Com Sucesso ☺')
+                    location.href = ('../administracao.php')
+                 </script>";
+        } catch (Throwable $th) {
+            echo "deu errado";
+        }
+
+        mysqli_close($this->con);
+
+    }
+
+    public static function getMyAgnds($id_adm){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+
+        $sql = "SELECT
+            a.id_agnd as 'id do agendamento',
+            a.data_agnd as 'data do agendamento',
+            a.descricao_tatto 'descrição da tatuagem',
+            c.nome_clt as 'nome do cliente',
+            c.id_clt as 'id do cliente'
+        from agendamento a
+
+        inner join cliente c on a.id_agnd = c.id_agnd
+
+        inner join administrador adm on adm.id_adm = c.id_adm
+        where adm.id_adm = '$id_adm';";
+
+        $result = mysqli_query($con, $sql);
+
+        mysqli_close($con);
 
         return $result;
     }
 
+    public function setMyAgnds($id_adm, $id_agnd){
+        $sql = "UPDATE cliente set id_adm = '$id_adm'
+        where id_agnd = '$id_agnd';";
 
-    function getNome_adm() {
-        return $this->nome_adm;
+        try {
+            mysqli_query($this->con, $sql);
+        } catch (Throwable $th) {
+            echo "algo deu errado";
+        }
+
+        mysqli_close($this->con);
     }
 
-    function getSenha_clt() {
-        return $this->senha_clt;
-    }
 
-    function getLogin_clt() {
-        return $this->login_clt;
-    }
-
-    function setNome_adm($nome_adm) {
-        $this->nome_adm = $nome_adm;
-    }
-
-    function setSenha_clt($senha_clt) {
-        $this->senha_clt = $senha_clt;
-    }
-
-    function setLogin_clt($login_clt) {
-        $this->login_clt = $login_clt;
-    }
-
-?>
+}

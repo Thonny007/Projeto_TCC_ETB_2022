@@ -1,47 +1,55 @@
-.container_menu{
-    max-width: 90vh;
-}
-
-.btn{
+.btn {
     margin: 0px 10px;
     color: white;
 }
 
-.btn.btn-warning:hover{
+.btn.btn-warning:hover {
     margin: 0px 10px;
     color: white;
 }
 
-.btn a{
+.btn a {
     color: white;
     text-decoration: none;
 }
 
-.acoes a {
-    background-color: transparent;
-    text-decoration: none;
-}
-
-.acoes img{
-    width: 20px;
-    height: 20px;
+.acoes .cancela {
+    width: 25px;
+    height: 25px;
     margin: 0px 10px;
 }
 
-.acoes a img.confirma{
+.acoes .confirma {
+    width: 27px;
+    height: 27px;
+    margin: 0px 10px;
+}
+
+#lista_cadastro {
+    background-color: #A9A9A9;
+    font-size: 17px;
+}
+
+
+/* .acoes img:nth-child(1) {
     background-color: #5bd89eb6;
     border-radius: 10px;
-}
+} */
 
-.acoes a img.cancela{
+
+/* .acoes img:nth-child(2) {
     background-color: rgb(238, 97, 97);
     border-radius: 10px;
-}
+} */
 
-#lupa{
+#lupa {
     margin-left: 15px;
 }
 
-#id{
+#id {
     text-align: center;
+}
+
+td a {
+    text-decoration: none;
 }

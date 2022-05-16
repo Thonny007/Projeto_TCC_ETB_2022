@@ -17,7 +17,7 @@ div .accordion h2 {
 /*tabela*/
 
 .txt_orçamento table tr td {
-    background-color: blanchedalmond;
+    background-color: rgb(203, 201, 198);
     text-align: center;
     text-decoration: black;
     color: black;
@@ -27,3 +27,34 @@ div .accordion h2 {
     width: 25px;
     margin: -7px;
 }
+
+.tabela_orç p {
+    color: black;
+}
+
+#panelsStayOpen-collapseOne img {
+    width: 300px;
+    height: 300px;
+}
+
+#img__flash td {
+    background-color: white;
+    margin: 10px;
+    width: 20%;
+}
+
+#img__flash td p {
+    text-align: left;
+    font-size: 15px;
+}
+
+#img__flash td img {
+    margin: 1px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+/* #accordionFlushExample .accordion-item #button_teste button {
+    background-color: rgb(136, 134, 130);
+} */

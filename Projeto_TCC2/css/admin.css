@@ -1,5 +1,9 @@
 #adm_lista ul {
-    background-color: blue;
+    background-color: #04040487;
+}
+
+div {
+    align-items: center;
 }
 
 #adm_lista ul li {
@@ -13,10 +17,10 @@
 #adm_lista ul li a {
     font-size: 30px;
     text-decoration: none;
-    color: black;
+    color: #ffffff;
     font-family: arial black;
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: yellow;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: black;
 }
 
 #adm_lista ul li a:hover {

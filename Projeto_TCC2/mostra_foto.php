@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            height: 100vh;
+            width: 100vh;
+        }
         .carrega-imagem{
-            max-width: 1000px;
-            max-height: 1000px;
+            width: 800px;
+            height: 500px;
             margin: auto;
-            margin-top: 50px;
             text-align: center;
         }
         
@@ -24,17 +27,23 @@
     <?php
     /*----------------------------------- LOGO MENU ----------------------------------- */
         include "menu_entrada.php";    
-    include "controler/valida_login.php";
+        include "controler/valida_login.php";
         require_once "classes/Agendamento.php";
 
         $agnd = Agendamentos::getById($_GET['id'], true);
         $foto = $agnd->getImg();
     ?>
+
     <div class="carrega-imagem">
-        <img src="controler/<?php echo $foto[0]; ?>" alt="foto_exemplo"/>
+        <a>
+            <img src="controler/<?php echo $foto[0]; ?>" alt="foto_exemplo"/>
+        </a>
+
+        <button>
+            <a href="controler/<?php echo $foto[0]; ?>" download>
+                DOWNLOAD
+            </a>
+        </button>
     </div>
-    <button>
-        <a href="/imgs_atendiment/<?php echo foto[0]?>" download>download</a>
-    </button>
 </body>
 </html>

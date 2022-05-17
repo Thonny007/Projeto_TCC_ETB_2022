@@ -108,6 +108,7 @@ class Administrador extends Pessoa {
         $result = mysqli_fetch_row($query);
 
         $admin = new Administrador(
+            $result[0],
             $result[1],
             $result[2],
             $result[3]
@@ -161,14 +162,16 @@ class Administrador extends Pessoa {
         return $result;
     }
 
-    public function setMyAgnds($id_adm, $id_agnd){
-        $sql = "UPDATE cliente set id_adm = '$id_adm'
-        where id_agnd = '$id_agnd';";
+    public function setMyAgnds($id_agnd){
+        $sql = "UPDATE cliente set id_adm = '$this->id'
+        where id_agnd = $id_agnd";
 
         try {
             mysqli_query($this->con, $sql);
         } catch (Throwable $th) {
             echo "algo deu errado";
+            echo $sql;
+            echo "<pre>$th</pre>";
         }
 
         mysqli_close($this->con);

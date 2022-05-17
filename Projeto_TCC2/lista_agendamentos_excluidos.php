@@ -28,12 +28,14 @@
 
 <?php include "menu_entrada.php"; ?>
 	<button class="btn btn-dark">
-		<a href="lista_agendamentos.php">Agendamentos</a>
+		<a href="lista_agendamentos.php">Agendamentos em Espera</a>
 	</button>
-	
 	<button class="btn btn-dark">
-		<a href="lista_agendamentos.php">Listar Clientes Confirmados e em Espera</a>
+		<a href="lista_agendamentos_confirmados.php">Agendamentos Confirmados</a>
 	</button>
+<!-- 	<button class="btn btn-dark">
+		<a href="lista_agendamentos.php">Listar Clientes Confirmados e em Espera</a>
+	</button> -->
 	<table id="lista_cadastro"  class="table mt-3 table-hover">
 		<thead>
 			<tr>
@@ -43,7 +45,7 @@
 				<td>status Agend</td>
 				<td>Descrição Tattoo</td>
 				<td>nome do cliente</td>
-				<td>Ação</td>
+				<!-- <td>Ação</td> -->
 			</tr>
 		</thead>
 			<?php		
@@ -59,7 +61,7 @@
 						</a>
 					</td>		
 					<td><?php echo $registro[2];?></td>				
-					<td><?php echo $registro[3];?></td>
+					<td><textarea class="edit_box" cols="20" rows="0.5" style="height:30px;width:80%" disabled><?php echo $registro[3];?> </textarea> </td>
 					<td><?php echo $registro[4];?></td>
 					<td class="acoes">
 						<!-- <a href="set_agnd_status.php?id=<?php/*  echo $registro[0]; */?>&ns=confirmado">
@@ -68,10 +70,10 @@
 						<a  href="set_agnd_status.php?id=<?php /* echo $registro[0]; */?>&ns=desmarcado">
 							<img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">						
 						</a> -->
-						<button>
+						<!-- <button>
 							<a href="controler/processa_delete_agnd.php?id=<?php echo $registro[0] ?>"> 
 							<img src="css/icons/lixo.svg"> </a>
-						</button>
+						</button> -->
 					</td>
 				</tr>
 			<?php } ?>

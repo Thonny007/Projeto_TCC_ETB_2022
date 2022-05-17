@@ -55,8 +55,8 @@
         <?php if (!$isAdm) {?>
         <form>
             <div class="form-group">
-                <label>Descrissão</label>
-                <input type="text" disabled class="form-control" name="desc" value="<?php echo $data[2]; ?>">
+                <label>Descrissão</label> <br>
+                <textarea class="edit_box" cols="20" rows="10" style="height:60px;width:100%;" disabled><?php echo $data[2]; ?> </textarea>
             </div>
             <div class="form-group">
                 <label>Data do agendamento</label>

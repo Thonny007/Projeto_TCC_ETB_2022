@@ -70,7 +70,7 @@
                     <label for="exampleFormControlTextarea1" class="form-label">
                         <p> Descreva como você quer a tatuagem </p>
                     </label>
-                    <textarea class="form-control" name="desc" rows="3" value="<?php echo $agnd[4] ?>"></textarea>
+                    <textarea style="width:50%;margin:auto;" class="form-control" name="desc" rows="3" value="<?php echo $agnd[4] ?>"></textarea>
                 </div>
                 <p>    
                     Imagem/Foto de Referência

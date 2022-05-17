@@ -32,7 +32,9 @@
 		<button class="btn btn-dark">
 			<a href="agendamento.php">Novo Agendamento</a>
 		</button>
-
+		<button class="btn btn-dark">
+			<a href="lista_agendamentos_confirmados.php">Agendamentos Confirmados</a>
+		</button>
 		<button class="btn btn-dark">
 			<a href="lista_agendamentos_excluidos.php">listar Agendamentos Cancelados</a>
 		</button>

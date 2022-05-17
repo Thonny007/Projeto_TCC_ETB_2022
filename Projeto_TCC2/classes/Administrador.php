@@ -139,8 +139,8 @@ class Administrador extends Pessoa {
 
     }
 
-    public static function getMyAgnds($id_adm){
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
+    public function getMyAgnds($id){
+        /* $con = mysqli_connect("localhost", "root", "", "agendamentos"); */
 
         $sql = "SELECT
             a.id_agnd as 'id do agendamento',
@@ -153,9 +153,9 @@ class Administrador extends Pessoa {
         inner join cliente c on a.id_agnd = c.id_agnd
 
         inner join administrador adm on adm.id_adm = c.id_adm
-        where adm.id_adm = '$id_adm';";
+        where adm.id_adm = '$this->id';";
 
-        $result = mysqli_query($con, $sql);
+        $result = mysqli_query($this->con, $sql);
 
         mysqli_close($con);
 

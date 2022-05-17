@@ -56,6 +56,7 @@ class Agendamentos {
     }
 
     public function list($excluidos = false ){
+        $con = mysqli_connect("localhost", "root", "", "agendamentos");
         if (!$excluidos) {
             $sql_consulta =
                 "SELECT 
@@ -82,7 +83,7 @@ class Agendamentos {
             where ag.status_agnd = 'desmarcado' ";
         }
 
-        return mysqli_query ($this->con, $sql_consulta);
+        return mysqli_query ($con, $sql_consulta);
     }
 
     public function getImg(){
@@ -145,6 +146,49 @@ class Agendamentos {
         return $toAgnd ? $agnd : $result;
     }
 
+    /*------------------------- UPDATE DO AGENDAMENTO --------------------------*/
+     public function update($id, $agnd=false)
+    {
+        $sql = "UPDATE agendamentos.cliente
+        SET 
+        id_agnd = $this->id = $id;
+        data_agnd = $this->data = $data;
+        descricao_tattoo = $this->desc = $desc;
+        imagem_atendimento = $this->imagem = $imagem;
+        status_agnd = $this->status = $status;
+        WHERE id_agnd = '$id' ";
+
+        try {
+            mysqli_query($this->con, $sql);
+
+            if (!$adm) {
+                echo "
+                    <script> 
+                        alert ('☺ Agendamento Alterado Com Sucesso ☺')
+                        location.href = ('../lista_agendamentos.php')
+                    </script>";
+            } else {
+                echo "
+                    <script>
+                        alert ('☺ Agendamento Alterado Com Sucesso ☺')
+                        location.href = ('../lista_agendamentos.php')
+                    </script>";
+            }
+
+
+        } catch (Throwable $th) {
+            echo "
+            <script>
+                alert ('⚠️⚠️ ERRO NA ALTERAÇÃO DO AGENDAMENTO ⚠️⚠️')
+                location.href = ('../adm_cliente.php')
+            </script>";
+
+            echo $th;
+        }
+
+        mysqli_close($this->con);
+    } 
+/*------------------------- UPDATE DO AGENDAMENTO ⬆️⬆️ -------------------------*/
     public function updateStatus($new_status){
         $this->setStatus($new_status);
 

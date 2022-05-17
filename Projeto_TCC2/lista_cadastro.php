@@ -55,9 +55,6 @@
                     <td width="5%">
                         <p> NÚMERO </p>
                     </td>
-                    <!-- <td>
-                       <p>Nº Agend</p>
-                    </td> -->
                     <td width="30%">
                         <!-- gato para empurrar a plavra ação -->
                         <p><a style="opacity:1%;">aaaaaaaa</a> AÇÃO</p>

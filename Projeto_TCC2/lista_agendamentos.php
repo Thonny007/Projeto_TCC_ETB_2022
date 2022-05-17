@@ -61,7 +61,7 @@
 						</a>
 					</td>		
 					<td><?php echo $registro[2];?></td>				
-					<td><?php echo $registro[3];?></td>
+					<td> <textarea class="edit_box" cols="20" rows="0.5" style="height:30px;" disabled><?php echo $registro[3];?> </textarea></td>
                     <td>
                         <!-- <a href="altera_clt.php?id_cliente=<?php /* echo $registro[5]; */?>"> -->                            <?php echo $registro[4];?>
                     </td>
@@ -73,7 +73,7 @@
 							<img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">						
 						</a>
 						<button>
-                            <a href="<?php echo $link_editar; ?>">
+                            <a href="adm_altera_agendamento.php?id=<?php echo $registro[0];?>">
                                 Editar <img width="24px" src="img/menu/pencil.png">
                             </a>
                         </button>

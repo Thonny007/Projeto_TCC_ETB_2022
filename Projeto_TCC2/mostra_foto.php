@@ -45,5 +45,8 @@
             </a>
         </button>
     </div>
+    <button>
+        <a href="controler/<?php echo $foto[0]?>" download>download</a>
+    </button>
 </body>
 </html>

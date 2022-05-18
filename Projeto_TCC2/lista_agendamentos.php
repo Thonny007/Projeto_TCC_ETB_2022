@@ -28,7 +28,7 @@
 	?>
 
 	<?php include "menu_entrada.php"; ?>
-<div class="container-fluid">
+    <div class="container-fluid">
 		<button class="btn btn-dark">
 			<a href="agendamento.php">Novo Agendamento</a>
 		</button>
@@ -84,9 +84,7 @@
 			<?php } ?>
 			<tfoot></tfoot>
 		</table>
-
 	</div>
-	
 </body>
 </html>
 </div>

@@ -139,12 +139,11 @@ class Administrador extends Pessoa {
 
     }
 
-    public function getMyAgnds($id){
-        /* $con = mysqli_connect("localhost", "root", "", "agendamentos"); */
-
+    public function getMyAgnds(){
         $sql = "SELECT
             a.id_agnd as 'id do agendamento',
             a.data_agnd as 'data do agendamento',
+            a.status_agnd as 'status',
             a.descricao_tatto 'descrição da tatuagem',
             c.nome_clt as 'nome do cliente',
             c.id_clt as 'id do cliente'
@@ -157,7 +156,7 @@ class Administrador extends Pessoa {
 
         $result = mysqli_query($this->con, $sql);
 
-        mysqli_close($con);
+        mysqli_close($this->con);
 
         return $result;
     }

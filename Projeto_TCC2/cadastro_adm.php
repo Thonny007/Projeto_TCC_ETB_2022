@@ -20,27 +20,27 @@
 <div class="container-fluid">
 
     <body>
-        <?php include "menu_entrada.php" ?>
-        <div class="fomulario_cadastro">
-            <form method="POST" action="controler/processa_cadastro_adm.php">
-                <h3> Cadastro de Administrador </h3>
+    <?php include "menu_entrada.php" ?>
+    <div class="fomulario_cadastro">
+        <form method="POST" action="controler/processa_cadastro_adm.php">
+            <h3> Cadastro de Administrador </h3>
 
-                <p>
-                    Nome do Adm:
-                    <input id="nome" type="text" name="nome" required>
-                </p>
-                <p>
-                    LOGIN:
-                    <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
-                </p>
-                <p>
-                    SENHA:
-                    <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
-                </p>
-                <!-- ENVIAR formulario -->
-                <input id="cadastrar" type="submit" nome="cadastrar" value="Cadastrar Administrador">
-            </form>
-        </div>
+            <p>
+                Nome do Adm:
+                <input id="nome" type="text" name="nome" required>
+            </p>
+            <p>
+                LOGIN:
+                <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
+            </p>
+            <p>
+                SENHA:
+                <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
+            </p>
+            <!-- ENVIAR formulario -->
+            <input id="cadastrar" type="submit" nome="cadastrar" value="Cadastrar Administrador">
+        </form>
+    </div>
     </body>
 </div>
 

@@ -23,8 +23,8 @@
 <div class="container-fluid">
     <body>
     <?php
-        include "controler/valida_login.php";
-        include "menu_entrada.php"
+    include "controler/valida_login.php";
+    include "menu_entrada.php"
     ?>
     <div id="funcionalidade" class="div_direita">
         <?php
@@ -57,10 +57,11 @@
                 </div>
                 <?php
             } else {
-                echo "<script>
-             							alert ('⚠️ ERRO NA ALTERÇÃO ⚠️')
-										location.href = ('altera_adm.php')
-         	 						 </script>";
+                echo
+                "<script>
+                    alert ('⚠️ ERRO NA ALTERÇÃO ⚠️')
+                    location.href = ('altera_adm.php')
+                 </script>";
             }
             ?>
         </form>

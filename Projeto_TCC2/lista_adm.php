@@ -17,12 +17,12 @@
     <?php include "menu_entrada.php" ?>
     <div id="list_cadastro" class="list_cadastro">
         <?php
-        $conectar = mysqli_connect("localhost", "root", "", "agendamentos");
-        $sql_consulta = "SELECT id_adm, nome_adm, login_adm, senha_adm 
-                             FROM administrador";
-        $resultado_consulta = mysqli_query($conectar, $sql_consulta);
+            $conectar = mysqli_connect("localhost", "root", "", "agendamentos");
+            $sql_consulta = "SELECT id_adm, nome_adm, login_adm, senha_adm 
+                                 FROM administrador";
+            $resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
-        $id_adm = $_SESSION["id"];
+            $id_adm = $_SESSION["id"];
         ?>
         <div class="container">
             <button id='btn_mostrar' type="button" class="btn btn-dark">
@@ -40,9 +40,7 @@
                         <strong> Ações </strong>
                     </td>
                 </tr>
-                <?php
-                while ($registro = mysqli_fetch_row($resultado_consulta)) {
-                    ?>
+                <?php while ($registro = mysqli_fetch_row($resultado_consulta)) { ?>
                     <tr>
                         <?php $link = "controler/processa_delete_adm.php?id=$registro[0]&id_adm=$id_adm"; ?>
                         <?php $link_editar = "altera_adm.php?id=$registro[0]"; ?>
@@ -66,13 +64,10 @@
                             </button>
                         </td>
                     </tr>
-                    <?php
-                }
-                ?>
+                    <?php } ?>
             </table>
         </div>
     </div>
-
 </div>
 </body>
 </div>

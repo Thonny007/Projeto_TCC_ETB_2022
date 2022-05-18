@@ -19,25 +19,25 @@
 </head>
 <div class="container-fluid">
     <body>
-        <!-- LOGO -->
-        <?php include "logo_menu.php" ?>
-        <!-- LOGO -->
-        <form class="form" method="POST" action="controler/processa_login.php">
+    <!-- LOGO -->
+    <?php include "logo_menu.php" ?>
+    <!-- LOGO -->
+    <form class="form" method="POST" action="controler/processa_login.php">
         <h5> Área de Login</h5>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"> LOGIN: </label>
-                <input type="login" class="login" name="login"  aria-describedby="emailHelp" required>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"> SENHA: </label>
-                <input type="password" class="senha" name="senha" required>
-            </div>
-
-            <button type="submit" name="entrar" value="entrar"  class="btn btn-primary"> ENTRAR </button>
-        </form>
-        <div class="rodape_1">
-            <?php include "rodape.php" ?>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"> LOGIN: </label>
+            <input type="login" class="login" name="login" aria-describedby="emailHelp" required>
         </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"> SENHA: </label>
+            <input type="password" class="senha" name="senha" required>
+        </div>
+
+        <button type="submit" name="entrar" value="entrar" class="btn btn-primary"> ENTRAR</button>
+    </form>
+    <div class="rodape_1">
+        <?php include "rodape.php" ?>
+    </div>
     </body>
 </div>
 

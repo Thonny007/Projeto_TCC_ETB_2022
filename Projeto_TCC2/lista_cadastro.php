@@ -61,11 +61,8 @@
                     </td>
                 </tr>
                 </thead>
-                <?php
-                while ($registro = mysqli_fetch_row($listar)) {
-                    ?>
+                <?php while ($registro = mysqli_fetch_row($listar)) { ?>
                     <tr>
-
                         <td>
                             <?php echo "$registro[1]"; ?><img width="30px">
                         </td>
@@ -101,9 +98,7 @@
                     </tr>
                     <tfoot>
                     </tfoot>
-                    <?php
-                }
-                ?>
+                    <?php } ?>
             </table>
         </div>
     </div>

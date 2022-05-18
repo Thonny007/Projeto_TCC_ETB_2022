@@ -56,7 +56,6 @@ class Agendamentos {
     }
 
     public function list($excluidos = false ){
-        $con = mysqli_connect("localhost", "root", "", "agendamentos");
         if (!$excluidos) {
             $sql_consulta =
                 "SELECT 
@@ -83,7 +82,7 @@ class Agendamentos {
             where ag.status_agnd = 'desmarcado' ";
         }
 
-        return mysqli_query ($con, $sql_consulta);
+        return mysqli_query ($this->con, $sql_consulta);
     }
 
     public function getImg(){
@@ -151,17 +150,17 @@ class Agendamentos {
     {
         $sql = "UPDATE agendamentos.cliente
         SET 
-        id_agnd = $this->id = $id;
-        data_agnd = $this->data = $data;
-        descricao_tattoo = $this->desc = $desc;
-        imagem_atendimento = $this->imagem = $imagem;
-        status_agnd = $this->status = $status;
+        id_agnd = $this->id;
+        data_agnd = $this->data;
+        descricao_tattoo = $this->desc;
+        imagem_atendimento = $this->imagem;
+        status_agnd = $this->status;
         WHERE id_agnd = '$id' ";
 
         try {
             mysqli_query($this->con, $sql);
 
-            if (!$adm) {
+            if (!$agnd) {
                 echo "
                     <script> 
                         alert ('☺ Agendamento Alterado Com Sucesso ☺')

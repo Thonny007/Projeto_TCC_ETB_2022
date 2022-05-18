@@ -19,34 +19,33 @@
             color: white;
             text-align: center;
         }
-        button a{
-            text-decoration:none ;
-            color:white ;
+
+        button a {
+            text-decoration: none;
+            color: white;
             margin: auto;
-            padding:30px ;
+            padding: 30px;
         }
-        a:hover{
-            color:white;
+
+        a:hover {
+            color: white;
         }
     </style>
 </head>
 <div class="container-fluid">
-<body>
-<?php
-    /* include "controler/valida_login.php"; */
-    include "menu_entrada.php";
-    include_once "classes/Agendamento.php";
-?>
-<div id="funcionalidade" class="div_direita">
+    <body>
     <?php
-         $cod = $_GET["id"];
-        $agnd = AgendamentoS::getById($cod);
-
+        include "menu_entrada.php";
+        include_once "classes/Agendamento.php";
     ?>
-   <!--  <button class="btn btn-dark">
-		<a href="lista_cadastro.php"></a>
-	</button> -->
-    <form style="width:90%;" method="POST" action="controler/processa_altera_agnd.php" enctype="multipart/form-data">
+    <div id="funcionalidade" class="div_direita">
+        <?php
+            $cod = $_GET["id"];
+            $agnd = AgendamentoS::getById($cod);
+        ?>
+
+        <form style="width:90%;" method="POST" action="controler/processa_altera_agnd.php"
+              enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $agnd[0] ?>">
             <div class="agm">
                 <h3> Altera Agendamento </h3>
@@ -57,12 +56,12 @@
                 <p>
                     Escolha um Horário:
                     <select name="hora_agendamento" id="hora_agendamento" required>
-                        <option value="8"selected> 8hrs </option>
-                        <option value="10" > 10hrs </option>
-                        <option value="12"> 12hrs </option>
-                        <option value="14"> 14hrs </option>
-                        <option value="16"> 16hrs </option>
-                        <option value="18"> 18hrs </option>
+                        <option value="8" selected> 8hrs</option>
+                        <option value="10"> 10hrs</option>
+                        <option value="12"> 12hrs</option>
+                        <option value="14"> 14hrs</option>
+                        <option value="16"> 16hrs</option>
+                        <option value="18"> 18hrs</option>
                     </select>
                 </p>
                 <p>
@@ -70,16 +69,16 @@
                     <label for="exampleFormControlTextarea1" class="form-label">
                         <p> Descreva como você quer a tatuagem </p>
                     </label>
-                    <textarea style="width:50%;margin:auto;" class="form-control" name="desc" rows="3" value="<?php echo $agnd[4] ?>"></textarea>
+                    <textarea style="width:50%;margin:auto;" class="form-control" name="desc" rows="3"
+                              value="<?php echo $agnd[4] ?>"></textarea>
                 </div>
-                <p>    
+                <p>
                     Imagem/Foto de Referência
                     <input type="file" name="ft" id="ft" value="<?php echo $agnd[2] ?>">
                 </p>
-                <!-- ENVIAR formulario -->
                 <input id="cadastrar" type="submit" nome="agendar" value="ALTERAR AGENDAMENTO">
             </div>
         </form>
-</body>
-    </div>
+    </body>
+</div>
 </html>

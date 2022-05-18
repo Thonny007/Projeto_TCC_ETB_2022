@@ -19,41 +19,41 @@
 <div class="container-fluid">
 
     <body>
-        <?php include "logo_menu.php" ?>
-        <div class="fomulario_cadastro">
-            <form method="POST" action="controler/processa_cadastro.php">
-                <div style="opacity:100%;" class="alert alert-warning" role="alert">
-                    <strong>  É Necessário Estar Conectado no Sistema para Realiza o Agendamento </strong>
-                </div>
-                <h3> CADASTRO </h3>
+    <?php include "logo_menu.php" ?>
+    <div class="fomulario_cadastro">
+        <form method="POST" action="controler/processa_cadastro.php">
+            <div style="opacity:100%;" class="alert alert-warning" role="alert">
+                <strong> É Necessário Estar Conectado no Sistema para Realiza o Agendamento </strong>
+            </div>
+            <h3> CADASTRO </h3>
 
-                <p>
-                    Nome Completo:
-                    <input id="nome" type="text" name="nome" required>
-                </p>
-                <p>
-                    Data de Nascimento:
-                    <input id="data_nasc" type="date" name="data_nasc" required>
-                </p>
-                <p>
-                    Telefone para Contado:
-                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
-                </p>
-                <p>
-                    LOGIN/Nome de Úsuario:
-                    <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
-                </p>
-                <p>
-                    SENHA:
-                    <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
-                </p>
-                <!-- ENVIAR formulario -->
-                <input id="cadastrar" type="submit" name="cadastrar" value="cadastrar">
-            </form>
-        </div>
-        <div class="rodape_1">
-            <?php include "rodape.php" ?>
-        </div>
+            <p>
+                Nome Completo:
+                <input id="nome" type="text" name="nome" required>
+            </p>
+            <p>
+                Data de Nascimento:
+                <input id="data_nasc" type="date" name="data_nasc" required>
+            </p>
+            <p>
+                Telefone para Contado:
+                <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
+            </p>
+            <p>
+                LOGIN/Nome de Úsuario:
+                <input id="login" type="text" name="login" placeholder="EX: abcd@123" required>
+            </p>
+            <p>
+                SENHA:
+                <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
+            </p>
+            <!-- ENVIAR formulario -->
+            <input id="cadastrar" type="submit" name="cadastrar" value="cadastrar">
+        </form>
+    </div>
+    <div class="rodape_1">
+        <?php include "rodape.php" ?>
+    </div>
     </body>
 </div>
 

@@ -1,5 +1,5 @@
-<?php 
-	session_start ();
+<?php
+session_start();
 ?>
 <head>
 
@@ -21,38 +21,29 @@
     <div class="container-fluid">
         <div class="logo">
             <h1>
-
-                    <a href="controler/logout.php">
-                        <img src="img/logo1.png" alt="">
-                        DITTE.TATTOO
-                    </a>
+                <a href="controler/logout.php">
+                    <img src="img/logo1.png" alt="">
+                    DITTE.TATTOO
+                </a>
             </h1>
         </div>
         <div class="lista_menu">
-        <strong>
-            <ul class="aaa">
-                <li class="li">
-                    <a href="controler/logout.php"><span data-tooltip="Volta para a Página Principal">Home-Page</span>  </a>
-                </li>
-                <li>
-                    <a href="cadastro.php"> Cadastro/Agendamento </a>
-                </li>
-                <li>
-                    <a href="orçamento.php"> Orçamento </a>
-                </li>
-                <li>
-                    <a href="desenhos.php"> Portfólio </a>
-                </li>
-                <li>
-                    <nav>
-                        <a href="#rodape_1"> Contato/Rede Sociais </a>
-                    </nav>
-                </li>
-                <li>
-                    <a href="login.php"> LOGIN </a>
-                </li>
-            </ul>
-        </strong>
+            <strong>
+                <ul class="aaa">
+                    <li class="li">
+                        <a href="controler/logout.php">
+                            <span data-tooltip="Volta para a Página Principal">Home-Page</span>
+                        </a>
+                    </li>
+                    <li><a href="cadastro.php"> Cadastro/Agendamento </a></li>
+                    <li><a href="orçamento.php"> Orçamento </a></li>
+                    <li><a href="desenhos.php"> Portfólio </a></li>
+                    <li>
+                        <nav><a href="#rodape_1"> Contato/Rede Sociais </a></nav>
+                    </li>
+                    <li><a href="login.php"> LOGIN </a></li>
+                </ul>
+            </strong>
         </div>
     </div>
 </header>

@@ -17,6 +17,7 @@
 			width: 100%;
 			width: 100vw;
 		}
+		
 	</style>
 </head>
 <div class="container-fluid">
@@ -36,7 +37,7 @@
 			<a href="lista_agendamentos_confirmados.php">Agendamentos Confirmados</a>
 		</button>
 		<button class="btn btn-dark">
-			<a href="lista_agendamentos_excluidos.php">listar Agendamentos Cancelados</a>
+			<a href="lista_agendamentos_excluidos.php">Listar Agendamentos Cancelados</a>
 		</button>
 
 		<table id="lista_cadastro" style="opai" class="table table-hover mt-3">

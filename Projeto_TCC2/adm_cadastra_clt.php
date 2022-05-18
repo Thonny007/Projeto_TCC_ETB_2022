@@ -5,20 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/formulario.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
-    <!-- bot css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <!-- bot css -->
-    <!-- bot js -->
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
-    <!-- bot js -->
-    <title> Cadastro.Ditte.Tattoo </title>
+    <title> Cadastrar_clt.Ditte.Tattoo </title>
+    <style>
+        button{
+            margin:10% ;
+            padding: 10%;
+        }
+        button a{
+            text-decoration: none;
+            color:white;
+        }
+        button a:hover{
+            text-decoration: none;
+            color:white;
+        }
+    </style>
 </head>
 <div class="container-fluid">
     <body>
     <?php include "menu_entrada.php" ?>
+        <button id='btn_mostrar' type="button" class="btn btn-dark">
+                <a href="lista_cadastro.php">Listar Clientes Cadastrados </a>
+            </button>
     <div class="fomulario_cadastro">
         <form method="POST" action="controler/processa_adm_cadastra_clt.php">
             <h3><u> CADASTRA USUÁRIOS </u></h3>

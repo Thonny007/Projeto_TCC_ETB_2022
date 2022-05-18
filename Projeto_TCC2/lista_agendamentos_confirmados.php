@@ -34,7 +34,7 @@
     </button>
 
     <button class="btn btn-dark">
-        <a href="lista_agendamentos_excluidos.php">listar Agendamentos Cancelados</a>
+        <a href="lista_agendamentos_excluidos.php">Listar Agendamentos Cancelados</a>
     </button>
     <table id="lista_cadastro" class="table mt-3 table-hover">
         <thead>
@@ -55,7 +55,7 @@
                     </a>
                 </td>
                 <td><?php echo $registro[2]; ?></td>
-                <td><?php echo $registro[3]; ?></td>
+                <td><textarea class="edit_box" cols="20" rows="0.5" style="height:30px;width:80%" disabled><?php echo $registro[3];?> </textarea> </td>
                 <td><?php echo $registro[4]; ?></td>
             </tr>
         <?php } ?>

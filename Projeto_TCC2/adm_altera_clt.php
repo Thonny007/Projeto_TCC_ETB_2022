@@ -45,7 +45,7 @@
             $cliente = Cliente::getById($cod);
         ?>
         <button class="btn btn-dark">
-            <a href="lista_cadastro.php">Lista Cadastro</a>
+            <a href="lista_cadastro.php">Listar Cliente Cadastros</a>
         </button>
         <form action="controler/processa_altera_clt.php" method="post">
             <input width="30%" type="hidden" name="id" value="<?php echo $cliente[0] ?>">

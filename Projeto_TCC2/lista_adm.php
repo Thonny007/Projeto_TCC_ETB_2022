@@ -10,6 +10,16 @@
     <script src="js/jQuery.js" defer></script>
     <script src="js/table_clientes.js" defer></script>
     <script src="js/form_cadastro.js" defer></script>
+    <style>
+         button a{
+            text-decoration: none;
+            color:white;
+        }
+        button a:hover{
+            text-decoration: none;
+            color:white;
+        }
+    </style>
 </head>
 <div class="container-fluid">
 
@@ -28,6 +38,10 @@
             <button id='btn_mostrar' type="button" class="btn btn-dark">
                 Mostrar Administradores do Sistema
             </button>
+            <button id='btn_mostrar' type="button" class="btn btn-dark">
+                <a href="cadastro_adm.php"> Cadastrar Administrador </a>
+            </button>
+            <p></p>
             <table class="table table-striped table-hover" id="table_cliente">
                 <tr>
                     <td class="esquerda">
@@ -53,12 +67,12 @@
                         </td>
                         <td>
                             <button>
-                                <a href="<?php echo $link_editar; ?>">
+                                <a style="color:black;" href="<?php echo $link_editar; ?>">
                                     Editar <img width="24px" src="img/menu/pencil.png">
                                 </a>
                             </button>
                             <button>
-                                <a href="<?php echo $link; ?>">
+                                <a style="color:black;" href="<?php echo $link; ?>">
                                     Excluir <img width="20px" src="css/icons/lixo.svg"/>
                                 </a>
                             </button>

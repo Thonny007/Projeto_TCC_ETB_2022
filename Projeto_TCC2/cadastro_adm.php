@@ -6,22 +6,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/formulario.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
-    <!-- bot css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <!-- bot css -->
-    <!-- bot js -->
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
-    <!-- bot js -->
-    <title> Cadastro.Ditte.Tattoo </title>
+    <title> Cadastro.Administrador.Ditte.Tattoo </title>
+    <style>
+         button a{
+            text-decoration: none;
+            color:white;
+        }
+        button a:hover{
+            text-decoration: none;
+            color:white;
+        }
+    </style>
 </head>
 <div class="container-fluid">
 
     <body>
     <?php include "menu_entrada.php" ?>
     <div class="fomulario_cadastro">
+        <button id='btn_mostrar' type="button" class="btn btn-dark">
+            <a href="lista_adm.php"> Listar Administradores </a>
+        </button>
         <form method="POST" action="controler/processa_cadastro_adm.php">
             <h3> Cadastro de Administrador </h3>
 

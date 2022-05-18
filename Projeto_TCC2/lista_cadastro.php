@@ -24,6 +24,14 @@
         .txt {
             text-align: center;
         }
+        .cliente{
+            text-decoration: none;
+            color:white;
+        }
+        .cliente:hover{
+            text-decoration: none;
+            color:white;
+        }
     </style>
 </head>
 <div class="container-fluid">
@@ -37,9 +45,13 @@
             $listar = $cliente->list();
         ?>
         <div class="container">
-            <button id='btn_mostrar' type="button" class="btn btn-dark">
+        <button id='btn_mostrar' type="button" class="btn btn-dark">
                 Mostrar Clientes Cadastrados
             </button>
+            <button  id='btn_mostrar' type="button" class="btn btn-dark">
+                <a class="cliente" href="adm_cadastra_clt.php"> Cadastrar Cliente </a>
+            </button>
+            <p></p>
             <table class="table table-striped table-hover" id="table_cliente">
                 <thead>
                 <tr>

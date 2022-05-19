@@ -146,40 +146,29 @@ class Agendamentos {
     }
 
     /*------------------------- UPDATE DO AGENDAMENTO --------------------------*/
-     public function update($id, $agnd=false)
-    {
-        $sql = "UPDATE agendamentos.cliente
+     public function update(){
+        $sql = "UPDATE agendamentos.agendamento
         SET 
-        id_agnd = $this->id;
-        data_agnd = $this->data;
-        descricao_tattoo = $this->desc;
-        imagem_atendimento = $this->imagem;
-        status_agnd = $this->status;
-        WHERE id_agnd = '$id' ";
+            data_agnd = '$this->data',
+            descricao_tatto = '$this->desc',
+            status_agnd = '$this->status'
+        WHERE id_agnd = $this->id ";
 
         try {
             mysqli_query($this->con, $sql);
 
-            if (!$agnd) {
-                echo "
-                    <script> 
-                        alert ('☺ Agendamento Alterado Com Sucesso ☺')
-                        location.href = ('../lista_agendamentos.php')
-                    </script>";
-            } else {
                 echo "
                     <script>
                         alert ('☺ Agendamento Alterado Com Sucesso ☺')
                         location.href = ('../lista_agendamentos.php')
                     </script>";
-            }
 
 
         } catch (Throwable $th) {
             echo "
             <script>
                 alert ('⚠️⚠️ ERRO NA ALTERAÇÃO DO AGENDAMENTO ⚠️⚠️')
-                location.href = ('../adm_cliente.php')
+                //location.href = '../adm_cliente.php'
             </script>";
 
             echo $th;
@@ -201,7 +190,8 @@ class Agendamentos {
     /**
      * @throws Exception
      */
-    public static function formataData($dataRecebida){
+    public static function formataData($dataRecebida): string
+    {
         $data = new DateTime($dataRecebida);
 
         return $data->format('d/m/Y H:i');

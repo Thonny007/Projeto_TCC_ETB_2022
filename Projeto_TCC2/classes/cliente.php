@@ -137,7 +137,8 @@ class Cliente extends Pessoa {
         $sql = "SELECT 
             a.data_agnd, 
             a.status_agnd, 
-            a.descricao_tatto
+            a.descricao_tatto,
+            a.id_agnd
         from agendamento a
         inner join cliente c on a.id_agnd = c.id_agnd
         where c.id_clt = '$id'";
@@ -151,8 +152,7 @@ class Cliente extends Pessoa {
         return $result;
     }
 
-    public function update($id, $adm=false)
-    {
+    public function update($adm=0){
         $sql = "UPDATE agendamentos.cliente
         SET 
             nome_clt='$this->nome', 
@@ -160,7 +160,7 @@ class Cliente extends Pessoa {
             senha_clt='$this->senha',
             data_nascimento='$this->data_nascimento',
             numero_cliente='$this->numero_cliente'
-        WHERE id_clt = '$id' ";
+        WHERE id_clt = '$this->id' ";
 
         try {
             mysqli_query($this->con, $sql);

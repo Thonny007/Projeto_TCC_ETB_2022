@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="css/altera_adm.css">
     <title> Ditte.Tattoo </title>
     <style>
-        form{
+        form {
             width: 50%;
             margin: auto;
-            background-color:#808080;
+            background-color: #808080;
             font-size: 20px;
-            border-radius:10px;
+            border-radius: 10px;
             color: white;
-            text-align:center;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <?php 
+    <?php
         session_start();
         include "classes/cliente.php";
         include "menu_entrada_clt.php";
@@ -36,41 +36,44 @@
         // retorna o agendamento que estpa acossiado ao cliente
         $data = $cliente->getAgendamento($id);
 
-        if ($data != null){
+        if ($data != null) {
             // pega a data e o horário do agendamento e separa em duas variáveis
             $agendamento = explode(" ", $data[0]);
             $dia = $agendamento[0];
             $horario = $agendamento[1];
-        }else {
+        } else {
             $data = [0, "Cliente não possui agendamentos", "Cliente não possui agendamentos"];
 
             $dia = null;
             $horario = '00:00:00';
         }
-
-
     ?>
-
     <div class="container">
-        <?php if (!$isAdm) {?>
-        <form>
-            <div class="form-group">
-                <label>Descrissão</label> <br>
-                <textarea class="edit_box" cols="20" rows="10" style="height:60px;width:100%;" disabled><?php echo $data[2]; ?> </textarea>
-            </div>
-            <div class="form-group">
-                <label>Data do agendamento</label>
-                <input type="date" disabled class="form-control" name="dia" value="<?php echo $dia; ?>">
-            </div>
-            <div class="form-group">
-                <label>Horário</label>
-                <input type="text" disabled class="form-control" name="hora" value="<?php echo $horario; ?>">
-            </div>
-            <div class="form-group">
-                <label>Status</label>
-                <input type="text" disabled class="form-control" name="status" value="<?php echo $data[1]; ?>">
-            </div>
-        </form>
+        <?php if (!$isAdm) { ?>
+            <!-- TODO botão de upload pras fotos -->
+            <form method="post" action="controler/processa_altera_agnd.php">
+                <input type="hidden" name="id_agnd" value="<?php echo $data[3]; ?>">
+                <div class="form-group">
+                    <label>Descrissão</label> <br>
+                    <textarea class="edit_box" cols="20"
+                              rows="10" style="height:60px;width:100%;"
+                              name="desc"
+                    ><?php echo $data[2]; ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Data do agendamento</label>
+                    <input type="date" class="form-control" name="dia" value="<?php echo $dia; ?>">
+                </div>
+                <div class="form-group">
+                    <label>Horário</label>
+                    <input type="text" class="form-control" name="hora" value="<?php echo $horario; ?>">
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <input type="text" class="form-control" name="status" value="<?php echo $data[1]; ?>">
+                </div>
+                <button type="submit" class="btn btn-danger">alterar</button>
+            </form>
         <?php } ?>
     </div>
 </body>

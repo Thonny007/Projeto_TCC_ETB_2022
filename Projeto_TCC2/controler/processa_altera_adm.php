@@ -6,7 +6,6 @@
     $login = $_POST["login"];
     $senha = $_POST["senha"];
 
-    $adm = new Administrador($nome, $login, $senha);
+    $adm = new Administrador($id, $nome, $login, $senha);
 
-    $adm->update($id);
-?>
+    $adm->update();

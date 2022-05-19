@@ -34,8 +34,7 @@
         <form method="post" action="controler/processa_altera_adm.php">
 
             <?php
-            if ($registro != null) {
-                ?>
+            if ($registro != null) {?>
                 <div class="container">
                     <form>
                         <input type="hidden" name="id" value="<?php echo $registro[0] ?>">

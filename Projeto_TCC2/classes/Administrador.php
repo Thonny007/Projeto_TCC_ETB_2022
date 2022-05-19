@@ -117,13 +117,13 @@ class Administrador extends Pessoa {
         return $toObj ? $admin : $result;
     }
 
-    public function update($id, $adm=0){
+    public function update($adm=0){
         $sql = "UPDATE agendamentos.administrador
         SET 
             login_adm='$this->login',
             nome_adm='$this->nome', 
             senha_adm='$this->senha'
-        WHERE id_adm = '$id' ";
+        WHERE id_adm = '$this->id' ";
 
         try {
             mysqli_query($this->con, $sql);

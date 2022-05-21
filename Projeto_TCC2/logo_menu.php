@@ -22,8 +22,8 @@ session_start();
         <div class="logo">
             <h1>
                 <a href="controler/logout.php">
-                    <img src="img/logo1.png" alt="">
-                    DITTE.TATTOO
+                    <img src="img/logo1.png" alt="imagem_logo">
+                    DITE.TATTOO
                 </a>
             </h1>
         </div>

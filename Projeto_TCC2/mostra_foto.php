@@ -33,6 +33,7 @@
         }
     </style>
 </head>
+<div class="container-fluid">
 <body>
     <?php
         include "menu_entrada.php";    
@@ -65,4 +66,5 @@
         </button>
     </div>
 </body>
+    </div>
 </html>

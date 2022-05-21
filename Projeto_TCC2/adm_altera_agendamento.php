@@ -77,6 +77,17 @@
                     <input type="file" name="ft" id="ft" value="<?php echo $agnd[2] ?>">
                 </p>
                 <input id="cadastrar" type="submit" nome="agendar" value="ALTERAR AGENDAMENTO">
+                <?php /* if ($data != null) {
+            // pega a data e o horário do agendamento e separa em duas variáveis
+            $agendamento = explode(" ", $data[0]);
+            $dia = $agendamento[0];
+            $horario = $agendamento[1];
+        } else {
+            $data = [0, "Cliente não possui agendamentos", "Cliente não possui agendamentos"];
+
+            $dia = null;
+            $horario = '00:00:00';
+        } */ ?>
             </div>
         </form>
     </body>

@@ -55,24 +55,24 @@
                 <input type="hidden" name="id_agnd" value="<?php echo $data[3]; ?>">
                 <div class="form-group">
                     <label>Descrissão</label> <br>
-                    <textarea class="edit_box" cols="20"
+                    <textarea class="edit_box" cols="20" disabled
                               rows="10" style="height:60px;width:100%;"
                               name="desc"
                     ><?php echo $data[2]; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label>Data do agendamento</label>
-                    <input type="date" class="form-control" name="dia" value="<?php echo $dia; ?>">
+                    <input type="date" class="form-control" disabled name="dia" value="<?php echo $dia; ?>">
                 </div>
                 <div class="form-group">
                     <label>Horário</label>
-                    <input type="text" class="form-control" name="hora" value="<?php echo $horario; ?>">
+                    <input type="text" class="form-control" name="hora" disabled value="<?php echo $horario; ?>">
                 </div>
                 <div class="form-group">
                     <label>Status</label>
-                    <input type="text" class="form-control" name="status" value="<?php echo $data[1]; ?>">
+                    <input type="text" class="form-control"  disabled name="status" value="<?php echo $data[1]; ?>">
                 </div>
-                <button type="submit" class="btn btn-danger">alterar</button>
+                <!-- <button type="submit" class="btn btn-danger">alterar</button> -->
             </form>
         <?php } ?>
     </div>

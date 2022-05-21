@@ -23,7 +23,7 @@
                     <h1>
                         <a href="administracao.php">
                             <img  src="img/logo1.png">
-                            DITTE.TATTOO
+                            DITE.TATTOO
                         </a>
                     </h1>
                 </td>

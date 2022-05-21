@@ -19,9 +19,9 @@
             <tr>
                 <td>
                     <h1>
-                        <a href=".php">
+                        <a href="adm_cliente.php">
                             <img src="img/logo1.png">
-                            DITTE.TATTOO
+                            DITE.TATTOO
                         </a>
                     </h1>
                 </td>

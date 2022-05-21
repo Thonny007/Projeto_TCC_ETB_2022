@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/carousel.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
-    <title> Ditte.Tattoo </title>
+    <title> Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
     <body>
     <!-- LOGO -->
     <?php include "logo_menu.php"; ?>
     <!-- Carousel Bootstrap -->
-    <div class="container-fluid">
         <?php include "carousel_index.php" ?>
+    <!-- Carousel Bootstrap -->
         <hr style="opacity:1%;">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">

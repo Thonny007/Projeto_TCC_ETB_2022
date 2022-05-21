@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/Menu_entrada.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <title> Altera.Agendamento.Ditte.Tattoo </title>
     <style>
@@ -42,52 +43,55 @@
         <?php
             $cod = $_GET["id"];
             $agnd = AgendamentoS::getById($cod);
+
+            $data = explode(' ', $agnd[1]);
+            $dia = $data[0];
+            $hora = $data[1];
+            $hora = explode(':', $hora)[0];
+
+            function selectHora(int $value, string $hora_agnd): void{
+                if ($value == $hora_agnd){
+                    echo "value=\"$value\" selected";
+                }else {
+                    echo "value=\"$value\"";
+                }
+            }
+
         ?>
 
         <form style="width:90%;" method="POST" action="controler/processa_altera_agnd.php"
               enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?php echo $agnd[0] ?>">
+            <input type="hidden" name="id_agnd" value="<?php echo $agnd[0] ?>">
+            <input type="hidden" name="status" value="<?php echo $agnd[3] ?>">
             <div class="agm">
                 <h3> Altera Agendamento </h3>
-                <p>
                     Escolha uma Data:
-                    <input id="data_agenda" type="date" name="data_agendamento" value="<?php echo $agnd[1] ?>" required>
-                </p>
-                <p>
-                    Escolha um Horário:
-                    <select name="hora_agendamento" id="hora_agendamento" required>
-                        <option value="8" selected> 8hrs</option>
-                        <option value="10"> 10hrs</option>
-                        <option value="12"> 12hrs</option>
-                        <option value="14"> 14hrs</option>
-                        <option value="16"> 16hrs</option>
-                        <option value="18"> 18hrs</option>
-                    </select>
-                </p>
-                <p>
+                    <input id="data_agenda" type="date" name="dia" value="<?php echo $dia ?>" required>
+                    <div>
+                        Escolha um Horário:
+                        <select name="hora" id="hora_agendamento" required>
+                            <option <?php selectHora(8, $hora);?> >8hrs</option>
+                            <option <?php selectHora(10, $hora);?> > 10hrs</option>
+                            <option <?php selectHora(12, $hora);?> > 12hrs</option>
+                            <option <?php selectHora(14, $hora);?> > 14hrs</option>
+                            <option <?php selectHora(16, $hora); ?> > 16hrs</option>
+                            <option <?php selectHora(18, $hora); ?> > 18hrs</option>
+                        </select>
+                    </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">
-                        <p> Descreva como você quer a tatuagem </p>
+                        <p> Descreva como quer a tatuagem </p>
                     </label>
                     <textarea style="width:50%;margin:auto;" class="form-control" name="desc" rows="3"
-                              value="<?php echo $agnd[4] ?>"></textarea>
+                    ><?php echo $agnd[4] ?></textarea>
                 </div>
-                <p>
-                    Imagem/Foto de Referência
-                    <input type="file" name="ft" id="ft" value="<?php echo $agnd[2] ?>">
-                </p>
-                <input id="cadastrar" type="submit" nome="agendar" value="ALTERAR AGENDAMENTO">
-                <?php /* if ($data != null) {
-            // pega a data e o horário do agendamento e separa em duas variáveis
-            $agendamento = explode(" ", $data[0]);
-            $dia = $agendamento[0];
-            $horario = $agendamento[1];
-        } else {
-            $data = [0, "Cliente não possui agendamentos", "Cliente não possui agendamentos"];
-
-            $dia = null;
-            $horario = '00:00:00';
-        } */ ?>
+                <div>
+                    <span>Imagem/Foto de Referência</span>
+                    <input type="file" name="ft" id="ft">
+                </div>
+                <div class="mt-4">
+                    <input id="cadastrar" type="submit" nome="agendar" value="ALTERAR AGENDAMENTO">
+                </div>
             </div>
         </form>
     </body>

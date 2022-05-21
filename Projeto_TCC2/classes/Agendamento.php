@@ -41,7 +41,16 @@ class Agendamentos {
         VALUES
             ('$this->data','$this->imagem','$this->desc')";
 
-        mysqli_query($this->con, $sql);
+        try {
+            mysqli_query($this->con, $sql);
+        }catch (Throwable $th){
+            echo
+            "<script>
+                alert('Horário já agendado favor marcar outro horário');
+                location.href = '../agendamento.php';    
+            </script>
+            ";
+        }
 
 
         $getLastId = "SELECT a.id_agnd  FROM agendamento a

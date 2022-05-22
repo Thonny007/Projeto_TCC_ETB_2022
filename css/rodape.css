@@ -1,0 +1,115 @@
+footer {
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.834);
+    color: SaddleBrown;
+    font-family: Arial black;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: white;
+    height: auto;
+}
+
+table {
+    width: fit-content;
+}
+
+.rodape img {
+    width: 30px;
+    height: 30px;
+    border-color: red;
+}
+
+footer dl li {
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+footer a,
+img {
+    color: inherit;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgb(195, 65, 65)
+}
+
+
+/* link selecionado */
+
+
+/* footer a:active {
+    color: green;
+} */
+
+footer {
+    max-width: 100%;
+    width: 98%;
+}
+
+
+/* foto rodape */
+
+table tr td .apresenta {
+    width: 200px;
+    height: 200px;
+    border-radius: 300px;
+}
+
+table tr td p {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 252, 252);
+}
+
+table tr td dl {
+    text-align: center;
+}
+
+table tr td a {
+    text-decoration: none;
+}
+
+.ender img {
+    width: 60px;
+    height: 60px;
+}
+
+.map img {
+    width: 90px;
+    height: 90px;
+}
+
+footer #contatos_menu dd:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: red;
+}
+
+#contatos_menu dd:hover .map {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: red;
+}
+
+#contatos_menu .ender:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: red;
+}

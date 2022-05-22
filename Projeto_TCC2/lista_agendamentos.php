@@ -30,9 +30,9 @@
 
 	<?php include "menu_entrada.php"; ?>
     <div class="container-fluid">
-		<button class="btn btn-dark">
-			<a href="agendamento.php">Novo Agendamento</a>
-		</button>
+		<!-- <button class="btn btn-dark">
+			<a href="agendamento_adm.php">Novo Agendamento</a>
+		</button> -->
 		<button class="btn btn-dark">
 			<a href="lista_agendamentos_confirmados.php">Agendamentos Confirmados</a>
 		</button>

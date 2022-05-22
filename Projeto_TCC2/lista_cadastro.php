@@ -32,6 +32,14 @@
             text-decoration: none;
             color:white;
         }
+        button a{
+            text-decoration: none;
+            color:white;
+        }
+        button a:hover{
+            text-decoration: none;
+            color:white;
+        }
     </style>
 </head>
 <div class="container-fluid">
@@ -93,14 +101,14 @@
                             <ol class="açao_ol">
                                 <dd class="açao_li">
                                     <button class="acao">
-                                        <a href="adm_altera_clt.php?id=<?php echo $registro[0] ?>">
+                                        <a style="color:black;" href="adm_altera_clt.php?id=<?php echo $registro[0] ?>">
                                             Editar <img width="24px" src="img/menu/pencil.png">
                                         </a>
                                     </button>
                                 </dd>
                                 <dd>
                                     <button class="acao">
-                                        <a href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
+                                        <a style="color:black;" href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
                                             Excluir <img width="20px" src="css/icons/lixo.svg"/>
                                         </a>
                                     </button>

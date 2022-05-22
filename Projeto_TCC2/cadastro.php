@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/formulario.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
-    <!-- bot css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <!-- bot css -->
-    <!-- bot js -->
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
-    <!-- bot js -->
+    <script src="js/mascaraTelefone.js" defer></script>
     <title> Cadastro.Ditte.Tattoo </title>
 </head>
 <div class="container-fluid">
@@ -37,7 +33,13 @@
             </p>
             <p>
                 Telefone para Contado:
-                <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
+                <input id="telefone"
+                       type="tel"
+                       name="telefone"
+                       placeholder="(xx) xxxxx-xxxx"
+                       required
+                       onkeyup="mask(this, mphone)"
+                >
             </p>
             <p>
                 LOGIN/Nome de Úsuario:

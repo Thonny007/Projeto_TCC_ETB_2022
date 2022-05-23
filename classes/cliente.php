@@ -69,6 +69,28 @@ class Cliente extends Pessoa {
         return $query;
     }
 
+    public function listByName($nome){
+        $sql = "select
+            id_clt,
+            nome_clt,
+            login_clt,
+            senha_clt,
+            data_nascimento,
+            id_agnd,
+            id_adm,
+            numero_cliente
+        from
+            cliente
+        where
+            nome_clt like '%$nome%'
+            order by nome";
+
+        $query = mysqli_query($this->con, $sql);
+        mysqli_close($this->con);
+
+        return $query;
+    }
+
     /**
      * @throws Exception
      */

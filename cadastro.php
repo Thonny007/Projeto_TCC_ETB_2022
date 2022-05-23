@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/formulario.css">
     <link rel="stylesheet" type="text/css" href="css/texto.css">
-    <!-- bot css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <!-- bot css -->
-    <!-- bot js -->
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
-    <!-- bot js -->
+    <script src="js/mascaraTelefone.js" defer></script>
     <title> Cadastro.Ditte.Tattoo </title>
 </head>
 <div class="container-fluid">
@@ -36,33 +32,14 @@
                 <input id="data_nasc" type="date" name="data_nasc" required>
             </p>
             <p>
-                <!-- ++++++++++++++++++++++++++++++++++++ MASCARA DE TELEFONE ++++++++++++++++++++++++++++++++++++ -->
-                <script>
-                    function mask(o, f) {
-                        setTimeout(function() {
-                            var v = mphone(o.value);
-                            if (v != o.value) {
-                                o.value = v;
-                            }
-                        }, 1);
-                    }
-                    function mphone(v) {
-                        var r = v.replace(/\D/g, "");
-                        r = r.replace(/^0/, "");
-                        if (r.length > 10) {
-                            r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
-                        } else if (r.length > 5) {
-                            r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
-                        } else if (r.length > 2) {
-                            r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-                        } else {
-                            r = r.replace(/^(\d*)/, "($1");
-                        }
-                            return r;
-                    }
-                </script>
                 Telefone para Contado:
-                <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" required>
+                <input id="telefone"
+                       type="tel"
+                       name="telefone"
+                       placeholder="(xx) xxxxx-xxxx"
+                       required
+                       onkeyup="mask(this, mphone)"
+                >
             </p>
             <p>
                 LOGIN/Nome de Úsuario:

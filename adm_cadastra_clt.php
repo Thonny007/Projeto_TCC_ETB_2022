@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/texto.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
+    <script src="js/mascaraTelefone.js" defer></script>
     <title> Cadastrar_clt.Ditte.Tattoo </title>
     <style>
         button{
@@ -44,7 +45,13 @@
             </p>
             <p>
                 Telefone para Contado:
-                <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxxxxxx" required>
+                <input id="telefone"
+                       type="tel"
+                       name="telefone"
+                       placeholder="(xx) xxxxx-xxxx"
+                       required
+                       onkeyup="mask(this, mphone)"
+                >
             </p>
             <p>
                 LOGIN/Nome de Úsuario:

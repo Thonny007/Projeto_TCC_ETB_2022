@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <script src="js/mascaraTelefone.js" defer></script>
     <title> Altera.Cadastro.Ditte.Tattoo </title>
     <style>
         form {
@@ -58,33 +59,8 @@
                 <input type="date" class="form-control" name="data_nasc" value="<?php echo $cliente[4]; ?>">
             </div>
             <div class="form-group">
-                <!-- ++++++++++++++++++++++++++++++++++++ MASCARA DE TELEFONE ++++++++++++++++++++++++++++++++++++ -->
-                <script>
-                    function mask(o, f) {
-                        setTimeout(function() {
-                            var v = mphone(o.value);
-                            if (v != o.value) {
-                                o.value = v;
-                            }
-                        }, 1);
-                    }
-                    function mphone(v) {
-                        var r = v.replace(/\D/g, "");
-                        r = r.replace(/^0/, "");
-                        if (r.length > 10) {
-                            r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
-                        } else if (r.length > 5) {
-                            r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
-                        } else if (r.length > 2) {
-                            r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-                        } else {
-                            r = r.replace(/^(\d*)/, "($1");
-                        }
-                            return r;
-                    }
-                </script>
                 <label> Telefone </label>
-                <input type="text" class="form-control" name="telefone" value="<?php echo $cliente[7] ?>" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);">
+                <input type="text" class="form-control" name="telefone" onkeyup="mask(this, mphone)" value="<?php echo $cliente[7] ?>">
             </div>
             <div class="form-group">
                 <label> Login </label>

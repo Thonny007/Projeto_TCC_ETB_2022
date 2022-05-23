@@ -12,7 +12,7 @@
         if(strlen($_POST["senha"]) < 6){
 		    echo "<script>
 			    	alert ('⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️')
-				    location.href = ('/Projeto_TCC2/lista_cadastro.php')
+				    location.href = ('../Projeto_TCC2/lista_cadastro.php')
 			    </script>";
         }else{            
             $cliente->update($_SESSION['adm']);

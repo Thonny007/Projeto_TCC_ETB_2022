@@ -53,17 +53,21 @@
             $listar = $cliente->list();
         ?>
         <div class="container">
-        <button id='btn_mostrar' type="button" class="btn btn-dark">
+            <button id='btn_mostrar' type="button" class="btn btn-dark">
                 Mostrar Clientes Cadastrados
             </button>
             <button  id='btn_mostrar' type="button" class="btn btn-dark">
                 <a class="cliente" href="adm_cadastra_clt.php"> Cadastrar Cliente </a>
             </button>
+            <button  id='btn_mostrar' type="button" class="btn btn-dark">
+                <a class="cliente" href="procura_cliente.php">Procurar Cliente</a>
+            </button>
+
             <p></p>
             <table class="table table-striped table-hover" id="table_cliente">
                 <thead>
                 <tr>
-                    <td>
+                    <td width="20%">
                         <p> NOME </p>
                     </td>
                     <td>
@@ -72,12 +76,12 @@
                     <td>
                         <p> DATA NASC. </p>
                     </td>
-                    <td width="5%">
+                    <td width="20%">
                         <p> NÚMERO </p>
                     </td>
                     <td width="30%">
                         <!-- gato para empurrar a plavra ação -->
-                        <p><a style="opacity:1%;">aaaaaaaa</a> AÇÃO</p>
+                        <p><a style="opacity:1%;">AAAAAAAAAAA</a> AÇÃO</p>
                     </td>
                 </tr>
                 </thead>

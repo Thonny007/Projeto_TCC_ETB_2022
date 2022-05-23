@@ -15,6 +15,9 @@
     <div id="adm_lista">
         <ul>
             <li>
+                <a href="procura_cliente.php">Procurar Cliente</a>
+            </li>
+            <li>
                 <a href="adm_cadastra_clt.php"> Cadastrar Cliente </a>
             </li>
             <li>
@@ -32,9 +35,7 @@
             <li>
                 <a href="altera_adm.php?id="> Alterar Meus Dados</a>
             </li>
-            <li>
-                <a href="procura_cliente.php">Procurar CLiente</a>
-            </li>
+       
         </ul>
     </div>
     </body>

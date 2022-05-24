@@ -27,7 +27,7 @@ if($_SESSION['adm']){
     $cliente->geraRelacionamento($id_agnd);
     echo"<script>
             alert ('AGENDAMENTO REALISADO COM SUCESSO')
-            location.href = ('/Projeto_TCC2/lista_agendamentos.php')
+            location.href = ('/Projeto_TCC2/administracao.php')
         </script>";
 }else{
        

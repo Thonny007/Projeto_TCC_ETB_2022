@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <script src="js/mascaraTelefone.js" defer></script>
     <title> Altera.Cadastro.Ditte.Tattoo </title>
     <style>
         form {
@@ -59,7 +60,7 @@
             </div>
             <div class="form-group">
                 <label> Telefone </label>
-                <input type="text" class="form-control" name="telefone" value="<?php echo $cliente[7] ?>">
+                <input type="text" class="form-control" name="telefone" onkeyup="mask(this, mphone)" value="<?php echo $cliente[7] ?>">
             </div>
             <div class="form-group">
                 <label> Login </label>

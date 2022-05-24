@@ -40,23 +40,37 @@
             text-decoration: none;
             color:white;
         }
-        .pesquisar{
-            width:20%;
-            float:right;
-            margin:auto;
-            
+        form {
+            border: 2px solid #ccc;
+            display: inline-block;
+            padding: 4px;
+        
+            background-color:white;
+            display: block;
+            float: right;
+            margin-right: 10px;
+            border-radius:10px;
+        }
+        form > input {
+            border: none
+        }
+        form > button {
+            background: royalblue;
+            border: none;
+            color: #fff;
+            padding: 4px 10px
         }
     </style>
 </head>
 <div class="container-fluid">
-<body>
-<?php include "menu_entrada.php" ?>
-    <!-- <div class="container">
-        <div id="data"></div>
-    </div> -->
-    <div class="pesquisar">
-        <input type="text" class="pesq" placeholder="Digite o nome do Cliente">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="css/icons/lupa.svg" alt=""></button>
-    </div>
+    <body>
+        <?php include "menu_entrada.php" ?>
+        <!-- <div class="container">
+            <div id="data"></div>
+        </div> -->
+        <form action='/' method='post'>
+            <input type='text' name='pesquisa' placeholder='Digite o Nome do Cliente'>
+            <button type="button" class="btn btn-dark" type='submit'> <img src="css/icons/lupa.svg" alt=""> Pesquisar</button>
+        </form>
 </body>
-    </div>
+</div>

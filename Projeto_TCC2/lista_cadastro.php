@@ -66,29 +66,31 @@
             <p></p>
             <table class="table table-striped table-hover" id="table_cliente">
                 <thead>
+                    
                 <tr>
                     <td width="20%">
-                        <p> NOME </p>
+                        <strong>  <p> NOME </p> </strong>
                     </td>
                     <td>
                         <p> LOGIN </p>
                     </td>
                     <td>
-                        <p> DATA NASC. </p>
+                        <strong> <p> DATA NASC. </p> </strong>
                     </td>
                     <td width="20%">
-                        <p> NÚMERO </p>
+                        <strong> <p> NÚMERO </p> </strong>
                     </td>
                     <td width="30%">
                         <!-- gato para empurrar a plavra ação -->
-                        <p><a style="opacity:1%;">AAAAAAAAAAA</a> AÇÃO</p>
+                        <strong> <p> <a style="opacity:1%;">AAAAAAAA</a> AÇÃO </p> </strong>
                     </td>
                 </tr>
+            
                 </thead>
                 <?php while ($registro = mysqli_fetch_row($listar)) { ?>
                     <tr>
                         <td>
-                            <?php echo "$registro[1]"; ?><img width="30px">
+                            <textarea  class="edit_box" cols="30" rows="0.5" style="height:30px;color:black" disabled><?php echo "$registro[1]"; ?></textarea>
                         </td>
                         <td class="esquerda">
                             <p>

@@ -26,7 +26,7 @@
 </head>
 <div class="container-fluid">
     <body>
-    <?php include "menu_entrada_clt.php" ?>
+    <?php include "menu_entrada.php" ?>
     <div id="adm_lista">
         <ul>
             <li><a href="altera_clt.php?id_cliente=<?php echo $_SESSION['id'] ?>"> Alterar meu Cadastro </a></li>

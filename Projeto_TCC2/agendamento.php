@@ -15,7 +15,7 @@
 <div class="container-fluid">
     <body>
     <!-- LOGO -->
-    <?php include "menu_entrada_clt.php"; ?>
+    <?php include "menu_entrada.php" ?>
     <form method="POST" action="controler/processa_agendamento.php" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $_SESSION["id"]; ?>">
         <div class="agm">

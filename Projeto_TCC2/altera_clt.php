@@ -24,7 +24,7 @@
 <body>
     <?php
         include "controler/valida_login.php";
-        include "menu_entrada_clt.php";
+        include "menu_entrada.php";
     ?>
     <?php
         if (!$_SESSION['adm']) {

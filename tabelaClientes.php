@@ -1,5 +1,5 @@
 <?php
-    include_once 'classes/cliente.php';
+    include_once '/classes/cliente.php';
     $cliente = new Cliente();
 
     $listar = $cliente->listByName($_GET['name']);

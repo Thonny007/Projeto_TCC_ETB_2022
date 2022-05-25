@@ -237,4 +237,5 @@ class Cliente extends Pessoa {
 
         mysqli_close($this->con);
     }
+
 }

@@ -1,15 +1,14 @@
 <?php
-    include_once '../classes/cliente.php';
+    include_once 'classes/cliente.php';
+    $cliente = new Cliente();
 
-    $clt = Cliente::getById($_GET['id'], true);
+    $listar = $cliente->listByName($_GET['name']);
 
-    try {
-        $listar = $clt->listByName('5');
-    }catch (Throwable $th){
-        echo "Deu erro Mesmo";
-    }
+    while ($registro = mysqli_fetch_row($listar)){
 ?>
 
 <pre>
-    <?php print_r($clt); ?>
+    <?php print_r($registro); ?>
 </pre>
+
+<?php } ?>

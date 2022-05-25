@@ -8,7 +8,6 @@
     <title> Pesquisar.clt.Ditte.Tattoo </title>
     <script src="js/jQuery.js" defer></script>
     <script src="js/table_clientes.js" defer></script>
-    <script src="js/form_cadastro.js" defer></script>
     <script src="js/renderClientes.js" defer></script>
     <style>
         .açao_td .açao_ol dd {
@@ -65,12 +64,10 @@
 <div class="container-fluid">
     <body>
         <?php include "menu_entrada.php" ?>
-        <!-- <div class="container">
+        <input type='text' name='pesquisa' id="name" placeholder='Digite o Nome do Cliente'>
+        <button type="button" class="btn btn-dark" type='submit' id="btn-procurar">Pesquisar</button>
+        <div class="container">
             <div id="data"></div>
-        </div> -->
-        <form action='/' method='post'>
-            <input type='text' name='pesquisa' placeholder='Digite o Nome do Cliente'>
-            <button type="button" class="btn btn-dark" type='submit'> <img src="css/icons/lupa.svg" alt=""> Pesquisar</button>
-        </form>
+        </div>
 </body>
 </div>

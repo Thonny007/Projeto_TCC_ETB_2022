@@ -83,7 +83,7 @@ class Cliente extends Pessoa {
             cliente
         where
             nome_clt like '%$nome%'
-            order by nome";
+            order by nome_clt";
 
         $query = mysqli_query($this->con, $sql);
         mysqli_close($this->con);
@@ -237,4 +237,5 @@ class Cliente extends Pessoa {
 
         mysqli_close($this->con);
     }
+
 }

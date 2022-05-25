@@ -21,9 +21,6 @@
             height: 30px;
         }
 
-        .txt {
-            text-align: center;
-        }
         .cliente{
             text-decoration: none;
             color:white;

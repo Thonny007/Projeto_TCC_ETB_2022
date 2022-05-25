@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <script src="js/mascaraTelefone.js" defer></script>
+    <script src="js/mascara_telefone.js" defer></script>
     <title> Altera.Cadastro.Ditte.Tattoo </title>
     <style>
         form {

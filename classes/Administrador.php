@@ -49,21 +49,16 @@ class Administrador extends Pessoa {
 
         try {
             mysqli_query($this->con, $sql);
-            echo
-            "
-            <script>
-            alert('☺ Administrador Cadastrado Com Sucesso ☺');
-            location.href = '../cadastro_adm.php'
-            </script>
-            ";
+            
+            echo "<script> 
+                        alert('☺ Administrador Cadastrado Com Sucesso ☺');
+                        location.href = ('../cadastro_adm.php')
+                  </script>";
         } catch (Throwable $th) {
-            echo
-            "
-            <script>
-            alert('⚠️⚠️ Erro ao cadastrar ⚠️⚠️');
-            location.href = '../cadastro_adm.php'
-            </script>
-                    ";
+            echo "<script>
+                        alert('⚠️⚠️ Erro ao cadastrar ⚠️⚠️');
+                        location.href = ('../cadastro_adm.php')
+                </script>";
         }
     }
 
@@ -72,31 +67,22 @@ class Administrador extends Pessoa {
 
         try {
             mysqli_query($this->con, $sql);
-            echo "
-                <script>
+            echo "<script>
                     alert ('☺ Registro de Administrador Deletado/Apagado com Sucesso ☺') 
-                </script>
-            ";
-            echo "
-            <script> 
-                location.href = ('../lista_adm.php') 
-            </script>";
-
+                  </script>";
+            echo "<script> 
+                        location.href = ('../lista_adm.php') 
+                  </script>";
 
         } catch (Throwable $th) {
-            echo "
-            <script> 
-                alert ('ERRO AO DELETAR ADMINISTRADOR') 
-            </script>";
-
-            echo "
-            <script> 
-                location.href = ('../lista_cadastro_adm.php') 
-            </script>";
+            echo "<script> 
+                        alert ('ERRO AO DELETAR ADMINISTRADOR') 
+                  </script>";
+            echo"<script> 
+                        location.href = ('../lista_cadastro_adm.php') 
+                 </script>";
 
         }
-
-
     }
 
     public static function getById($id, $toObj = false){

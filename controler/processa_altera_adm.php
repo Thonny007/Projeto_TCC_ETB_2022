@@ -7,11 +7,11 @@
     $senha = $_POST["senha"];
 
     $adm = new Administrador($id, $nome, $login, $senha);
-    if ($login == null) {
+   /*  if ($login == null) { */
         if(strlen($_POST["senha"]) < 6){
             echo "<script>
                     alert ('⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️')
-                    location.href = ('/Projeto_TCC2/lista_adm.php')
+                    location.href = ('../lista_adm.php')
                 </script>";
         }else {
     
@@ -19,12 +19,12 @@
     
             echo "<script>
                         alert ('☺ ADMINISTRADOR ALTERADO COM SUCESSO ☺')
-                        location.href = ('/Projeto_TCC2/lista_adm.php')
+                        location.href = ('../lista_adm.php')
                     </script>";
         }
-    }else {
+   /*  }else {
         echo "<script>
                     alert ('⚠️ Login Já Existente Favor Inserir Outro Login ⚠️')
-                    location.href = ('/Projeto_TCC2/lista_adm.php')
-                </script>";
-}
+                    location.href = ('../lista_adm.php')
+                </script>"; */
+/* } */

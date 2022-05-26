@@ -47,11 +47,9 @@ class Agendamentos {
             echo
             "<script>
                 alert('Horário já agendado favor marcar outro horário');
-                location.href = '../agendamento.php';    
-            </script>
-            ";
+                location.href = ('../agendamento.php')    
+            </script>";
         }
-
 
         $getLastId = "SELECT a.id_agnd  FROM agendamento a
         order by a.id_agnd desc limit 1;";
@@ -115,7 +113,7 @@ class Agendamentos {
 
             echo "
             <script> 
-                location.href = '../lista_agendamento_excluido.php' 
+                location.href = ('../lista_agendamento_excluido.php') 
             </script>";
 
 
@@ -127,7 +125,7 @@ class Agendamentos {
 
             echo "
             <script> 
-                location.href = '../lista_agendamento_excluido.php' 
+                location.href = ('../lista_agendamento_excluido.php') 
             </script>";
 
         }
@@ -177,7 +175,7 @@ class Agendamentos {
             echo "
             <script>
                 alert ('⚠️⚠️ ERRO NA ALTERAÇÃO DO AGENDAMENTO ⚠️⚠️')
-                //location.href = '../adm_cliente.php'
+                //location.href = ('../adm_cliente.php')
             </script>";
 
             echo $th;
@@ -209,6 +207,4 @@ class Agendamentos {
     public function setStatus($status){
         $this->status = $status;
     }
-
-
 }

@@ -7,12 +7,9 @@
     $admin = Administrador::getById($id, true);
 
     if ($id == $id_adm_logado) {
-        echo
-        "
-                <script>
-                    location.href = 'logout.php';
-                </script>
-            ";
+        echo "<script>
+                    location.href = ('logout.php')
+            </script> ";
     } else {
         $admin->delete($id);
     }

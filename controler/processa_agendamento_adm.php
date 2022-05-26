@@ -25,7 +25,7 @@
 
     echo" <script>
             alert ('☺ AGENDAMENTO DO ADM REALIZADO COM SUCESSO ☺')
-            location.href = ('/Projeto_TCC2/lista_agendamentos.php')
+            location.href = ('../lista_agendamentos.php')
         </script>"
 
 ?>

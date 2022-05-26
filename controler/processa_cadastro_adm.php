@@ -11,7 +11,7 @@
         if(strlen($_POST["senha"]) < 6){
 		    echo "<script>
 			    	alert ('⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️')
-				    location.href = ('/Projeto_TCC2/cadastro_adm.php')
+				    location.href = ('../cadastro_adm.php')
 			    </script>";
 	    }else{
 	            // 3 — chamando a função insert se o ‘login’ informado estiver disponível
@@ -20,7 +20,7 @@
     }else{
         echo"<script>
                 alert('⚠️⚠️ Login Já Cadastrado Favor Tente Outro ⚠️⚠️');
-                location.href = '../cadastro_adm.php'
+                location.href = '(../cadastro_adm.php')
             </script>
                     ";
     }

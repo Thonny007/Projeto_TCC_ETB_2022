@@ -1,5 +1,5 @@
 <?php
-    include_once 'classes/cliente.php';
+    include_once '../classes/cliente.php';
     $cliente = new Cliente();
 
     $listar = $cliente->listByName($_GET['name']);
@@ -34,15 +34,15 @@
                 <ol class="açao_ol">
             <td class="açao_li">
                 <button class="acao">
-                    <a style="color:black;" href="adm_altera_clt.php?id=<?php echo $registro[0] ?>">
-                        Editar <img width="24" src="img/menu/pencil.png" alt="">
+                    <a style="color:black;" href="../adm_altera_clt.php?id=<?php echo $registro[0] ?>">
+                        Editar <img width="24" src="../img/menu/pencil.png" alt="">
                     </a>
                 </button>
             </td>
             <td>
                 <button class="acao">
-                    <a style="color:black;" href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
-                        Excluir <img width="20px" src="css/icons/lixo.svg" alt="a"/>
+                    <a style="color:black;" href="../controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
+                        Excluir <img width="20px" src="../css/icons/lixo.svg" alt="a"/>
                     </a>
                 </button>
             </td>

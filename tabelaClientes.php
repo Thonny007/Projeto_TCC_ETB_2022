@@ -1,3 +1,11 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/lista_clt.css">
+    <style>
+        table{
+            text-align:center;
+        }
+    </style>
+</head>
 <?php
     include_once 'classes/cliente.php';
     $cliente = new Cliente();
@@ -7,7 +15,25 @@
 ?>
 <?php if($qtd > 0){ ?>
     <p> <?php echo $qtd;?> registros encontrados</p>
-    <table class="table table-striped table-hover" id="table_cliente">
+    <table style="background-color: #DCDCDC ;" class="table table-striped table-hover" id="table_cliente">
+    <tr>
+                    <td width="25%">
+                        <strong>  <p> NOME </p> </strong>
+                    </td>
+                    <td width="10%">
+                        <strong> <p> LOGIN </p> </strong>
+                    </td>
+                    <td width="20%">
+                        <strong> <p> DATA NASC. </p> </strong>
+                    </td>
+                    <td width="20%">
+                        <strong> <p> NÚMERO </p> </strong>
+                    </td>
+                    <td width="30%">
+                        <!-- gato para empurrar a plavra ação -->
+                        <strong> <p>  AÇÃO </p> </strong>
+                    </td>
+                </tr>
     <?php while ($registro = mysqli_fetch_row($listar)) { ?>
         <tr>
             <td>
@@ -32,14 +58,12 @@
             </td>
             <td class="açao_td">
                 <ol class="açao_ol">
-            <td class="açao_li">
                 <button class="acao">
                     <a style="color:black;" href="adm_altera_clt.php?id=<?php echo $registro[0] ?>">
                         Editar <img width="24" src="img/menu/pencil.png" alt="">
                     </a>
                 </button>
-            </td>
-            <td>
+       
                 <button class="acao">
                     <a style="color:black;" href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
                         Excluir <img width="20px" src="css/icons/lixo.svg" alt="a"/>
@@ -51,5 +75,5 @@
         <?php } ?>
     </table>
 <?php }else{ ?>
-    <h1>Desculpe Nenhum registro encontrado</h1>
+    <h1> <img src="img/nAchei.png" alt="img_X"> Desculpe Nenhum Registro Encontrado</h1>
 <?php } ?>

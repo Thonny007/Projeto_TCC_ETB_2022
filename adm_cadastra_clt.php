@@ -32,6 +32,9 @@
         <button id='btn_mostrar' type="button" class="btn btn-dark">
                 <a href="lista_cadastro.php">Listar Clientes Cadastrados </a>
             </button>
+            <button  id='btn_mostrar' type="button" class="btn btn-dark">
+                <a class="cliente" href="procura_cliente.php">Procurar Cliente</a>
+            </button>
     <div class="fomulario_cadastro">
         <form method="POST" action="controler/processa_adm_cadastra_clt.php">
             <h3><u> CADASTRA USUÁRIOS </u></h3>

@@ -8,7 +8,7 @@
     <title> Pesquisar.clt.Dite.Tattoo </title>
     <script src="js/jQuery.js" defer></script>
     <script src="js/table_clientes.js" defer></script>
-    <script src="js/render_procurar_clientes.js" defer></script>
+    <script src="js/render_clientes.js" defer></script>
     <link rel="stylesheet" href="css/lista_clt.css">
     <style>
         #pesquisar{

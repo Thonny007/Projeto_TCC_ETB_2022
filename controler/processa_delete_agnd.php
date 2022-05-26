@@ -12,6 +12,6 @@
             ";
             echo "
             <script> 
-                location.href = ('../lista_agendamentos_excluidos.php') 
+                location.href = ('../lista_agendamentos.php') 
             </script>";
 ?>

@@ -47,12 +47,6 @@
         <a href="lista_agendamentos.php">Agendamentos</a>
     </button>
 
-    <button class="btn btn-dark">
-        <a href="lista_agendamentos_excluidos.php">Listar Agendamentos Cancelados</a>
-    </button>
-    <button class="btn btn-dark">
-        <a href="lista_agendamentos_confirmados.php">Agendamentos Confirmados</a>
-    </button>
     <p></p>
     <div class="carrega-imagem">
         <a>

@@ -3,7 +3,7 @@ const nome = $("#name");
 
 function chamarTabela() {
     $.ajax({
-         url: `tabelaClientes.php?name=${nome.val()}`,
+         url: `tabelas/tabelaClientes.php?name=${nome.val()}`,
          method: 'get',
          success(data) {
              $('#data').html(data);

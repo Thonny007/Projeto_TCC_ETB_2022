@@ -7,7 +7,7 @@
     </style>
 </head>
 <?php
-    include_once 'classes/cliente.php';
+    include_once '../classes/cliente.php';
     $cliente = new Cliente();
 
     $listar = $cliente->listByName($_GET['name']);
@@ -59,14 +59,14 @@
             <td class="açao_td">
                 <ol class="açao_ol">
                 <button class="acao">
-                    <a style="color:black;" href="adm_altera_clt.php?id=<?php echo $registro[0] ?>">
-                        Editar <img width="24" src="img/menu/pencil.png" alt="">
+                    <a style="color:black;" href="../adm_altera_clt.php?id=<?php echo $registro[0] ?>">
+                        Editar <img width="24" src="../img/menu/pencil.png" alt="">
                     </a>
                 </button>
        
                 <button class="acao">
-                    <a style="color:black;" href="controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
-                        Excluir <img width="20px" src="css/icons/lixo.svg" alt="a"/>
+                    <a style="color:black;" href="../controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
+                        Excluir <img width="20px" src="../css/icons/lixo.svg" alt="a"/>
                     </a>
                 </button>
             </td>

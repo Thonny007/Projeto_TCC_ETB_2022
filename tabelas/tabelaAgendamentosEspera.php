@@ -1,3 +1,9 @@
+<head>
+    <style>
+        #lista_cadastro{text-align: center}
+
+    </style>
+</head>
 <?php
     include_once "../classes/Agendamento.php";
     $agnd = new Agendamentos();
@@ -7,12 +13,12 @@
 <table id="lista_cadastro" style="opai" class="table table-hover mt-3">
     <thead>
     <tr>
-        <td> Data Agend</td>
-        <td> Img Referencia</td>
-        <td> status Agend</td>
-        <td> Descrição Tattoo</td>
-        <td> Nome Cliente</td>
-        <td> Ação</td>
+        <td width="15%"> <b> Data Agend </b> </td>
+        <td width="10%"> <b> Img Referencia </b> </td>
+        <td width="15%"> <b> Status Agend </b> </td>
+        <td width="15%"> <b> Descrição Tattoo </b> </td>
+        <td width="15%"> <b> Nome Cliente </b> </td>
+        <td width="15%"> <b> Ação </b> </td>
     </tr>
     </thead>
     <?php while ($registro = mysqli_fetch_row($listar)) {?>
@@ -36,7 +42,7 @@
                     <img class="cancela" src="css/icons/cancel.svg" alt="icone cancelar">
                 </a>
                 <button>
-                    <a href="adm_altera_agendamento.php?id=<?php echo $registro[0]; ?>">
+                    <a style="color:black;" href="adm_altera_agendamento.php?id=<?php echo $registro[0]; ?>">
                         Editar <img width="24px" src="img/menu/pencil.png">
                     </a>
                 </button>

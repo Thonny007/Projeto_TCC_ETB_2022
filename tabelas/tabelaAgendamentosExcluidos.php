@@ -1,3 +1,8 @@
+<head>
+    <style>
+        #lista_cadastro{text-align: center}
+    </style>
+</head>
 <?php
     include_once "../classes/Agendamento.php";
 
@@ -6,14 +11,17 @@
 ?>
 <table id="lista_cadastro" class="table mt-3 table-hover">
     <thead>
-    <tr>
-        <td>Data Agend</td>
-        <td>Img Referencia</td>
-        <td>status Agend</td>
-        <td>Descrição Tattoo</td>
-        <td>nome do cliente</td>
-
+        <tr>
+        <!-- a tag (B) deixa em NEGRITO -->
+        <td width="15%">  <b> Data Agend  </b></td>
+        <td width="15%"> <b> Img Referencia </b> </td>
+        <td width="20%"> <b> Status Agend </b> </td>
+        <td width="20%"> <b> Descrição Tattoo </b> </td>
+        <td width="20%"> <b> Nome do Cliente </b> </td>
+        <td width="20%"> <b> Ação </b> </td>
+        </strong>
     </tr>
+    
     </thead>
     <?php
     while ($registro = mysqli_fetch_row($listar)) {?>
@@ -30,6 +38,11 @@
                           disabled><?php echo $registro[3]; ?> </textarea></td>
             <td><?php echo $registro[4]; ?></td>
             <td class="acoes">
+            <button>
+                    <a style="color:black;" href="adm_altera_agendamento.php?id=<?php echo $registro[0]; ?>">
+                        Editar <img width="24px" src="img/menu/pencil.png">
+                    </a>
+                </button>
             </td>
         </tr>
     <?php } ?>

@@ -14,7 +14,7 @@
     $qtd = $listar->num_rows;
 ?>
 <?php if($qtd > 0){ ?>
-    <p> <?php echo $qtd;?> registros encontrados</p>
+    <p> <?php echo $qtd;?> <img src="img/confirm.png" alt=""> Registros Encontrados</p>
     <table style="background-color: #DCDCDC ;" class="table table-striped table-hover" id="table_cliente">
     <tr>
                     <td width="25%">
@@ -60,13 +60,12 @@
                 <ol class="açao_ol">
                 <button class="acao">
                     <a style="color:black;" href="../adm_altera_clt.php?id=<?php echo $registro[0] ?>">
-                        Editar <img width="24" src="../img/menu/pencil.png" alt="">
+                        Editar <img width="24" src="img/menu/pencil.png" alt="">
                     </a>
                 </button>
-       
                 <button class="acao">
                     <a style="color:black;" href="../controler/processa_delete_clt.php?id=<?php echo $registro[0] ?>">
-                        Excluir <img width="20px" src="../css/icons/lixo.svg" alt="a"/>
+                        Excluir <img width="20px" src="css/icons/lixo.svg" alt="a"/>
                     </a>
                 </button>
             </td>

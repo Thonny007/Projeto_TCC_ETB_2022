@@ -44,7 +44,7 @@
             </div>
             <p>
                 Imagem/Foto de Referência
-                <input type="file" name="ft" id="ft">
+                <input type="file" name="ft" id="ft" required>
             </p>
             <div class="alert alert-danger" role="alert">
                 Atenção dependendo do tempo da sessão a tatuatora podera mudar os dias ou o horários
@@ -52,7 +52,7 @@
             </div>
             <p> Endereço: Coletivo Sul - St. B Sul QSB 10 - Taguatinga - DF</p>
             <!-- ENVIAR formulario -->
-            <input id="cadastrar" type="submit" nome="agendar" value="AGENDAR">
+            <input width="60px"  class="btn btn-light" id="cadastrar" type="submit" nome="agendar" value="AGENDAR">
         </div>
     </form>
 

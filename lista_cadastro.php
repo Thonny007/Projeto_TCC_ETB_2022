@@ -6,7 +6,7 @@
     <!-- LINK PARA O CSS -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.mim.css">
     <link rel="stylesheet" type="text/css" href="css/lista_clt.css">
-    <title> Adminitração.Ditte.Tattoo </title>
+    <title> Adm.Lista.clt.Ditte.Tattoo </title>
     <script src="js/jQuery.js" defer></script>
     <script src="js/table_clientes.js" defer></script>
     <script src="js/form_cadastro.js" defer></script>
@@ -36,6 +36,9 @@
         button a:hover{
             text-decoration: none;
             color:white;
+        }
+        #table_cliente{ 
+            text-align: center;
         }
     </style>
 </head>
@@ -69,7 +72,7 @@
                         <strong>  <p> NOME </p> </strong>
                     </td>
                     <td>
-                        <p> LOGIN </p>
+                        <p> <b> LOGIN </b> </p>
                     </td>
                     <td>
                         <strong> <p> DATA NASC. </p> </strong>
@@ -79,7 +82,7 @@
                     </td>
                     <td width="30%">
                         <!-- gato para empurrar a plavra ação -->
-                        <strong> <p> <a style="opacity:1%;">AAAAAAAA</a> AÇÃO </p> </strong>
+                        <strong> <p> AÇÃO </p> </strong>
                     </td>
                 </tr>
             

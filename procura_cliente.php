@@ -15,7 +15,7 @@
             border: 2px solid #ccc;
             display: inline-block;
             padding: 3px;
-            width:23%;
+            width:23.5%;
             background-color:white;
             display: block;
             /* float: right; */

@@ -19,11 +19,12 @@
         }
     </style>
 </head>
+<div class="container-fluid">
 <body>
     <?php
         session_start();
         include "classes/cliente.php";
-        include "menu_entrada_clt.php";
+        include "menu_entrada.php";
         $id = $_SESSION["id"];
         $isAdm = $_SESSION["adm"];
 
@@ -77,4 +78,5 @@
         <?php } ?>
     </div>
 </body>
+</div>
 </html>		

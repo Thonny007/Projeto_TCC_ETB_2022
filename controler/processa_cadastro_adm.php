@@ -20,7 +20,6 @@
     }else{
         echo"<script>
                 alert('⚠️⚠️ Login Já Cadastrado Favor Tente Outro ⚠️⚠️');
-                location.href = '(../cadastro_adm.php')
-            </script>
-                    ";
+                location.href = ('../cadastro_adm.php')
+            </script>";
     }

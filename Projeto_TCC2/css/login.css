@@ -1,0 +1,13 @@
+form {
+    background-color: rgba(163, 110, 110, 0.377);
+    font-family: arial Black;
+    text-align: center;
+    margin: 16px;
+    font-size: large;
+    border-radius: 30px;
+    width: 1293px;
+}
+
+.form {
+    padding: 40px;
+}

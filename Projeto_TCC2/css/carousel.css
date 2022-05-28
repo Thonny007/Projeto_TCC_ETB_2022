@@ -1,0 +1,13 @@
+/* Borda Arredondado*/
+
+#carouselExampleIndicators div {
+    border-radius: 15px;
+}
+
+
+/* TAMANHO DAS IMAGENS DO CAROUSEL */
+
+#carouselExampleIndicators div img {
+    height: 500px;
+    width: 500px;
+}

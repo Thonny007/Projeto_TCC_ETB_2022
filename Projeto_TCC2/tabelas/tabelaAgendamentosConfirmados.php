@@ -13,12 +13,12 @@
 
 <table id="lista_cadastro" class="table mt-3 table-hover">
     <thead>
-            <td width="15%"> <b> Data Agend </b> </td>
-            <td width="10%"> <b> Img Referencia </b> </td>
-            <td width="15%"> <b> Status Agend </b> </td>
-            <td width="15%"> <b> Descrição Tattoo </b> </td>
-            <td width="15%"> <b> Nome Cliente </b> </td>
-            <td width="15%"> <b> Ação </b> </td>
+            <td> <b> Data Agend </b> </td>
+            <td> <b> Img Referencia </b> </td>
+            <td> <b> Status Agend </b> </td>
+            <td> <b> Descrição Tattoo </b> </td>
+            <td> <b> Nome Cliente </b> </td>
+            <td> <b> Ação </b> </td>
         </thead>
     <tbody>
     <?php while ($registro = mysqli_fetch_row($listar)) { ?>

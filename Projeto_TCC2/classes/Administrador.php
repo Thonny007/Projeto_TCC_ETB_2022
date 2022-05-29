@@ -129,7 +129,7 @@ class Administrador extends Pessoa {
             a.id_agnd as 'id do agendamento',
             a.data_agnd as 'data do agendamento',
             a.status_agnd as 'status',
-            a.descricao_tatto 'descrição da tatuagem',
+            a.descricao_tatto as 'descrição da tatuagem',
             c.nome_clt as 'nome do cliente',
             c.id_clt as 'id do cliente'
         from agendamento a

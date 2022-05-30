@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="css/texto.css">
-    <title> Orçamento.Ditte.Tattoo </title>
+    <title> Orçamento.Dite.Tattoo </title>
     <style>
        .tabela_orç{
                 width: 100%;

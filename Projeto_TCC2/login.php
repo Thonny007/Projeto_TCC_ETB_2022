@@ -15,7 +15,7 @@
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
     <!-- bot js -->
 
-    <title> Login.Ditte.Tattoo </title>
+    <title> Login.Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
     <body>

@@ -59,7 +59,7 @@
             <td class="açao_td">
                 <ol class="açao_ol">
                 <button class="acao">
-                    <a style="color:black;" href="../adm_altera_clt.php?id=<?php echo $registro[0] ?>">
+                    <a style="color:black;" href="../administrador_servive/adm_altera_clt.php?id=<?php echo $registro[0] ?>">
                         Editar <img width="24" src="../img/menu/pencil.png" alt="">
                     </a>
                 </button>

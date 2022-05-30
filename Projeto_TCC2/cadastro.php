@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
     <script src="js/mascara_telefone.js" defer></script>
-    <title> Cadastro.Ditte.Tattoo </title>
+    <title> Cadastro.Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/formulario.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
-    <title> Agendamento.Ditte.Tattoo </title>
+    <title> Agendamento.Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
     <body>

@@ -6,7 +6,7 @@
     <!-- LINK PARA O CSS -->
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
 
-    <title> Adminitração.Ditte.Tattoo </title>
+    <title> Adminitração.Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
     <body>

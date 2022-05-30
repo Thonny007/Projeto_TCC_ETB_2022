@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../css/lista_agendamentos.css">
     <script src="../js/jQuery.js"></script>
     <script src="../js/render_agendamentos.js" defer></script>
-    <title> Lista.agnd.Ditte.Tattoo </title>
+    <title> Lista.agnd.Dite.Tattoo </title>
     <style>
         body {
             width: 100%;
@@ -26,9 +26,9 @@
     <?php include "../menus/menu_entrada.php"; ?>
     <input type="hidden" id="id_adm" value="<?php echo $_SESSION['id']; ?>">
     <div class="container-fluid">
-        <button class="btn btn-dark">
+        <!-- <button class="btn btn-dark">
             <a href="agendamento_adm.php">Novo Agendamento</a>
-        </button>
+        </button> -->
         <button class="btn btn-dark" id="em_espera">
             Agendamentos em espera
         </button>

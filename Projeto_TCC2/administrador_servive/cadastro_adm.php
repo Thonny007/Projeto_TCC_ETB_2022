@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/texto.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="../css/bootstrap/bootstrap.min.js" defer></script>
-    <title> Cadastro.Administrador.Ditte.Tattoo </title>
+    <title> Cadastro.Administrador.Dite.Tattoo </title>
     <style>
          button a{
             text-decoration: none;

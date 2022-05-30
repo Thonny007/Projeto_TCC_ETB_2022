@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/Menu_entrada.css">
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <title> Altera.Agendamento.Ditte.Tattoo </title>
+    <title> Altera.Agendamento.Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
     <body>

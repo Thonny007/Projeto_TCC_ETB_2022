@@ -6,7 +6,7 @@
     <!-- LINK PARA O CSS -->
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.mim.css">
     <link rel="stylesheet" type="text/css" href="../css/lista_clt.css">
-    <title> Adm.Lista.clt.Ditte.Tattoo </title>
+    <title> Adm.Lista.clt.Dite.Tattoo </title>
     <script src="../js/jQuery.js" defer></script>
     <script src="../js/table_clientes.js" defer></script>
     <script src="../js/form_cadastro.js" defer></script>

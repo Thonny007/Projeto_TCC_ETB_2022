@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <script src="../js/mascara_telefone.js" defer></script>
-    <title> Altera.Cadastro.Ditte.Tattoo </title>
+    <title> Altera.Cadastro.Dite.Tattoo </title>
     <style>
         form {
             width: 50%;

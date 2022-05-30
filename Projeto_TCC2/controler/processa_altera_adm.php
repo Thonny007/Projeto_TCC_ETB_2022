@@ -11,7 +11,7 @@
         if(strlen($_POST["senha"]) < 6){
             echo "<script>
                     alert ('⚠️ Sua senha teve ter no minimo 6(seis) caracteres ⚠️')
-                    location.href = ('../administrador_servive/altera_adm.php')
+                    location.href = ('../administrador_servive/altera_adm.php?id=$id')
                 </script>";
         }else {
     

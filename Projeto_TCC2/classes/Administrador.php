@@ -137,7 +137,7 @@ class Administrador extends Pessoa {
         inner join cliente c on a.id_agnd = c.id_agnd
 
         inner join administrador adm on adm.id_adm = c.id_adm
-        where adm.id_adm = '$this->id';";
+        where adm.id_adm = '$this->id' and a.atendido = 0";
 
         $result = mysqli_query($this->con, $sql);
 
@@ -161,5 +161,19 @@ class Administrador extends Pessoa {
         mysqli_close($this->con);
     }
 
+    public function atender($id): bool{
+        $sql = "UPDATE agendamento set atendido = 1 where id_agnd = $id";
+
+        try {
+            mysqli_query($this->con, $sql);
+            return  true;
+        }catch (Throwable $th){
+            echo "algo deu errado";
+            echo $sql;
+            echo "<pre>$th</pre>";
+
+            return false;
+        }
+    }
 
 }

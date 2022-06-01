@@ -18,7 +18,7 @@
             <td> <b> Status Agend </b> </td>
             <td> <b> Descrição Tattoo </b> </td>
             <td> <b> Nome Cliente </b> </td>
-            <td> <b> Ação </b> </td>
+            <td> <b> Ações </b> </td>
         </thead>
     <tbody>
     <?php while ($registro = mysqli_fetch_row($listar)) { ?>
@@ -37,6 +37,12 @@
                 <button>
                     <a style="color:black;" href="adm_altera_agendamento.php?id=<?php echo $registro[0]; ?>">
                         Editar <img width="24px" src="../img/menu/pencil.png">
+                    </a>
+                </button>
+                <input type="hidden" id="id" value="<?php echo $registro[0]; ?>">
+                <button id="atender">
+                    <a style="color:black;" href="../controler/confirma_agendamento.php?id=<?php echo $registro[0]; ?>">
+                        atendido<img width="24px" src="../img/confirm.png">
                     </a>
                 </button>
             </td>

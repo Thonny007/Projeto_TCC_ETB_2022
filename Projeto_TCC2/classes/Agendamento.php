@@ -74,7 +74,7 @@ class Agendamentos {
                 c.id_clt as 'id cliente'
             FROM agendamento ag
             inner join cliente c on c.id_agnd  = ag.id_agnd
-            where ag.status_agnd  = 'espera'";
+            where ag.status_agnd  = 'espera' and ag.atendido = 0";
         } else {
             $sql_consulta =
                 "SELECT 
@@ -86,7 +86,7 @@ class Agendamentos {
                 c.id_clt as 'id cliente'
             FROM agendamento ag
             inner join cliente c on c.id_agnd  = ag.id_agnd
-            where ag.status_agnd = 'desmarcado' ";
+            where ag.status_agnd = 'desmarcado' and ag.atendido = 0";
         }
 
         return mysqli_query ($this->con, $sql_consulta);

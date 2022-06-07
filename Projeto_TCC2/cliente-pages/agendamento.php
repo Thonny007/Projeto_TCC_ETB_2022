@@ -47,7 +47,7 @@
             </div>
             <p>
                 Imagem/Foto de Referência
-                <input type="file" name="ft" id="ft" required>
+                <input  class="btn btn-secondary"    type="file" name="ft" id="ft" required>
             </p>
             <div class="alert alert-danger" role="alert">
                 Atenção dependendo do tempo da sessão a tatuatora podera mudar os dias ou o horários

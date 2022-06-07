@@ -45,7 +45,9 @@
                 SENHA:
                 <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
             </p>
-            <input id="cadastrar" type="submit" nome="cadastrar" value="Cadastrar Administrador">
+            <button class="btn btn-light" id="cadastrar" type="submit" nome="cadastrar" value="Cadastrar Administrador">
+                <b>CADASTRAR ADMINISTRADOR</b>
+            </button>
         </form>
     </div>
     </body>

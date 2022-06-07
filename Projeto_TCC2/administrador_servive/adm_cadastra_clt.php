@@ -65,7 +65,9 @@
                 <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
             </p>
             <!-- ENVIAR formulario -->
-            <input id="cadastrar" type="submit" name="cadastrar" value="Cadastrar Usuário">
+            <button class="btn btn-light" id="cadastrar" type="submit" name="cadastrar" value="Cadastrar Usuário">
+                <b>CADASTRAR USUÁRIO</b>
+            </button>
         </form>
     </div>
     </body>

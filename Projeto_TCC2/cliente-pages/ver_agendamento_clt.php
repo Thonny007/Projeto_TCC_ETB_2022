@@ -55,7 +55,7 @@
             <form style="height:350px; method="post" action="../controler/processa_altera_agnd.php">
                 <input type="hidden" name="id_agnd" value="<?php echo $data[3]; ?>">
                 <div class="form-group">
-                    <label>Descrissão</label> <br>
+                    <label>Descrição</label> <br>
                     <textarea class="edit_box" cols="20" disabled
                               rows="10" style="height:60px;width:100%;color:black;"
                               name="desc"

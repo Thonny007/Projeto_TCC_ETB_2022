@@ -20,6 +20,9 @@
         <input type="hidden" name="id" value="<?php echo $_SESSION["id"]; ?>">
         <div class="agm">
             <h3> Agendamento </h3>
+                <div class="alert alert-warning" role="alert">
+                    Obs: Se já tiver um agendamento, não realize outro até que o atual seja descamardo porque o agendamento atual vai ser substituido pelo novo agendamento.
+                </div>
             <p>
                 Escolha uma Data:
                 <input id="data_agenda" type="date" name="data_agendamento" required>
@@ -52,7 +55,9 @@
             </div>
             <p> Endereço: Coletivo Sul - St. B Sul QSB 10 - Taguatinga - DF</p>
             <!-- ENVIAR formulario -->
-            <input width="60px"  class="btn btn-light" id="cadastrar" type="submit" nome="agendar" value="AGENDAR">
+            <button width="60px"  class="btn btn-light" id="cadastrar" type="submit" nome="agendar" value="AGENDAR">
+                <b>AGENDAR</b>
+            </button>
         </div>
     </form>
 

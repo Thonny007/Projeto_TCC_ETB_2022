@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="css/bootstrap/bootstrap.min.js" defer></script>
     <script src="js/mascara_telefone.js" defer></script>
+    <style>
+        button{
+            color:black;
+            background-color:white;
+        }
+    </style>
     <title> Cadastro.Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
@@ -44,7 +50,9 @@
                 <input id="senha" type="password" name="senha" placeholder="mínimo 6(seis Caracteres)" required>
             </p>
             <!-- ENVIAR formulario -->
-            <input id="cadastrar" type="submit" name="cadastrar" value="cadastrar">
+            <button class="btn btn-light" id="cadastrar" type="submit" name="cadastrar" value="CADASTRAR">
+                    <b>CADASTRAR</b>
+            </button>
         </form>
     </div>
     <div class="rodape_1">

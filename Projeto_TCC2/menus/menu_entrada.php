@@ -1,11 +1,27 @@
 <?php
     include "../controler/valida_login.php" 
- ?>
+?>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/Menu_entrada.css">    
     <script type="text/javascript" src="../css/bootstrap/bootstrap.min.js" defer></script>
-
+    <style>
+        .botão  tr td{
+            width:30%;
+            margin:auto;
+        }
+        .botão tr td a{
+            width:30%;
+            margin:auto;
+        }
+        table .sair{
+            width:30%;
+            align-content:flex-start;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <div class="container-fluid">
 <header>
@@ -18,25 +34,27 @@
     </style>
 <?php        
     if($_SESSION['adm']){
-        ?>    
-
+?>    
     <div id="menu">
         <div class="logo_entrada">
-            <table>    
+        <table class="botão">    
             <tr>
                 <td>
                     <h1>
-                        <a href="../administrador_servive/administracao.php">
+                        <a href="../cliente-pages/adm_cliente.php">
                             <img  src="../img/logo1.png">
                             DITE.TATTOO
                         </a>
                     </h1>
                 </td>
                 <td width="20%" class="sair">
-                    <p> Olá <?php echo $_SESSION["nome"]; ?></p>
-                    <a href="../controler/logout.php">                     
-                        SAIR <!-- <img src="" alt="logout"> -->
+                    <p> Olá <?php echo $_SESSION["nome"]; ?>
+                    <button style="margin:20px; width:70px; height:30px;" class="btn btn-light">
+                        <a style="margin:0.1px; color:black;" href="../controler/logout.php">                     
+                        SAIR
                     </a>
+                    </button>
+                    </p>
                 </td>
             </tr>
             </table>
@@ -61,7 +79,7 @@
 ?>
  <div id="menu">
         <div class="logo_entrada">
-            <table>    
+            <table class="botão">    
             <tr>
                 <td>
                     <h1>
@@ -72,10 +90,13 @@
                     </h1>
                 </td>
                 <td width="20%" class="sair">
-                    <p> Olá <?php echo $_SESSION["nome"]; ?></p>
-                    <a href="../controler/logout.php">                     
-                        SAIR <!-- <img src="" alt="logout"> -->
+                    <p> Olá <?php echo $_SESSION["nome"]; ?>
+                    <button style="margin:20px; width:70px; height:30px;" class="btn btn-light">
+                        <a style="margin:0.1px; color:black;" href="../controler/logout.php">                     
+                        SAIR
                     </a>
+                    </button>
+                    </p>
                 </td>
             </tr>
             </table>

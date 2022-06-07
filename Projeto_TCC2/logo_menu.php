@@ -35,7 +35,7 @@ session_start();
                             <span data-tooltip="Volta para a Página Principal">Home-Page</span>
                         </a>
                     </li>
-                    <li><a href="cadastro.php"> Cadastro/Agendamento </a></li>
+                    <li><a href="cadastro.php"> Cadastro </a></li>
                     <li><a href="orçamento.php"> Orçamento </a></li>
                     <li><a href="desenhos.php"> Portfólio </a></li>
                     <li>

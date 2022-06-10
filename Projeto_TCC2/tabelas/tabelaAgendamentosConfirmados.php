@@ -30,9 +30,9 @@
                     <img src="../css/icons/lupa.svg" alt="icone lupa">
                 </a>
             </td>
-            <td><?php echo $registro[2]; ?></td>
-            <td><textarea class="edit_box" cols="20" rows="0.5" style="height:30px;width:80%" disabled><?php echo $registro[3];?> </textarea> </td>
-            <td><?php echo $registro[4]; ?></td>
+            <td> <?php echo $registro[2]; ?></td>
+            <td> <textarea class="edit_box" cols="20" rows="0.5" style="height:30px;width:80%" disabled> <?php echo $registro[3];?> </textarea> </td>
+            <td> <?php echo $registro[4]; ?> </td>
             <td class="acoes">
                 <button>
                     <a style="color:black;" href="adm_altera_agendamento.php?id=<?php echo $registro[0]; ?>">
@@ -42,7 +42,7 @@
                 <input type="hidden" id="id" value="<?php echo $registro[0]; ?>">
                 <button id="atender">
                     <a style="color:black;" href="../controler/confirma_agendamento.php?id=<?php echo $registro[0]; ?>">
-                        atendido<img width="24px" src="../img/confirm.png">
+                        Atendido <img width="24px" src="../img/confirm.png">
                     </a>
                 </button>
             </td>

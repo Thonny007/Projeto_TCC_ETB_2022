@@ -19,7 +19,7 @@
     </thead>
     <?php while ($registro = mysqli_fetch_row($listar)) {?>
         <tr>
-            <td><?php echo Agendamentos::formataData($registro[1]); ?></td>
+            <td> <?php echo Agendamentos::formataData($registro[1]); ?> </td>
             <td>
                 ver foto
                 <a id="lupa" href="../administrador_servive/mostra_foto.php?id=<?php echo $registro[0]; ?>">

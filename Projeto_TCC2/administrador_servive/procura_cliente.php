@@ -15,7 +15,7 @@
             border: 2px solid #ccc;
             display: inline-block;
             padding: 3px;
-            width:23.5%;
+            width:24%;
             background-color:white;
             display: block;
             /* float: right; */
@@ -36,10 +36,12 @@
 <div class="container-fluid">
     <body>
         <?php include "../menus/menu_entrada.php" ?>
+        <div class="container-fluid">
         <div id="pesquisar" class="pesq_clt">
-            <input type='text' name='pesquisa' id="name" placeholder='Digite o Nome do Cliente'>
-            <button type="button" class="btn btn-secondary" type='submit' id="btn-procurar"><img src="../css/icons/lupa.svg" alt="img_lupa"/> Pesquisar</button>
-        </div>  
+                <input type='text' name='pesquisa' id="name" placeholder='Digite o Nome do Cliente'>
+                <button type="button" class="btn btn-secondary" type='submit' id="btn-procurar"><img src="../css/icons/lupa.svg" alt="img_lupa"/> Pesquisar</button>
+            </div>  
+        </div>
         <div class="container-fluid">
             <div id="data"></div>
         </div>

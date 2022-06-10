@@ -27,9 +27,11 @@
     <body>
     <?php include "../menus/menu_entrada.php" ?>
     <div class="fomulario_cadastro">
-        <button id='btn_mostrar' type="button" class="btn btn-dark">
-            <a href="lista_adm.php"> Listar Administradores </a>
-        </button>
+        <div class="container-fluid">    
+            <button id='btn_mostrar' type="button" class="btn btn-dark">
+                <a href="lista_adm.php"> Listar Administradores </a>
+            </button>
+        </div>
         <form method="POST" action="../controler/processa_cadastro_adm.php">
             <h3> Cadastro de Administrador </h3>
 

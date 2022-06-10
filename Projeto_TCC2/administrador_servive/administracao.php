@@ -13,6 +13,7 @@
     <?php include "../controler/valida_login.php" ?>
     <?php include "../menus/menu_entrada.php" ?>
     <div id="adm_lista">
+    <div class="container-fluid">
         <ul>
             <li>
                 <a href="procura_cliente.php">Procurar Cliente</a>
@@ -35,8 +36,8 @@
             <li>
                 <a href="altera_adm.php?id="> Alterar Meus Dados</a>
             </li>
-       
         </ul>
+    </div>
     </div>
     </body>
 </div>

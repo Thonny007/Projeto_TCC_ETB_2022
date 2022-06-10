@@ -64,6 +64,7 @@
                         </div>
                         <button type="submit" class="btn btn-danger">ALTERAR</button>
                     </form>
+                    <p></p>
                 </div>
             <?php
                 }else {

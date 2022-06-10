@@ -43,10 +43,11 @@
         $agnd = Agendamentos::getById($_GET['id'], true);
         $foto = $agnd->getImg();
     ?>
-    <button  class="btn btn-dark">
-        <a href="lista_agendamentos.php">Agendamentos</a>
-    </button>
-
+    <div class="container-fluid">
+        <button  class="btn btn-dark">
+            <a href="lista_agendamentos.php">Agendamentos</a>
+        </button>
+    </div>
     <p></p>
     <div class="carrega-imagem">
         <a>

@@ -10,6 +10,16 @@
     <link rel="stylesheet" type="text/css" href="../css/Menu_entrada.css">
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <style>
+         button a{
+            text-decoration: none;
+            color:white;
+        }
+        button a:hover{
+            text-decoration: none;
+            color:white;
+        }
+    </style>
     <title> Altera.Agendamento.Dite.Tattoo </title>
 </head>
 <div class="container-fluid">
@@ -37,12 +47,17 @@
             }
 
         ?>
-
-        <form id="table_al" style="width:90%;" method="POST" action="../controler/processa_altera_agnd.php" enctype="multipart/form-data">
+        <div class="container-fluid">
+        <button  class="btn btn-dark">
+            <a href="lista_agendamentos.php">Agendamentos</a>
+        </button>
+        </div>
+        <p></p>
+        <form style="margin:auto;" id="table_al" style="width:90%;" method="POST" action="../controler/processa_altera_agnd.php" enctype="multipart/form-data">
             <input type="hidden" name="id_agnd" value="<?php echo $agnd[0] ?>">
             <input type="hidden" name="status" value="<?php echo $agnd[3] ?>">
             <div class="agm">
-                <h3> Altera Agendamento </h3>
+                <h3> <u> Altera Agendamento </u> </h3>
                     <p>
                         Alterar a Data:
                         <input id="data_agenda" type="date" name="dia" value="<?php echo $dia ?>" required>
@@ -63,18 +78,21 @@
                         <label for="exampleFormControlTextarea1" class="form-label">
                             <p> Alterar Descrição da Tatuagem </p>
                         </label>
-                        <textarea style="width:50%;margin:auto;" class="form-control" name="desc" rows="3"><?php echo $agnd[4] ?></textarea>
+                        <textarea class="form-control" name="desc" rows="3"><?php echo $agnd[4] ?></textarea>
                 </div>
                 </p>
                 <p> 
                     Imagem/Foto de Referência
-                    <input type="file" name="ft" id="ft">
+                    <input class="btn btn-secondary"   type="file" name="ft" id="ft">
                 </p>
                 <div class="mt-4">
-                    <input id="cadastrar" type="submit" nome="agendar" value="ALTERAR AGENDAMENTO">
+                    <button width="60px"  class="btn btn-light" id="cadastrar" type="submit" nome="agendar" value="ALTERAR AGENDAMENTO">
+                        <b>ALTERAR AGENDAMENTO</b>
+                    </button>
                 </div>
             </div>
         </form>
+        <p></p>
     </body>
 </div>
 </html>

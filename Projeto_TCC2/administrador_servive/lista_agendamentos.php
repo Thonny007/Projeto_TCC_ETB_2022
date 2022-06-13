@@ -26,9 +26,6 @@
     <?php include "../menus/menu_entrada.php"; ?>
     <input type="hidden" id="id_adm" value="<?php echo $_SESSION['id']; ?>">
     <div class="container-fluid">
-        <!-- <button class="btn btn-dark">
-            <a href="agendamento_adm.php">Novo Agendamento</a>
-        </button> -->
         <button class="btn btn-dark" id="em_espera">
             Agendamentos em espera
         </button>
@@ -37,6 +34,9 @@
         </button>
         <button class="btn btn-dark" id="excluidos">
             Listar Agendamentos Cancelados
+        </button>
+        <button class="btn btn-dark" id="atendidos">
+            atendidos
         </button>
         <div id="data"></div>
     </div>

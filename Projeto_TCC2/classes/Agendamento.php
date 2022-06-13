@@ -207,4 +207,25 @@ class Agendamentos {
     public function setStatus($status){
         $this->status = $status;
     }
+
+    public function countAtendidos(){
+        $sql = 
+            "SELECT count(id_agnd) FROM agendamento
+            WHERE  atendido = 1";
+        $query =  mysqli_query($this->con, $sql);
+
+        return mysqli_fetch_row($query);
+    }
+
+    public function listAtendidos(){
+        $sql_consulta =
+            "SELECT 
+            ag.id_agnd as 'id', 
+            ag.data_agnd as 'data', 
+            ag.status_agnd as 'status', 
+            ag.descricao_tatto as 'desc'
+        where ag.atendido = 1";
+
+        return mysqli_query ($this->con, $sql_consulta);
+    }
 }

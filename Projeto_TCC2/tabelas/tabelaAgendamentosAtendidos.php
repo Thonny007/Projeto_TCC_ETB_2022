@@ -5,9 +5,9 @@
     $agnd = new Agendamentos();
     $listar = $agnd->listAtendidos();
 
-    $quantidade = agnd->countAtendidos();
+    $quantidade = $agnd->countAtendidos();
 ?>
-<p>quantidade de agendamentos atendidos: <?php echo  ?></p>
+<p> Quantidade de Agendamentos Atendidos: <?php echo $quantidade[0]; ?></p>
 <table id="lista_cadastro" style="opai" class="table table-hover mt-3">
     <thead>
     <tr>

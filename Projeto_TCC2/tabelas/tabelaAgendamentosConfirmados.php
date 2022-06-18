@@ -22,6 +22,7 @@
         </thead>
     <tbody>
     <?php while ($registro = mysqli_fetch_row($listar)) { ?>
+        <?php $link = "id=$registro[0]&id_clt=$registro[5]"; ?>
         <tr>
             <td><?php echo Agendamentos::formataData($registro[1]); ?></td>
             <td>
@@ -41,7 +42,7 @@
                 </button>
                 <input type="hidden" id="id" value="<?php echo $registro[0]; ?>">
                 <button id="atender">
-                    <a style="color:black;" href="../controler/confirma_agendamento.php?id=<?php echo $registro[0]; ?>">
+                    <a style="color:black;" href="../controler/confirma_agendamento.php?<?php echo $link; ?>">
                         Atendido <img width="24px" src="../img/confirm.png">
                     </a>
                 </button>

@@ -211,7 +211,7 @@ class Agendamentos {
     public function countAtendidos(){
         $sql = 
             "SELECT count(id_agnd) FROM agendamento
-            WHERE  atendido = 1";
+            WHERE  atendido > 0";
         $query =  mysqli_query($this->con, $sql);
 
         return mysqli_fetch_row($query);
@@ -219,12 +219,15 @@ class Agendamentos {
 
     public function listAtendidos(){
         $sql_consulta =
-            "SELECT 
-            ag.id_agnd as 'id', 
-            ag.data_agnd as 'data', 
-            ag.status_agnd as 'status', 
-            ag.descricao_tatto as 'desc'
-        where ag.atendido = 1";
+            "SELECT
+                ag.id_agnd,
+                ag.data_agnd,
+                ag.status_agnd,
+                ag.descricao_tatto,
+                c.nome_clt
+            from agendamento ag
+            inner join cliente c on c.id_clt = ag.atendido
+            where ag.atendido > 0";
 
         return mysqli_query ($this->con, $sql_consulta);
     }

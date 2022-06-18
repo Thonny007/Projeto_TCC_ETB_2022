@@ -161,8 +161,8 @@ class Administrador extends Pessoa {
         mysqli_close($this->con);
     }
 
-    public function atender($id): bool{
-        $sql = "UPDATE agendamento set atendido = 1 where id_agnd = $id";
+    public function atender($id, $id_clt): bool{
+        $sql = "UPDATE agendamento set atendido = $id_clt where id_agnd = $id";
         $sql_cliente = "UPDATE cliente SET id_adm = NULL WHERE id_agnd = $id";
 
         try {

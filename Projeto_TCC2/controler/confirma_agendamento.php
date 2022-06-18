@@ -3,7 +3,7 @@
 
     $adm = new Administrador();
 
-    if ($adm->atender($_GET['id'])){
+    if ($adm->atender($_GET['id'], $_GET['id_clt'])){
         echo "<script> alert('sucesso'); </script>";
         echo "<script> location.href = '../administrador_servive/lista_agendamentos.php'; </script>";
     }else {

@@ -11,6 +11,7 @@
 <table id="lista_cadastro" style="opai" class="table table-hover mt-3">
     <thead>
     <tr>
+        <td> <b> Nome do cliente </b> </td>
         <td> <b> Data Agend </b> </td>
         <td> <b> Img Referencia </b> </td>
         <td> <b> Status Agend </b> </td>
@@ -20,6 +21,7 @@
     </thead>
     <?php while ($registro = mysqli_fetch_row($listar)) {?>
         <tr>
+            <td> <?php echo $registro[4]; ?></td>
             <td> <?php echo Agendamentos::formataData($registro[1]); ?> </td>
             <td>
                 ver foto
@@ -31,23 +33,13 @@
             <td>
                 <label>
                     <textarea class="edit_box"
-                              cols="20" rows="0.5" style="height:30px;"
-                              disabled> <?php echo $registro[3];
+                        cols="20" rows="0.5" style="height:30px;"
+                        disabled> <?php echo $registro[3];
                     ?></textarea>
                 </label>
             </td>
             <td class="acoes">
-                <a href="../administrador_servive/set_agnd_status.php?id=<?php echo $registro[0]; ?>&ns=confirmado&id_adm=<?php echo $_SESSION['id']; ?>">
-                    <img class="confirma" src="../css/icons/check.svg" alt="icone check">
-                </a>
-                <a href="../administrador_servive/set_agnd_status.php?id=<?php echo $registro[0]; ?>&ns=desmarcado&id_adm=<?php echo $_SESSION['id']; ?>">
-                    <img class="cancela" src="../css/icons/cancel.svg" alt="icone cancelar">
-                </a>
-                <button>
-                    <a style="color:black;" href="../administrador_servive/adm_altera_agendamento.php?id=<?php echo $registro[0]; ?>">
-                        Editar <img width="24px" src="../img/menu/pencil.png" alt="">
-                    </a>
-                </button>
+              
             </td>
         </tr>
     <?php } ?>

@@ -18,7 +18,6 @@ class Agendamentos {
         $this->Agendamentos($id, $data, $status, $imagem, $desc);
     }
 
-
     private function Agendamentos(
         $id,
         $data,
@@ -110,12 +109,10 @@ class Agendamentos {
                     alert ('☺ Registro Deletado/Apagado com Sucesso ☺') 
                 </script>
             ";
-
             echo "
             <script> 
-                location.href = ('../lista_agendamento_excluido.php') 
+                location.href = ('../administrador_servive/lista_agendamentos.php') 
             </script>";
-
 
         } catch (Throwable $th) {
             echo "
@@ -125,12 +122,10 @@ class Agendamentos {
 
             echo "
             <script> 
-                location.href = ('../lista_agendamento_excluido.php') 
+                location.href = ('../administrador_servive/lista_agendamentos.php') 
             </script>";
 
         }
-
-
     }
 
     public static function getById($id, $toAgnd=false) {

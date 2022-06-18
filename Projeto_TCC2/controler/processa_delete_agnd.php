@@ -12,6 +12,6 @@
             ";
             echo "
             <script> 
-                location.href = ('../lista_agendamentos.php') 
+                location.href = ('../administrador_servive/lista_agendamentos.php') 
             </script>";
 ?>

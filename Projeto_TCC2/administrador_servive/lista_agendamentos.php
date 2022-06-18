@@ -27,7 +27,7 @@
     <input type="hidden" id="id_adm" value="<?php echo $_SESSION['id']; ?>">
     <div class="container-fluid">
         <button class="btn btn-dark" id="em_espera">
-            Agendamentos em espera
+            Agendamentos em Espera
         </button>
         <button class="btn btn-dark" id="confirmados">
             Agendamentos Confirmados
@@ -36,7 +36,7 @@
             Listar Agendamentos Cancelados
         </button>
         <button class="btn btn-dark" id="atendidos">
-            atendidos
+            Atendidos
         </button>
         <div id="data"></div>
     </div>

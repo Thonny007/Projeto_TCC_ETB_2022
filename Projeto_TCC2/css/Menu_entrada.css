@@ -37,6 +37,7 @@ h1 a:hover {
     margin: -15px;
     /*     align-items: left; */
     width: auto;
+    height: 160px;
 }
 
 .logo_entrada img {

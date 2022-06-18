@@ -29,6 +29,7 @@ h1 a:hover {
     margin: -15px;
     align-items: baseline;
     width: auto;
+    height: auto;
 }
 
 .logo img {

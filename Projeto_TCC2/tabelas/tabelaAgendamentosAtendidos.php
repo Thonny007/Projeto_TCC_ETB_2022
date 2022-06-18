@@ -39,7 +39,11 @@
                 </label>
             </td>
             <td class="acoes">
-              
+                <button>
+                    <a href="../controler/processa_delete_agnd.php">
+                        <img src="../css/icons/lixo.svg" alt="apagar">
+                    </a>
+                </button>              
             </td>
         </tr>
     <?php } ?>

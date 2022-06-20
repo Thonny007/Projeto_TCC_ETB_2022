@@ -41,7 +41,7 @@
             <tr>
                 <td>
                     <h1>
-                        <a href="../cliente-pages/adm_cliente.php">
+                        <a href="../administrador_servive/administracao.php">
                             <img  src="../img/logo1.png">
                             DITE.TATTOO
                         </a>

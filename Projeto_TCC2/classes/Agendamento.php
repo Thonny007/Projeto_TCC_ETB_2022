@@ -149,12 +149,25 @@ class Agendamentos {
 
     /*------------------------- UPDATE DO AGENDAMENTO --------------------------*/
      public function update(){
-        $sql = "UPDATE agendamentos.agendamento
-        SET 
-            data_agnd = '$this->data',
-            descricao_tatto = '$this->desc',
-            status_agnd = '$this->status'
-        WHERE id_agnd = $this->id ";
+
+        if ($this->imagem == null) {
+            $sql = "UPDATE agendamentos.agendamento
+            SET 
+                data_agnd = '$this->data',
+                descricao_tatto = '$this->desc',
+                status_agnd = '$this->status'
+            WHERE id_agnd = $this->id ";
+        } else {
+            $sql = "UPDATE agendamentos.agendamento
+            SET 
+                data_agnd = '$this->data',
+                descricao_tatto = '$this->desc',
+                status_agnd = '$this->status',
+                imagem_atendimento = '$this->imagem'
+            WHERE id_agnd = $this->id ";
+        }
+        
+
 
         try {
             mysqli_query($this->con, $sql);
@@ -175,7 +188,6 @@ class Agendamentos {
 
             echo $th;
         }
-
         mysqli_close($this->con);
     } 
 /*------------------------- UPDATE DO AGENDAMENTO ⬆️⬆️ -------------------------*/
